@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class LevelManager : MonoBehaviour
 {
-    [SerializeField] private int m_sliceCount;
     [SerializeField] private int m_currentSlice;
     [SerializeField] private float m_editorSliceDistance = 0;
 
@@ -26,18 +25,27 @@ public class LevelManager : MonoBehaviour
 
     public void OnValidate()
     {
-        if(!Application.isPlaying)
+        if (!Application.isPlaying)
+        {
+            LevelSlice[] slices = transform.GetComponentsInChildren<LevelSlice>();
+
+            m_slices = new List<LevelSlice>(slices);
+
             SetDepthLimits(m_editorSliceDistance);
+        }
     }
 
     public void Start()
     {
+        if (!m_dynamicObjects.Contains(m_playerObject))
+            m_dynamicObjects.Add(m_playerObject);
         AlignDynamicObjects();
         SetDepthLimits();
     }
 
     private void Update()
     {
+        // this is temporary
         if(UnityEngine.InputSystem.Keyboard.current.spaceKey.wasReleasedThisFrame)
         {
             if(m_state == State.SideScroller)
@@ -68,8 +76,9 @@ public class LevelManager : MonoBehaviour
 
     void TransitionToSlice(int index)
     {
-        // Move camera
+        // TODO: Move camera
 
+        // Align Objects to slice
         AlignDynamicObjects();
 
         // Disable all other slices
@@ -84,32 +93,12 @@ public class LevelManager : MonoBehaviour
 
     void TransitionToTopDown()
     {
-        // Move Camera
+        // TODO: Move camera
+
         // Enable all other slices
-        int i = 0;
         foreach (var slice in m_slices)
         {
             slice.SetSliceEnabled(true);
-        }
-    }
-
-    void OrganiseDynamicObjects()
-    {
-        foreach (var obj in m_dynamicObjects)
-        {
-            foreach(var slice in m_slices)
-            {
-                if(obj.transform.position.x >= slice.GetLowerBound() && obj.transform.position.x < slice.GetUpperBound())
-                {
-                    slice.AddDynamicObject(obj);
-                    foreach (var otherSlice in m_slices)
-                    {
-                        if (otherSlice != slice)
-                            otherSlice.RemoveDynamicObject(obj);
-                    }
-                    break;
-                }
-            }
         }
     }
 
@@ -120,7 +109,7 @@ public class LevelManager : MonoBehaviour
         int index = 0;
         foreach (var slice in m_slices)
         {
-            var newDist = Vector3.Distance(slice.transform.position, obj.transform.position);
+            var newDist = Vector3.Distance(new Vector3(slice.transform.position.x, 0, 0), new Vector3(obj.transform.position.x, 0, 0));
             if (newDist < dist)
             {
                 dist = newDist;

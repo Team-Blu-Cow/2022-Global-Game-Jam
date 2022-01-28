@@ -4,8 +4,12 @@ using UnityEngine;
 
 public class LevelSlice : MonoBehaviour
 {
+    // set this lists values in editor
     [SerializeField] private List<GameObject> m_staticObjects;
-    [SerializeField] private List<GameObject> m_dynamicObjects;
+
+    // this list is serialized for debug purposes only, don't add anything to it in editor!!
+    [SerializeField, Tooltip("this list is serialized for debug purposes only, don't add anything to it in editor!!") ]
+    private List<GameObject> m_dynamicObjects;
 
     [SerializeField] private SliceDimentions m_depthLimits;
 
@@ -20,7 +24,7 @@ public class LevelSlice : MonoBehaviour
         if (m_dynamicObjects.Contains(obj))
             return;
         m_dynamicObjects.Add(obj);
-        obj.transform.position = new Vector3(transform.position.x, obj.transform.position.y, obj.transform.position.z);
+        SetDynamicObjectPosition(obj);
     }
 
 
@@ -79,16 +83,6 @@ public class LevelSlice : MonoBehaviour
                 transform.position.x,
                 transform.position.y,
                 transform.position.z + (m_depthLimits.width*0.5f)), new Vector3(1, 1, m_depthLimits.width));
-    }
-
-    public float GetLowerBound()
-    {
-        return transform.position.x - (m_depthLimits.depth * 0.5f);
-    }
-
-    public float GetUpperBound()
-    {
-        return transform.position.x + (m_depthLimits.depth * 0.5f);
     }
 }
 
