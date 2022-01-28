@@ -15,6 +15,7 @@ public class LevelManager : MonoBehaviour
     [SerializeField] private List<GameObject> m_dynamicObjects;
     [SerializeField] private GameObject m_playerObject;
 
+    // this is also all temp stuff, change to work with game state singletons (or whatever they are called)
     enum State
     {
         TopDown,
@@ -45,7 +46,7 @@ public class LevelManager : MonoBehaviour
 
     private void Update()
     {
-        // this is temporary
+        // this is temporary, just to demonstrate functionality
         if(UnityEngine.InputSystem.Keyboard.current.spaceKey.wasReleasedThisFrame)
         {
             if(m_state == State.SideScroller)
