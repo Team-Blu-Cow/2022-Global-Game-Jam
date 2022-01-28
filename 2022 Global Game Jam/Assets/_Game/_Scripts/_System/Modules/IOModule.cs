@@ -17,11 +17,6 @@ namespace blu
             Read();
         }
 
-        private void OnEnable()
-        {
-            base.Awake();
-        }
-
         public override void Initialize()
         {
             base.Initialize();
