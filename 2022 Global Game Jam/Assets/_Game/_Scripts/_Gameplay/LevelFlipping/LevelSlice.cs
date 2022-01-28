@@ -30,6 +30,19 @@ public class LevelSlice : MonoBehaviour
             m_dynamicObjects.Remove(obj);
     }
 
+    public void SetSliceEnabled(bool enabled)
+    {
+        foreach (var obj in m_dynamicObjects)
+        {
+            obj.SetActive(enabled);
+        }
+
+        foreach (var obj in m_staticObjects)
+        {
+            obj.SetActive(enabled);
+        }
+    }
+
     public void SetDepth(float offset, float depth, float width)
     {
         m_depthLimits.offset = offset;

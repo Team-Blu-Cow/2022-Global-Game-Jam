@@ -25,13 +25,32 @@ public class LevelManager : MonoBehaviour
 
     public void OnValidate()
     {
-        SetDepthLimits(m_editorSliceDistance);
+        if(!Application.isPlaying)
+            SetDepthLimits(m_editorSliceDistance);
     }
 
     public void Start()
     {
         AlignDynamicObjects();
         SetDepthLimits();
+    }
+
+    private void Update()
+    {
+        if(UnityEngine.InputSystem.Keyboard.current.spaceKey.wasReleasedThisFrame)
+        {
+            if(m_state == State.SideScroller)
+            {
+                TransitionToTopDown();
+                m_state = State.TopDown;
+            }
+            else
+            {
+                TransitionToSlice(m_currentSlice);
+                m_state = State.SideScroller;
+            }
+            
+        }
     }
 
     void SetDepthLimits(float offset = 0)
@@ -48,13 +67,28 @@ public class LevelManager : MonoBehaviour
     void TransitionToSlice(int index)
     {
         // Move camera
+
+        AlignDynamicObjects();
+
         // Disable all other slices
+        int i = 0;
+        foreach (var slice in m_slices)
+        {
+            if (i != index)
+                slice.SetSliceEnabled(false);
+            i++;
+        }
     }
 
     void TransitionToTopDown()
     {
         // Move Camera
         // Enable all other slices
+        int i = 0;
+        foreach (var slice in m_slices)
+        {
+            slice.SetSliceEnabled(true);
+        }
     }
 
     void OrganiseDynamicObjects()
@@ -77,23 +111,30 @@ public class LevelManager : MonoBehaviour
         }
     }
 
+    int FindClosestSlice(GameObject obj)
+    {
+        float dist = float.MaxValue;
+        int closest = 0;
+        int index = 0;
+        foreach (var slice in m_slices)
+        {
+            var newDist = Vector3.Distance(slice.transform.position, obj.transform.position);
+            if (newDist < dist)
+            {
+                dist = newDist;
+                closest = index;
+            }
+            index++;
+        }
+
+        return closest;
+    }
+
     void AlignDynamicObjects()
     {
         foreach (var obj in m_dynamicObjects)
         {
-            float dist = float.MaxValue;
-            int closest = 0;
-            int index = 0;
-            foreach (var slice in m_slices)
-            {
-                var newDist = Vector3.Distance(slice.transform.position, obj.transform.position);
-                if(newDist < dist)
-                {
-                    dist = newDist;
-                    closest = index;
-                }
-                index++;
-            }
+            int closest = FindClosestSlice(obj);
 
             LevelSlice closestSlice = m_slices[closest];
             closestSlice.AddDynamicObject(obj);
