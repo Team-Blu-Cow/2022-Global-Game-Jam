@@ -7,8 +7,9 @@ public class Billboard : MonoBehaviour
     [SerializeField] private bool isRotating = true;
 
     private Material sideMaterial;
-    private Material topDownMaterial;
+    private Material topDownMaterial;    
 
+   
     bool isSideView = true;
 
     private void Start()
@@ -26,7 +27,15 @@ public class Billboard : MonoBehaviour
             transform.LookAt(Camera.main.transform.position, -Vector3.up);
             transform.rotation = Quaternion.Euler(transform.eulerAngles.x - 90.0f, transform.eulerAngles.y, transform.eulerAngles.z);
 
-            if (transform.rotation.eulerAngles.x < 315.0f && transform.rotation.eulerAngles.x >= 269.0f)
+            if (transform.eulerAngles.x < 0.0f)
+            {
+                transform.localRotation = Quaternion.Euler(-180.0f, transform.eulerAngles.y, transform.eulerAngles.z);
+            }
+
+            ConsoleProDebug.Watch("Billboard rotation", transform.eulerAngles.x.ToString());
+
+
+            if (transform.rotation.eulerAngles.x < 315.0f && transform.rotation.eulerAngles.x >= 270.0f)
             {
                 if (isSideView == false)
                 {
