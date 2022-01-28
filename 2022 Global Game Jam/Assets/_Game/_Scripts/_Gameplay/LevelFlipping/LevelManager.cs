@@ -14,6 +14,7 @@ public class LevelManager : MonoBehaviour
     [SerializeField] private float m_levelWidth = 10;
 
     [SerializeField] private List<GameObject> m_dynamicObjects;
+    [SerializeField] private GameObject m_playerObject;
 
     enum State
     {
@@ -46,6 +47,7 @@ public class LevelManager : MonoBehaviour
             }
             else
             {
+                m_currentSlice = FindClosestSlice(m_playerObject);
                 TransitionToSlice(m_currentSlice);
                 m_state = State.SideScroller;
             }

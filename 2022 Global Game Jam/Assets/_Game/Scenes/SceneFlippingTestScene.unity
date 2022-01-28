@@ -1397,6 +1397,7 @@ MonoBehaviour:
   m_levelWidth: 10
   m_dynamicObjects:
   - {fileID: 1270857751}
+  m_playerObject: {fileID: 1270857751}
   m_state: 0
 --- !u!4 &1688983995
 Transform:
