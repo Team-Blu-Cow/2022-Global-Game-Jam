@@ -14,6 +14,15 @@ public class LevelSelectController : MonoBehaviour
     const int m_maxLevelCount = 20;
     int m_pageNum = 0;
 
+    public int PageNum { get => m_pageNum; }
+    public int MaxPageNum 
+    { get {
+            int textCount = m_textMeshes.Count;
+            int pageCount = (m_maxLevelCount + textCount - 1) / textCount;
+            return pageCount; 
+    } }
+
+
     LevelManager m_manager;
 
     blu.IOModule iomodule;
@@ -79,17 +88,16 @@ public class LevelSelectController : MonoBehaviour
         }
     }
 
-    void NextPage()
+    public void NextPage()
     {
-        int textCount = m_textMeshes.Count;
-        int pageCount = (m_maxLevelCount + textCount - 1) / textCount;
-        if (m_pageNum == pageCount - 1) return;
+
+        if (m_pageNum == MaxPageNum - 1) return;
 
         m_pageNum++;
         UpdateTextMeshes();
     }
 
-    void LastPage()
+    public void LastPage()
     {
         if (m_pageNum == 0) return;
 

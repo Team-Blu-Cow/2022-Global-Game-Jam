@@ -6,7 +6,7 @@ using TMPro;
 public class ObjectTransparencyController : MonoBehaviour
 {
     [SerializeField, HideInInspector] private Material m_material;
-    [SerializeField, HideInInspector] private TextMeshPro m_tmPro;
+    [SerializeField, HideInInspector] private List<TextMeshPro> m_tmPro;
 
 
     [SerializeField] private float m_opacity = 1;
@@ -65,7 +65,7 @@ public class ObjectTransparencyController : MonoBehaviour
             }
         }
 
-        m_tmPro = GetComponentInChildren<TextMeshPro>();
+        m_tmPro = new List<TextMeshPro>(GetComponentsInChildren<TextMeshPro>());
     }
 
     public float opacity
@@ -94,10 +94,13 @@ public class ObjectTransparencyController : MonoBehaviour
         if(m_material)
             m_material.SetFloat("_Opacity", m_opacity);
 
-        if(m_tmPro)
+        for(int i = 0; i < m_tmPro.Count; i++)
         {
-            Color color = m_tmPro.color;
-            m_tmPro.color = new Color(color.r, color.b, color.g, m_opacity);
+            if(m_tmPro[i])
+            {
+                Color color = m_tmPro[i].color;
+                m_tmPro[i].color = new Color(color.r, color.b, color.g, m_opacity);
+            }
         }
     }
 
