@@ -2,19 +2,26 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using blu;
+
 
 public class Interactable : MonoBehaviour
 {
     Transform m_popUp;
-    [SerializeField] bool sideView;
-    [SerializeField, HideInInspector] PlayerController player;
+    [SerializeField, HideInInspector] PlayerController m_player;
     [SerializeField] float m_radius;
 
+    [SerializeField, HideInInspector] protected LevelSelectController m_controller;
+    [SerializeField, HideInInspector] protected LevelManager m_manager;
+
     protected bool inTrigger = false;
+    protected bool playerInSlice = false;
 
     protected virtual void OnValidate()
     {
-        player = FindObjectOfType<PlayerController>();
+        m_player = FindObjectOfType<PlayerController>();
+        m_controller = FindObjectOfType<LevelSelectController>();
+        m_manager = FindObjectOfType<LevelManager>();
 
         m_popUp = transform.Find("Interact Popup");
         if(m_popUp == null)
@@ -49,10 +56,36 @@ public class Interactable : MonoBehaviour
         }        
     }
 
+    private void OnEnable()
+    {
+        App.GetModule<GameStateModule>().LateOnStateChangeEvent += OnFlip;
+    }
+
+    private void OnDisable()
+    {
+        App.GetModule<GameStateModule>().LateOnStateChangeEvent -= OnFlip;
+    }
+
+    virtual protected void OnFlip(GameStateModule.RotationState state)
+    {
+        LevelSlice slice = m_manager.GetSlice(m_manager.FindClosestSlice(gameObject));
+
+        if (slice.HasObject(FindObjectOfType<PlayerController>().gameObject))
+        {
+            playerInSlice = true;
+        }
+        else
+        {
+            playerInSlice = false;
+        }
+    }
+
     private void Update()
     {
-        if (TryGetComponent<SphereCollider>(out SphereCollider collider))        
-            collider.radius = m_radius;        
+        if (inTrigger && playerInSlice && GameStateModule.CurrentRotationState == GameStateModule.RotationState.SIDE_ON)
+            OpenPopUp();
+        else
+            ClosePopUp();    
     }
 
     private void Awake()
@@ -62,12 +95,18 @@ public class Interactable : MonoBehaviour
 
     private void Start()
     {
-        player.PlayerInput.PlayerControls.Interact.performed += _ => OnInteract();        
+        m_player.PlayerInput.PlayerControls.Interact.performed += _ => OnInteract();        
     }
 
     virtual protected bool OnInteract()
     {
         if (!inTrigger)
+            return false;
+
+        if (GameStateModule.CurrentRotationState == GameStateModule.RotationState.TOP_DOWN)
+            return false;
+
+        if (!playerInSlice)
             return false;
 
         return true;
@@ -78,7 +117,6 @@ public class Interactable : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             inTrigger = true;
-            OpenPopUp();
         }
     }
 
@@ -87,7 +125,6 @@ public class Interactable : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             inTrigger = false;
-            ClosePopUp();
         }
     }
 
@@ -98,10 +135,7 @@ public class Interactable : MonoBehaviour
 
     protected virtual void OpenPopUp()
     {
-        if (sideView)
-            m_popUp.localPosition = new Vector3(0.6f, 0.6f , 0.6f);
-        else
-            m_popUp.localPosition = new Vector3(-0.6f, 0.6f, 0.6f);
+        m_popUp.localPosition = new Vector3(0.6f, 0.6f , 0.6f);
 
         SetPopUpSprite();
 
@@ -110,15 +144,15 @@ public class Interactable : MonoBehaviour
 
     private void SetPopUpSprite()
     {
-        int bindingIndex = player.PlayerInput.FindAction("Interact").GetBindingIndexForControl(player.PlayerInput.FindAction("Interact").controls[0]);
+        int bindingIndex = m_player.PlayerInput.FindAction("Interact").GetBindingIndexForControl(m_player.PlayerInput.FindAction("Interact").controls[0]);
 
         string key = InputControlPath.ToHumanReadableString(
-            player.PlayerInput.FindAction("Interact").bindings[bindingIndex].effectivePath,
+            m_player.PlayerInput.FindAction("Interact").bindings[bindingIndex].effectivePath,
             InputControlPath.HumanReadableStringOptions.OmitDevice);
 
         SpriteRenderer sr = m_popUp.GetComponent<SpriteRenderer>();
 
-        if (sr.sprite.name != "UI/Light/" + key + "_Key_Light")
+        if (sr.sprite == null || sr.sprite.name != "UI/Light/" + key + "_Key_Light")
         {
             Sprite keySprite = Resources.Load<Sprite>("UI/Light/" + key + "_Key_Light");
             if (keySprite)
