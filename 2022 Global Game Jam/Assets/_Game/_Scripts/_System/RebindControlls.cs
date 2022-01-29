@@ -27,6 +27,9 @@ public class RebindControlls : MonoBehaviour
 
     public void StartRebind()
     {
+        if (player.PlayerInput.FindAction(actionRebind) == null)
+            return;
+
         startRebindGO.SetActive(false);
         waitingGO.SetActive(true);
 
@@ -41,6 +44,9 @@ public class RebindControlls : MonoBehaviour
 
     public void StartCompRebind()
     {
+        if (player.PlayerInput.FindAction(actionRebind) == null)
+            return;
+
         startRebindGO.SetActive(false);
         waitingGO.SetActive(true);
 
@@ -68,6 +74,9 @@ public class RebindControlls : MonoBehaviour
 
     private void UpdateUI(bool composite = false)
     {
+        if (player.PlayerInput.FindAction(actionRebind) == null)
+            return;
+
         int bindingIndex = player.PlayerInput.FindAction(actionRebind).GetBindingIndexForControl(player.PlayerInput.FindAction(actionRebind).controls[0]);
 
         if (composite)

@@ -322,6 +322,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: PauseCanvases
       objectReference: {fileID: 0}
+    - target: {fileID: 4811214675090068701, guid: 4c3e13cb6664123439748a29f4ecdfc6, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1511657656}
+    - target: {fileID: 4838714580636256161, guid: 4c3e13cb6664123439748a29f4ecdfc6, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1511657656}
     - target: {fileID: 5123281922723109766, guid: 4c3e13cb6664123439748a29f4ecdfc6, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
