@@ -15,13 +15,12 @@ public class LevelManager : MonoBehaviour
     [SerializeField] private List<GameObject> m_dynamicObjects;
     [SerializeField] private GameObject m_playerObject;
 
-    // this is also all temp stuff, change to work with game state singletons (or whatever they are called)
+    // this is temp stuff, change this to work with game state singletons (or whatever they are called)
     enum State
     {
         TopDown,
         SideScroller
     }
-
     [SerializeField] private State m_state;
 
     public void OnValidate()
