@@ -6,23 +6,36 @@ public class Billboard : MonoBehaviour
 {
     [SerializeField] private bool isRotating = true;
 
-    private Material sideMaterial;
-    private Material topDownMaterial;    
+    private Material m_material;
 
+    private MeshRenderer m_meshRenderer;
    
-    bool isSideView = true;
+    [SerializeField] bool isSideView = true;
+    [SerializeField] float rot;
 
     private void Start()
     {
-        sideMaterial = Resources.Load<Material>("Materials/sideMaterial");
-        topDownMaterial = Resources.Load<Material>("Materials/topDownMaterial");
-        GetComponent<MeshRenderer>().material = sideMaterial;
+        var obj = GetComponentInChildren<MeshRenderer>().gameObject;
+        m_meshRenderer = obj.GetComponent<MeshRenderer>();
+        m_meshRenderer.material = m_material;
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (isRotating)
+        transform.rotation = Camera.main.transform.rotation;
+
+        // this is vile... but its the only way i could get the rotations to work
+        rot = transform.localRotation.eulerAngles.y - 360;
+        if (rot < -300f)
+            rot = 0;
+
+        isSideView = (rot <= -45);
+        
+        // TODO @adam: add 2d animation on 3d object code here
+
+        /*if (isRotating)
         {
             transform.LookAt(Camera.main.transform.position, -Vector3.up);
             transform.rotation = Quaternion.Euler(transform.eulerAngles.x - 90.0f, transform.eulerAngles.y, transform.eulerAngles.z);
@@ -39,7 +52,7 @@ public class Billboard : MonoBehaviour
             {
                 if (isSideView == false)
                 {
-                    GetComponent<MeshRenderer>().material = sideMaterial;
+                    m_meshRenderer.material = sideMaterial;
                     isSideView = true;
                 }
             }
@@ -47,10 +60,10 @@ public class Billboard : MonoBehaviour
             {
                 if (isSideView == true)
                 {
-                    GetComponent<MeshRenderer>().material = topDownMaterial;
+                    m_meshRenderer.material = topDownMaterial;
                     isSideView = false;
                 }
             }
-        }
+        }*/
     }
 }
