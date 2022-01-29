@@ -92,7 +92,10 @@ public class ObjectTransparencyController : MonoBehaviour
     void Update()
     {
         if(m_material)
+        {
+            //m_material.SetFloat("_GreyScale", m_opacity);
             m_material.SetFloat("_Opacity", m_opacity);
+        }
 
         if(m_tmPro)
         {

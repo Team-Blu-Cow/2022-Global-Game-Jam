@@ -14,6 +14,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float m_checkRadius;
 
     [SerializeField, HideInInspector] private Animator m_animator;
+    [SerializeField, HideInInspector] private Billboard m_billboard;
 
     [SerializeField] private SideScrollController m_sideScrollController = new SideScrollController();
     [SerializeField] private TopDownController m_topDownController = new TopDownController();
@@ -22,6 +23,12 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField] private PlayerInfo m_info;
     public PlayerInfo pInfo => m_info;
+
+    public Transform spriteTransform
+    {
+        get { return m_billboard.sprTransform; }
+        set { m_billboard.sprTransform = value; }
+    }
 
     private void OnEnable()
     {
@@ -42,6 +49,7 @@ public class PlayerController : MonoBehaviour
             levelMagr.m_playerObject = this.gameObject;
         }
         m_animator = GetComponent<Animator>();
+        m_billboard = GetComponentInChildren<Billboard>();
     }
 
     private void Awake()
@@ -63,12 +71,6 @@ public class PlayerController : MonoBehaviour
 
         input_.PlayerControls.Flip.performed += _ => Flip();
 
-        //input_.PlayerControls.Jump.performed += _ => ;
-        //input_.PlayerControls.Jump.canceled += _ => ;
-
-        //input_.PlayerControls.Move.performed += ctx => Move(ctx.ReadValue<Vector2>());
-        //input_.PlayerControls.Move.canceled += _ => Move(new Vector2(0, 0));
-
         input_.UI.Disable();
         input_.PlayerControls.Enable();
     }
@@ -77,30 +79,23 @@ public class PlayerController : MonoBehaviour
     {
         m_topDown = !m_topDown;
         if (m_topDown)
+        {
             blu.App.GetModule<blu.GameStateModule>().ChangeState(blu.GameStateModule.RotationState.TOP_DOWN);
+            m_topDownController.SetMoveDirection(m_sideScrollController.facingRight);
+        }
         else
+        {
             blu.App.GetModule<blu.GameStateModule>().ChangeState(blu.GameStateModule.RotationState.SIDE_ON);
+            m_sideScrollController.SetFacing(m_topDownController.GetFacingDirection());
+            //m_topDownController.ResetRotation();
+        }
     }
-
-    private float maxVelocity = float.MinValue;
-    private float minVelocity = float.MaxValue;
 
     private void Update()
     {
-        if (m_rb.velocity.y > maxVelocity)
-        {
-            maxVelocity = m_rb.velocity.y;
-        }
-
-        if (m_rb.velocity.y < minVelocity)
-        {
-            minVelocity = m_rb.velocity.y;
-        }
-
-        ConsoleProDebug.Watch("RigidBody velocity.y", m_rb.velocity.y.ToString());
-        ConsoleProDebug.Watch("RigidBody max velocity.y", maxVelocity.ToString());
-        ConsoleProDebug.Watch("RigidBody min velocity.y", minVelocity.ToString());
         CollectInput();
+
+        m_animator.SetBool("topDown", m_billboard.isTopView);
     }
 
     private void FixedUpdate()
@@ -112,9 +107,6 @@ public class PlayerController : MonoBehaviour
             m_topDownController.OnFixedUpdate();
         else
             m_sideScrollController.OnFixedUpdate();
-
-        m_animator.SetBool("topDown", m_topDown);
-
     }
 
     void CollectInput()
@@ -122,7 +114,7 @@ public class PlayerController : MonoBehaviour
         Vector2 vec = input_.PlayerControls.Move.ReadValue<Vector2>();
 
         m_info.MovementH = vec.x;
-        m_info.MovementV = vec.y;
+        m_info.MovementV = -vec.y;
 
         m_info.JumpPressedLastFrame = m_info.JumpPressedThisFrame;
         m_info.JumpPressedThisFrame = input_.PlayerControls.Jump.WasPressedThisFrame();

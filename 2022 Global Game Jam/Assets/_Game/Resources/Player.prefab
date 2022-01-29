@@ -24,14 +24,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4291815805671322453}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0.1, z: 0}
   m_LocalScale: {x: 0.19999999, y: 0.2, z: 0.2}
   m_Children:
   - {fileID: 7439471149419140394}
   m_Father: {fileID: 7966750297532486442}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!114 &5022112384351794080
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -47,6 +47,7 @@ MonoBehaviour:
   isRotating: 1
   isSideView: 1
   rot: 0
+  sprTransform: {fileID: 7439471149419140394}
 --- !u!1 &6591500600001011757
 GameObject:
   m_ObjectHideFlags: 0
@@ -141,8 +142,8 @@ GameObject:
   - component: {fileID: 7966750297532486445}
   - component: {fileID: 7966750297532486443}
   - component: {fileID: 7966750297532486440}
-  - component: {fileID: 4047457259851036051}
   - component: {fileID: 676900467}
+  - component: {fileID: 8251521344676310790}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -189,15 +190,28 @@ MonoBehaviour:
   m_footSensor: {fileID: 7966750299069407935}
   m_checkRadius: 0.15
   m_animator: {fileID: 676900467}
+  m_billboard: {fileID: 5022112384351794080}
   m_sideScrollController:
-    jumpForce: 10
+    jumpForce: 7
+    CoyoteTime: 0.2
+    JumpBuffer: 0.2
+  m_topDownController:
+    rotationSpeed: 720
   m_info:
-    MovementX: 0
-    MovementY: 0
+    MovementH: 0
+    MovementV: 0
     groundMoveSpeed: 10
     xscaleMult: 1
+    MaxFallSpeed: 14
+    FallSpeed: 0.1
+    CurrentFallSpeed: 0
+    FallMultiplier: 1.5
+    LowJumpMultiplier: 2
     IsGrounded: 0
+    JumpPressedThisFrame: 0
+    JumpPressedLastFrame: 0
     JumpPressed: 0
+    JumpDown: 0
     JumpReleased: 0
 --- !u!54 &7966750297532486440
 Rigidbody:
@@ -215,19 +229,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
---- !u!65 &4047457259851036051
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7966750297532486446}
-  m_Material: {fileID: 13400000, guid: 14526fcca76a748448501c757f0cda57, type: 2}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!95 &676900467
 Animator:
   serializedVersion: 3
@@ -247,6 +248,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!135 &8251521344676310790
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7966750297532486446}
+  m_Material: {fileID: 13400000, guid: 14526fcca76a748448501c757f0cda57, type: 2}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.65
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &7966750299069407934
 GameObject:
   m_ObjectHideFlags: 0

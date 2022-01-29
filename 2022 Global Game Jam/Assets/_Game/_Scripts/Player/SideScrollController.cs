@@ -7,7 +7,7 @@ using System.Linq;
 public class SideScrollController : PlayerStateController
 {
     [SerializeField] public float jumpForce;
-    private bool facingRight = true;
+    public bool facingRight = true;
 
     [SerializeField] public float CoyoteTime = 0.2f;
     private float CoyoteTimeCounter;
@@ -15,15 +15,11 @@ public class SideScrollController : PlayerStateController
     [SerializeField] public float JumpBuffer = 0.2f;
     private float JumpBufferCounter;
 
-    [SerializeField] public float IdleTime = 0.2f;
-    private float IdleCounter;
-
     public override void OnFixedUpdate()
     {
         CheckMoveDirection();
         TryJump();
         AnimateJump();
-        CheckForIdle();
     }
 
     private void CheckMoveDirection()
@@ -67,26 +63,21 @@ public class SideScrollController : PlayerStateController
         m_animator.SetFloat("verticalVelocity", animVal);
     }
 
-    private void CheckForIdle()
-    {
-        if (pInfo.IsGrounded && Mathf.Abs(pInfo.MovementH) < 0.1f)
-            IdleCounter -= Time.deltaTime;
-        else
-        {
-            IdleCounter = IdleTime;
-            m_animator.SetBool("isIdle", false);
-        }  
-
-        if(IdleTime < 0)
-            m_animator.SetBool("isIdle", true);
-    }
-
     void Flip()
     {
         facingRight = !facingRight;
         m_player.pInfo.xscaleMult *= -1;
         Vector3 Scaler = m_player.transform.localScale;
         Scaler.x *= -1;
+        m_player.transform.localScale = Scaler;
+    }
+
+    public void SetFacing(bool isFacingRight)
+    {
+        facingRight = isFacingRight;
+        m_player.pInfo.xscaleMult = (isFacingRight) ? 1 : -1;
+        Vector3 Scaler = m_player.transform.localScale;
+        Scaler.x = Mathf.Abs(m_player.transform.localScale.x) * m_player.pInfo.xscaleMult;
         m_player.transform.localScale = Scaler;
     }
 }
