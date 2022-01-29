@@ -13,6 +13,13 @@ public class LevelSlice : MonoBehaviour
 
     [SerializeField] private SliceDimentions m_depthLimits;
 
+    [SerializeField] private LevelManager m_manager;
+
+    public LevelManager manager
+    {
+        set { m_manager = value; }
+    }
+
     public SliceDimentions sliceDepth
     {
         get { return m_depthLimits; }
@@ -27,6 +34,15 @@ public class LevelSlice : MonoBehaviour
         SetDynamicObjectPosition(obj);
     }
 
+    private void Start()
+    {
+        foreach(var obj in m_staticObjects)
+        {
+            var transparencyController = obj.GetComponent<ObjectTransparencyController>();
+            if (transparencyController)
+                transparencyController.manager = m_manager;
+        }
+    }
 
     public void RemoveDynamicObject(GameObject obj)
     {
@@ -36,14 +52,37 @@ public class LevelSlice : MonoBehaviour
 
     public void SetSliceEnabled(bool enabled)
     {
-        foreach (var obj in m_dynamicObjects)
+        if(enabled)
         {
-            obj.SetActive(enabled);
-        }
+            foreach (var obj in m_dynamicObjects)
+            {
+                var mat = obj.GetComponent<ObjectTransparencyController>();
+                if(mat)
+                    mat.FadeIn(m_manager.cameraBlend);
+            }
 
-        foreach (var obj in m_staticObjects)
+            foreach (var obj in m_staticObjects)
+            {
+                var mat = obj.GetComponent<ObjectTransparencyController>();
+                if (mat)
+                    mat.FadeIn(m_manager.cameraBlend);
+            }
+        }
+        else
         {
-            obj.SetActive(enabled);
+            foreach (var obj in m_dynamicObjects)
+            {
+                var mat = obj.GetComponent<ObjectTransparencyController>();
+                if (mat)
+                    mat.FadeOut(m_manager.cameraBlend);
+            }
+
+            foreach (var obj in m_staticObjects)
+            {
+                var mat = obj.GetComponent<ObjectTransparencyController>();
+                if (mat)
+                    mat.FadeOut(m_manager.cameraBlend);
+            }
         }
     }
 
