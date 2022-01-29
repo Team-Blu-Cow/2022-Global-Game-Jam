@@ -22,7 +22,7 @@ public class PushableBlock : MonoBehaviour
         rb = GetComponent<Rigidbody>();
     }
 
-    void OnStateChange(blu.GameStateModule.RotationState state)
+    public void OnStateChange(blu.GameStateModule.RotationState state)
     {
         if (state == blu.GameStateModule.RotationState.SIDE_ON)
         {

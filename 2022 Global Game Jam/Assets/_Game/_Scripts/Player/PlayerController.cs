@@ -11,6 +11,10 @@ public class PlayerController : MonoBehaviour
 
     private Vector2 velocity;
 
+    [SerializeField] private bool m_isColliding = false;
+    [SerializeField] private bool m_isPulling = false;
+    [SerializeField] private GameObject m_collidingBox;
+
     [SerializeField] bool m_grounded = true;
 
     [SerializeField] bool m_topDown;
@@ -19,6 +23,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float m_gravity;
     [SerializeField] float m_moveSpeed;
     [SerializeField] Transform m_footSensor;
+
 
 
     private void OnEnable()
@@ -56,6 +61,9 @@ public class PlayerController : MonoBehaviour
 
         input_.PlayerControls.Flip.performed += _ => Flip();
         input_.PlayerControls.Jump.performed += _ => Jump();
+
+        input_.PlayerControls.Pull.performed += _ => OnPullPerformed();
+        input_.PlayerControls.Pull.canceled += _ => OnPullCanceled();
 
         input_.PlayerControls.Move.performed += ctx => Move(ctx.ReadValue<Vector2>());
         input_.PlayerControls.Move.canceled += _ => Move(new Vector2(0, 0));
@@ -105,11 +113,64 @@ public class PlayerController : MonoBehaviour
     {
         m_grounded = Physics.OverlapSphere(m_footSensor.position + new Vector3(0, 0f, 0.45f), 0.15f).Length > 1;
         m_grounded |= Physics.OverlapSphere(m_footSensor.position - new Vector3(0, 0f, 0.45f), 0.15f).Length > 1;
+
+        if (m_isPulling)
+            PullObject();
     }
 
     private void OnDrawGizmos()
     {
         Gizmos.DrawWireSphere(m_footSensor.position - new Vector3(0, 0f, 0.45f), 0.15f);
         Gizmos.DrawWireSphere(m_footSensor.position + new Vector3(0, 0f, 0.45f), 0.15f);
+    }
+
+    private void OnPullPerformed()
+    {
+        m_isPulling = true;
+    }
+
+    private void OnPullCanceled()
+    {
+        m_isPulling = false;
+
+        if (m_collidingBox != null)
+        {
+            if (m_topDown)
+            {
+                m_collidingBox.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotationY;
+            }
+            else
+            {
+                m_collidingBox.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationY | RigidbodyConstraints.FreezeRotationZ;
+            }
+        }
+    }
+
+    private void PullObject()
+    {
+        if (m_isColliding && m_collidingBox != null)
+        {
+            Rigidbody boxRb = m_collidingBox.GetComponent<Rigidbody>();
+            boxRb.velocity = m_rb.velocity;
+            boxRb.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationY | RigidbodyConstraints.FreezeRotationZ;
+        }
+    }
+
+    private void OnTriggerStay(Collider other)
+    {
+        if(other.gameObject.tag == "Pullable")
+        {
+            m_isColliding = true;
+            m_collidingBox = other.gameObject;
+        } 
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.tag == "Pullable")
+        {
+            m_isColliding = false;
+            m_collidingBox = null;
+        }
     }
 }
