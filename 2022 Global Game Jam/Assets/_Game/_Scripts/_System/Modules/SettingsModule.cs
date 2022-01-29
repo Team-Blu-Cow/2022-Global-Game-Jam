@@ -8,11 +8,11 @@ namespace blu
     {
         public struct AudioSettings
         {
-            public bool mute = false;
-            public float masterVolume = 0;
+            public bool mute;
+            public float masterVolume;
 
-            public float musicVolume = 0;
-            public float sfxVolume = 0;
+            public float musicVolume;
+            public float sfxVolume;
             public FMOD.Studio.Bus master;
             public FMOD.Studio.Bus music;
             public FMOD.Studio.Bus sfx;
