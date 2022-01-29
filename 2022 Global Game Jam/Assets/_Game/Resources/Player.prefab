@@ -203,8 +203,9 @@ MonoBehaviour:
   m_topDown: 0
   m_jumpForce: 75
   m_gravity: 9.8
-  m_moveSpeed: 1.5
+  m_moveSpeed: 3
   m_footSensor: {fileID: 7966750299069407935}
+  m_animator: {fileID: 0}
 --- !u!54 &7966750297532486440
 Rigidbody:
   m_ObjectHideFlags: 0
