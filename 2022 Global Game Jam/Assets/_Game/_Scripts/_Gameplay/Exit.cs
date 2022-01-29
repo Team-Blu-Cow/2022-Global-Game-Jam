@@ -24,7 +24,7 @@ public class Exit : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             //blu.App.GetModule<blu.SceneModule>().SwitchScene(SceneManager.GetActiveScene().name, blu.TransitionType.Fade, blu.LoadingBarType.BottomRightRadial);
-            m_levelEndCanvas.ShowCanvas();
+            m_levelEndCanvas.ShowCanvas(m_levelEndCanvas.GetComponentInChildren<Canvas>());
         }        
     }
 

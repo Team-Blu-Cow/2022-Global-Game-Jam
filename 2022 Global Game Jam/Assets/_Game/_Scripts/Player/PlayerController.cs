@@ -8,6 +8,8 @@ public class PlayerController : MonoBehaviour
     private Rigidbody m_rb;
 
     private Vector2 velocity;
+    bool m_paused = false;
+
     [SerializeField] bool m_grounded = true;
 
     [SerializeField] bool m_topDown;
@@ -16,6 +18,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float m_gravity;
     [SerializeField] float m_moveSpeed;
     [SerializeField] Transform m_footSensor;
+
+    [SerializeField] GameObject m_pauseGO;
 
     private void OnEnable()
     {
@@ -40,6 +44,19 @@ public class PlayerController : MonoBehaviour
         input_.PlayerControls.Move.performed += ctx => Move(ctx.ReadValue<Vector2>());
         input_.PlayerControls.Move.canceled += _ => Move(new Vector2(0,0));
 
+        input_.UI.Pause.performed += _ => PauseGame();
+
+    }
+
+    public void PauseGame()
+    {
+        var canvases = m_pauseGO.GetComponentsInChildren<Canvas>();
+
+        foreach (Canvas canvas in canvases)        
+            canvas.enabled = false;        
+
+        m_paused = !m_paused;
+        canvases[1].enabled = m_paused;
     }
 
     private void Jump()

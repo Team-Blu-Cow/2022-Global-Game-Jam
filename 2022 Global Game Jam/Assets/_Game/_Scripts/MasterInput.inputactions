@@ -1,5 +1,5 @@
 {
-    "name": "InputSystem",
+    "name": "MasterInput",
     "maps": [
         {
             "name": "Player Controls",
@@ -156,6 +156,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "Pause",
+                    "type": "Button",
+                    "id": "055fccca-48c0-4374-a9fd-27da47b590a1",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -233,6 +242,17 @@
                     "processors": "",
                     "groups": "KB+M",
                     "action": "Select",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "7ec85668-ef8e-4ad6-819f-d4a7b459c6cf",
+                    "path": "<Keyboard>/escape",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "KB+M",
+                    "action": "Pause",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

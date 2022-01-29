@@ -6,37 +6,44 @@ using UnityEngine.UI;
 
 public class LevelEndCanvas : MonoBehaviour
 {
-    private Canvas canvas;
+    //private Canvas canvas;
+
+    [SerializeField] List<string> m_swapScenes;
   
     private void Awake()
     {
-        canvas = GetComponent<Canvas>();
+        //canvas = GetComponent<Canvas>();
 
         Button[] buttons = GetComponentsInChildren<Button>();
 
         buttons[0].onClick.AddListener(Retry);
-        buttons[1].onClick.AddListener(SwapA);
-        buttons[2].onClick.AddListener(SwapA);
+        if (m_swapScenes.Count > 1)
+        {
+            buttons[1].onClick.AddListener(() => Swap(m_swapScenes[0]));
+            buttons[2].onClick.AddListener(() => Swap(m_swapScenes[1]));
+        }
 
-        canvas.enabled = false;
+        //canvas.enabled = false;
     }
 
-    private void SwapA()
+    public void Swap(string scene)
     {
-        blu.App.GetModule<blu.SceneModule>().SwitchScene("Sample Scene", blu.TransitionType.Fade, blu.LoadingBarType.BottomRightRadial);
+        blu.App.GetModule<blu.SceneModule>().SwitchScene(scene, blu.TransitionType.Fade, blu.LoadingBarType.BottomRightRadial);
+        //canvas.enabled = false;
     }
     
-    private void Retry()
+    public void Retry()
     {
         blu.App.GetModule<blu.SceneModule>().SwitchScene(SceneManager.GetActiveScene().name, blu.TransitionType.Fade, blu.LoadingBarType.BottomRightRadial);
+        //canvas.enabled = false;
     }
 
-    public void ShowCanvas()
+    public void ShowCanvas(Canvas canvas)
     {
         canvas.enabled = true;
     }
 
-    public void HideCanvas()
+    public void HideCanvas(Canvas canvas)
     {
         canvas.enabled = false;
     }
