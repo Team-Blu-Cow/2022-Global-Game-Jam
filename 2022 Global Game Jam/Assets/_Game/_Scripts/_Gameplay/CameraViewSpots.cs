@@ -19,6 +19,8 @@ public class CameraViewSpots : MonoBehaviour
 
         GameObject topDownCamObject = GameObject.Find("TopDownCam");
         topVirtualCamera = topDownCamObject.GetComponent<Cinemachine.CinemachineVirtualCamera>();
+
+        CameraMoveToTopDownView();
     }
 
     // Update is called once per frame

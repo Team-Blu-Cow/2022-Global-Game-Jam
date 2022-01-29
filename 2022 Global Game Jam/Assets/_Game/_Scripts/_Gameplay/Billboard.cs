@@ -15,9 +15,9 @@ public class Billboard : MonoBehaviour
 
     private void Start()
     {
-        var obj = GetComponentInChildren<MeshRenderer>().gameObject;
-        m_meshRenderer = obj.GetComponent<MeshRenderer>();
-        m_meshRenderer.material = m_material;
+        //var obj = GetComponentInChildren<MeshRenderer>().gameObject;
+        //m_meshRenderer = obj.GetComponent<MeshRenderer>();
+        //m_meshRenderer.material = m_material;
 
     }
 
