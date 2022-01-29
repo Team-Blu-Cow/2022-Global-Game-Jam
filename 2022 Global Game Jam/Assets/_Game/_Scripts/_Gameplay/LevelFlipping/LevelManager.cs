@@ -54,6 +54,10 @@ public class LevelManager : MonoBehaviour
 
     }
 
+    public void OnEnable()
+    {
+        blu.App.GetModule<blu.GameStateModule>().OnStateChangeEvent += OnStateChange;
+    }
     public void Start()
     {
         if (!m_dynamicObjects.Contains(m_playerObject))
@@ -71,10 +75,23 @@ public class LevelManager : MonoBehaviour
         SetDepthLimits();
     }
 
+    void OnStateChange(blu.GameStateModule.RotationState state)
+    {
+        if(state == blu.GameStateModule.RotationState.SIDE_ON)
+        {
+            m_currentSlice = FindClosestSlice(m_playerObject);
+            TransitionToSlice(m_currentSlice);
+        }
+        else if(state == blu.GameStateModule.RotationState.TOP_DOWN)
+        {
+            TransitionToTopDown();
+        }
+    }
+
     private void Update()
     {
         // this is temporary, just to demonstrate functionality
-        if(UnityEngine.InputSystem.Keyboard.current.qKey.wasReleasedThisFrame)
+        /*if(UnityEngine.InputSystem.Keyboard.current.qKey.wasReleasedThisFrame)
         {
             if(m_state == State.SideScroller)
             {
@@ -88,7 +105,7 @@ public class LevelManager : MonoBehaviour
                 m_state = State.SideScroller;
             }
             
-        }
+        }*/
     }
 
     void SetDepthLimits(float offset = 0)

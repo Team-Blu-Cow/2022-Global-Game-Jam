@@ -80,7 +80,12 @@ public class PlayerController : MonoBehaviour
 
     private void Flip()
     {
+        
         m_topDown = !m_topDown;
+        if (m_topDown)
+            blu.App.GetModule<blu.GameStateModule>().ChangeState(blu.GameStateModule.RotationState.TOP_DOWN);
+        else
+            blu.App.GetModule<blu.GameStateModule>().ChangeState(blu.GameStateModule.RotationState.SIDE_ON);
     }
 
     private void FixedUpdate()
