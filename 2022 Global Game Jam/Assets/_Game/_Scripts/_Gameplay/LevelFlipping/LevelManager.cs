@@ -217,6 +217,8 @@ public class LevelManager : MonoBehaviour
     private void SpawnWalls()
     {
         List<GameObject> walls = new List<GameObject>();
+        float wallHeight = 5.0f;
+
 
         for (int i = 0; i < 4; i++)
         {
@@ -228,18 +230,18 @@ public class LevelManager : MonoBehaviour
 
         //Top
         walls[0].transform.position = new Vector3(-1, 0, m_levelWidth / 2.0f);
-        walls[0].GetComponent<BoxCollider>().size = new Vector3(1, 5, m_levelWidth);
+        walls[0].GetComponent<BoxCollider>().size = new Vector3(1, wallHeight, m_levelWidth);
 
         //Left
         walls[1].transform.position = new Vector3(((m_slices.Count * m_sliceDepth) / 2.0f) - 0.5f, 0, -1);
-        walls[1].GetComponent<BoxCollider>().size = new Vector3((m_slices.Count * m_sliceDepth), 5, 1);
+        walls[1].GetComponent<BoxCollider>().size = new Vector3((m_slices.Count * m_sliceDepth), wallHeight, 1);
 
         //Bottom
         walls[2].transform.position = new Vector3((m_slices.Count * m_sliceDepth), 0, m_levelWidth / 2.0f);
-        walls[2].GetComponent<BoxCollider>().size = new Vector3(1, 5, m_levelWidth);
+        walls[2].GetComponent<BoxCollider>().size = new Vector3(1, wallHeight, m_levelWidth);
 
         //Right
         walls[3].transform.position = new Vector3(((m_slices.Count * m_sliceDepth) / 2.0f) - 0.5f, 0, m_levelWidth + 0.5f);
-        walls[3].GetComponent<BoxCollider>().size = new Vector3((m_slices.Count * m_sliceDepth), 5, 1);
+        walls[3].GetComponent<BoxCollider>().size = new Vector3((m_slices.Count * m_sliceDepth), wallHeight, 1);
     }
 }

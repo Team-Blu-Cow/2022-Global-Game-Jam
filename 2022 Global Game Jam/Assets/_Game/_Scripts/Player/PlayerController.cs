@@ -109,10 +109,16 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
-       if (m_topDown)
-           m_rb.velocity = new Vector3(-velocity.y* m_moveSpeed, m_rb.velocity.y, velocity.x* m_moveSpeed);
-       else
-           m_rb.velocity = new Vector3(0, m_rb.velocity.y, velocity.x*m_moveSpeed) ;
+        if (m_topDown)
+        {
+            m_rb.velocity = new Vector3(-velocity.y * m_moveSpeed, m_rb.velocity.y, velocity.x * m_moveSpeed);
+            m_rb.constraints = RigidbodyConstraints.FreezePositionY | RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationY | RigidbodyConstraints.FreezeRotationZ;
+        }
+        else
+        {
+            m_rb.velocity = new Vector3(0, m_rb.velocity.y, velocity.x * m_moveSpeed);
+            m_rb.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationY | RigidbodyConstraints.FreezeRotationZ;
+        }
 
         if (!m_grounded)
             m_rb.AddForce(new Vector2(0,-m_gravity), ForceMode.Impulse);
@@ -122,8 +128,9 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        m_grounded = Physics.OverlapSphere(m_footSensor.position + new Vector3(0, 0f, 0.45f), 0.15f).Length > 1;
-        m_grounded |= Physics.OverlapSphere(m_footSensor.position - new Vector3(0, 0f, 0.45f), 0.15f).Length > 1;
+        // Layer mask was added here as overlap spheres were detecting the trigger collider on the pushable blocks
+        m_grounded = Physics.OverlapSphere(m_footSensor.position + new Vector3(0, 0f, 0.45f), 0.15f, 1).Length > 1;
+        m_grounded |= Physics.OverlapSphere(m_footSensor.position - new Vector3(0, 0f, 0.45f), 0.15f, 1).Length > 1;
 
 
         if (m_isPulling)
@@ -153,7 +160,7 @@ public class PlayerController : MonoBehaviour
         {
             if (m_topDown)
             {
-                m_collidingBox.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotationY;
+                m_collidingBox.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ;
             }
             else
             {
@@ -177,8 +184,8 @@ public class PlayerController : MonoBehaviour
         if(other.gameObject.tag == "Pullable")
         {
             m_isColliding = true;
-            m_collidingBox = other.gameObject;
-        } 
+            m_collidingBox = other.gameObject.transform.parent.gameObject;
+        }
     }
 
     private void OnTriggerExit(Collider other)
