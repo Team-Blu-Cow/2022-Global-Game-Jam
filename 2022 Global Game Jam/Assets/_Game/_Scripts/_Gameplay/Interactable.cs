@@ -28,8 +28,6 @@ public class Interactable : MonoBehaviour
             obj.transform.SetParent(transform);
         }
 
-        SetPopUpSprite();
-
         // todo make the editable in Editor
         if(TryGetComponent<SphereCollider>(out SphereCollider collider))
         {
@@ -105,6 +103,9 @@ public class Interactable : MonoBehaviour
 
     private void SetPopUpSprite()
     {
+        Debug.Log(player.PlayerInput);
+
+
         int bindingIndex = player.PlayerInput.FindAction("Interact").GetBindingIndexForControl(player.PlayerInput.FindAction("Interact").controls[0]);
 
         string key = InputControlPath.ToHumanReadableString(
