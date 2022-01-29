@@ -31,6 +31,18 @@ public class PlayerController : MonoBehaviour
         input_.Disable();
     }
 
+
+    private void OnValidate()
+    {
+        var levelMagr = FindObjectOfType<LevelManager>();
+
+        if(levelMagr)
+        {
+            levelMagr.m_playerObject = this.gameObject;
+        }
+
+    }
+
     private void Awake()
     {
         input_ = new MasterInput();

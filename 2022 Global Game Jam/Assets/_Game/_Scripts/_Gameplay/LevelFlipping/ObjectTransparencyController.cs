@@ -16,6 +16,33 @@ public class ObjectTransparencyController : MonoBehaviour
         set { m_manager = value; }
     }
 
+    public void OnValidate()
+    {
+        if(m_manager == null)
+            m_manager = FindObjectOfType<LevelManager>();
+
+        if(m_manager)
+        {
+            int closest = m_manager.FindClosestSlice(this.gameObject);
+
+            for(int s = 0; s < m_manager.SliceCount(); s++)
+            {
+                LevelSlice slice = m_manager.GetSlice(s);
+                if (s == closest)
+                {
+                    slice.AddStaticObject(this.gameObject);
+                    transform.SetParent(slice.transform);
+                    transform.localPosition = new Vector3(0, transform.position.y, transform.position.z);
+
+                }
+                else
+                {
+                    slice.RemoveStaticObject(this.gameObject);
+                }
+            }
+        }
+    }
+
     public float opacity
     {
         get { return m_opacity; }
