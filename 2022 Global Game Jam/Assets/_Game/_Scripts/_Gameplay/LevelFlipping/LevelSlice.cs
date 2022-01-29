@@ -26,6 +26,15 @@ public class LevelSlice : MonoBehaviour
         set { m_depthLimits = value; }
     }
 
+    private void OnValidate()
+    {
+        for(int i = m_staticObjects.Count - 1; i >= 0; i--)
+        {
+            if(m_staticObjects[i] == null)
+                m_staticObjects.RemoveAt(i);
+        }
+    }
+
     public void AddDynamicObject(GameObject obj)
     {
         if (m_dynamicObjects.Contains(obj))
@@ -105,10 +114,13 @@ public class LevelSlice : MonoBehaviour
             SetDynamicObjectPosition(obj);
         }
 
-        foreach (var obj in m_staticObjects)
-        {
-            obj.transform.localPosition = new Vector3(0, obj.transform.position.y, obj.transform.position.z);
-        }
+        // this has been moved to ObjectTransparencyController::OnValidate()
+        // objects now automagicly change their parents when they are moved within the scene
+
+        //foreach (var obj in m_staticObjects)
+        //{
+        //    obj.transform.localPosition = new Vector3(0, obj.transform.position.y, obj.transform.position.z);
+        //}
     }
 
     public void SetDynamicObjectPosition(GameObject obj)
@@ -123,6 +135,23 @@ public class LevelSlice : MonoBehaviour
                 transform.position.y,
                 transform.position.z + (m_depthLimits.width*0.5f)), new Vector3(1, 1, m_depthLimits.width));
     }
+
+    public void AddStaticObject(GameObject obj)
+    {
+        if(m_staticObjects.Contains(obj) == false)
+        {
+            m_staticObjects.Add(obj);
+        }
+    }
+
+    public void RemoveStaticObject(GameObject obj)
+    {
+        if (m_staticObjects.Contains(obj))
+        {
+            m_staticObjects.Remove(obj);
+        }
+    }
+
 }
 
 public struct SliceDimentions

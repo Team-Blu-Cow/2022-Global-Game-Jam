@@ -13,7 +13,7 @@ namespace blu
         protected override void Awake()
         {
             base.Awake();
-            Read();
+            ReadDataFromDisk();
         }
 
         public override void Initialize()
@@ -42,12 +42,12 @@ namespace blu
                 levelsComplete.Add(level, complete);
             }
 
-            Write();
+            WriteDataToDisk();
         }
 
-        private void Read()
+        private void ReadDataFromDisk()
         {
-            //#TODO @Matthew: don't think this actually does anything
+            // @Matthew: don't think this actually does anything
             // it returns a dictionary of <int, bool> and nothing is using it?
             // The final parameter is a default value if ES3 cant find anything
             // but you're sending in the dictionary you want to assign to I think
@@ -56,10 +56,13 @@ namespace blu
             //
             // for now imma just fire the settings data to player prefs but ideally
             // it should be in here
-            ES3.Load(listKey, filename, levelsComplete);
+
+            // @Adam: apparently tired me cant fucking read docs,
+
+            levelsComplete = ES3.Load(listKey, filename, new Dictionary<int, bool>());
         }
 
-        private void Write()
+        private void WriteDataToDisk()
         {
             ES3.Save(listKey, levelsComplete, filename);
         }

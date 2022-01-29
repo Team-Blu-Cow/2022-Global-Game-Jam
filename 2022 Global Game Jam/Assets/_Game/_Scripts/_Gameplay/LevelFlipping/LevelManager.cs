@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEditor;
 using Cinemachine;
 
 public class LevelManager : MonoBehaviour
@@ -14,7 +15,7 @@ public class LevelManager : MonoBehaviour
     [SerializeField] private float m_levelWidth = 10;
 
     [SerializeField] private List<GameObject> m_dynamicObjects;
-    [SerializeField] private GameObject m_playerObject;
+    public GameObject m_playerObject;
 
     [SerializeField] private CinemachineBrain m_cameraBrain;
 
@@ -44,6 +45,11 @@ public class LevelManager : MonoBehaviour
             m_slices = new List<LevelSlice>(slices);
 
             SetDepthLimits(m_editorSliceDistance);
+        }
+
+        if(m_cameraBrain == null)
+        {
+            m_cameraBrain = FindObjectOfType<CinemachineBrain>();
         }
 
     }
@@ -129,7 +135,7 @@ public class LevelManager : MonoBehaviour
         }
     }
 
-    int FindClosestSlice(GameObject obj)
+    public int FindClosestSlice(GameObject obj)
     {
         float dist = float.MaxValue;
         int closest = 0;
@@ -169,6 +175,19 @@ public class LevelManager : MonoBehaviour
     private void OnDrawGizmos()
     {
         Gizmos.DrawLine(transform.position, transform.position + (Vector3.up * 10));
+    }
+
+    public LevelSlice GetSlice(int i)
+    {
+        if (i > m_slices.Count - 1)
+            return null;
+
+        return m_slices[i];
+    }
+
+    public int SliceCount()
+    {
+        return m_slices.Count;
     }
 
 }
