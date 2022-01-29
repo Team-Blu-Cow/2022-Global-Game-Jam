@@ -32,7 +32,14 @@ public class Interactable : MonoBehaviour
         if(TryGetComponent<SphereCollider>(out SphereCollider collider))
         {
             collider.isTrigger = true;
-            collider.radius = m_radius;
+            if(m_radius != 0)
+            {
+                collider.radius = m_radius;
+            }
+            else
+            {
+                collider.radius = 1;
+            }
         }
         else
         {
@@ -103,9 +110,6 @@ public class Interactable : MonoBehaviour
 
     private void SetPopUpSprite()
     {
-        Debug.Log(player.PlayerInput);
-
-
         int bindingIndex = player.PlayerInput.FindAction("Interact").GetBindingIndexForControl(player.PlayerInput.FindAction("Interact").controls[0]);
 
         string key = InputControlPath.ToHumanReadableString(

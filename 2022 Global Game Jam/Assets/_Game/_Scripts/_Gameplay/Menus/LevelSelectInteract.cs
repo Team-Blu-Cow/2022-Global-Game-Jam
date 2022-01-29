@@ -49,7 +49,11 @@ public class LevelSelectInteract : Interactable
         if (GameStateModule.CurrentRotationState == GameStateModule.RotationState.TOP_DOWN)
             return false;
 
-        Debug.Log("Interact");
+        if (!inSlice)
+            return false;
+
+        Debug.Log("Loading " + sceneName);
+        App.GetModule<SceneModule>().SwitchScene(sceneName, TransitionType.Fade, LoadingBarType.BottomRightRadial);
 
         return true;
     }
