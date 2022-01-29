@@ -23,6 +23,8 @@ namespace blu
 
             AddModule<InputModule>();
             AddModule<SceneModule>();
+            AddModule<SettingsModule>();
+            AddModule<GameStateModule>();
         }
 
         //<summary>

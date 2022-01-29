@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-1522629531109437993
+--- !u!114 &-3879342425743827973
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Desktop/Master.bank
+  m_Name: bank:/Master.strings.bank
   m_EditorClassIdentifier: 
-  Path: Assets/_Game/FMODBanks/Desktop/Master.bank
-  Name: Desktop/Master
-  StudioPath: bank:/Master
-  lastModified: 637790265550970979
+  Path: Assets/FMODAssets/Desktop/Master.strings.bank
+  Name: Master.strings
+  StudioPath: bank:/Master.strings
+  lastModified: 637790280673441075
   FileSizes:
   - Name: Desktop
-    Value: 1444
+    Value: 842
   Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
@@ -33,17 +33,17 @@ MonoBehaviour:
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
   EditorBanks:
-  - {fileID: 4625832239525360220}
-  - {fileID: -1522629531109437993}
+  - {fileID: -3879342425743827973}
+  - {fileID: 102251513846015432}
   EditorEvents: []
   EditorParameters: []
   MasterBanks:
-  - {fileID: -1522629531109437993}
+  - {fileID: 102251513846015432}
   StringsBanks:
-  - {fileID: 4625832239525360220}
-  cacheTime: 637790265550980985
+  - {fileID: -3879342425743827973}
+  cacheTime: 637790280673441075
   cacheVersion: 10
---- !u!114 &4625832239525360220
+--- !u!114 &102251513846015432
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -53,13 +53,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.strings.bank
+  m_Name: bank:/Master.bank
   m_EditorClassIdentifier: 
-  Path: Assets/_Game/FMODBanks/Desktop/Master.strings.bank
-  Name: Master.strings
-  StudioPath: bank:/Master.strings
-  lastModified: 637790265550980985
+  Path: Assets/FMODAssets/Desktop/Master.bank
+  Name: Master
+  StudioPath: bank:/Master
+  lastModified: 637790280673431065
   FileSizes:
   - Name: Desktop
-    Value: 830
+    Value: 1486
   Exists: 1
