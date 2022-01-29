@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class Interactable : MonoBehaviour
 {
@@ -21,14 +22,14 @@ public class Interactable : MonoBehaviour
         {
             GameObject obj = new GameObject();
             obj.name = "Interact Popup";
-            SpriteRenderer sr = obj.AddComponent<SpriteRenderer>();
+            obj.AddComponent<SpriteRenderer>();
             obj.AddComponent<Billboard>();
-
-            sr.sprite = Resources.Load<Sprite>("UI/Light/E_Key_Light");
 
             m_popUp = obj.transform;
             obj.transform.SetParent(transform);
         }
+
+        SetPopUpSprite();
     }
 
 
@@ -75,7 +76,7 @@ public class Interactable : MonoBehaviour
         Debug.Log("Left interactable");
         m_popUp.gameObject.SetActive(false);
     }
-    
+
     private void OpenPopUp()
     {
         Debug.Log("Open interactable");
@@ -85,6 +86,28 @@ public class Interactable : MonoBehaviour
         else
             m_popUp.localPosition = new Vector3(-0.6f, 0.6f, 0.6f);
 
+        SetPopUpSprite();
+
         m_popUp.gameObject.SetActive(true);
+    }
+
+    private void SetPopUpSprite()
+    {
+        int bindingIndex = player.PlayerInput.FindAction("Interact").GetBindingIndexForControl(player.PlayerInput.FindAction("Interact").controls[0]);
+
+        string key = InputControlPath.ToHumanReadableString(
+            player.PlayerInput.FindAction("Interact").bindings[bindingIndex].effectivePath,
+            InputControlPath.HumanReadableStringOptions.OmitDevice);
+
+        SpriteRenderer sr = m_popUp.GetComponent<SpriteRenderer>();
+
+        if (sr.sprite.name != "UI/Light/" + key + "_Key_Light")
+        {
+            Sprite keySprite = Resources.Load<Sprite>("UI/Light/" + key + "_Key_Light");
+            if (keySprite)
+                sr.sprite = keySprite;
+            else
+                sr.sprite = Resources.Load<Sprite>("UI/Light/E_Key_Light");
+        }
     }
 }
