@@ -31,7 +31,7 @@ public class PushableBlock : MonoBehaviour
         }
         else if (state == blu.GameStateModule.RotationState.TOP_DOWN)
         {
-            rb.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ;
+            //rb.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ;
         }
     }
 }

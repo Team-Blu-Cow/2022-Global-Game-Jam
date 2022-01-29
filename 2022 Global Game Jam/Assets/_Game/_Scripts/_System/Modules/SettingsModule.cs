@@ -37,7 +37,7 @@ namespace blu
         public override void Initialize() //
         {
             base.Initialize();
-            InitAudioSettings();
+            //InitAudioSettings();
             InitGraphicsSettings();
         }
 

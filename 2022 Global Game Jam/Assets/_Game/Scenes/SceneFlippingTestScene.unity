@@ -431,7 +431,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_material: {fileID: 1955299247}
-  m_tmPro: {fileID: 0}
+  m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
   m_type: 0
@@ -692,7 +692,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_material: {fileID: 1928220194}
-  m_tmPro: {fileID: 0}
+  m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
   m_type: 0
@@ -1149,7 +1149,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_material: {fileID: 1955299247}
-  m_tmPro: {fileID: 0}
+  m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
   m_type: 0
@@ -1262,7 +1262,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_material: {fileID: 2138720860}
-  m_tmPro: {fileID: 0}
+  m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
   m_type: 0
@@ -1375,7 +1375,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_material: {fileID: 164875265}
-  m_tmPro: {fileID: 0}
+  m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
   m_type: 0
@@ -1488,7 +1488,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_material: {fileID: 136302705}
-  m_tmPro: {fileID: 0}
+  m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
   m_type: 0
@@ -1525,7 +1525,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_material: {fileID: 1955299247}
-  m_tmPro: {fileID: 0}
+  m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
   m_type: 0
@@ -1714,7 +1714,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_material: {fileID: 535625366}
-  m_tmPro: {fileID: 0}
+  m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
   m_type: 0
@@ -1768,15 +1768,6 @@ MonoBehaviour:
   - {fileID: 967530154}
   m_dynamicObjects:
   - {fileID: 726805693}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 2825776924845836945, guid: 5e302d999291be24e95ccce7b887bb0b, type: 3}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   m_manager: {fileID: 1688983994}
 --- !u!1 &1112821381
 GameObject:
@@ -1892,7 +1883,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_material: {fileID: 1955299247}
-  m_tmPro: {fileID: 0}
+  m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
   m_type: 0
@@ -2111,7 +2102,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_material: {fileID: 1955299247}
-  m_tmPro: {fileID: 0}
+  m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
   m_type: 0
@@ -2484,7 +2475,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_material: {fileID: 1955299247}
-  m_tmPro: {fileID: 0}
+  m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
   m_type: 0
@@ -2773,7 +2764,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_material: {fileID: 719553322}
-  m_tmPro: {fileID: 0}
+  m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
   m_type: 0
@@ -2972,7 +2963,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_material: {fileID: 183011258}
-  m_tmPro: {fileID: 0}
+  m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
   m_type: 0
@@ -3085,7 +3076,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_material: {fileID: 636699494}
-  m_tmPro: {fileID: 0}
+  m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
   m_type: 0
@@ -3136,7 +3127,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_material: {fileID: 1955299247}
-  m_tmPro: {fileID: 0}
+  m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
   m_type: 0

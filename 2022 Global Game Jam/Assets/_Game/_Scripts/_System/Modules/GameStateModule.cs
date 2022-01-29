@@ -37,6 +37,11 @@ namespace blu
             if(OnStateChangeEvent != null)
             {
                 OnStateChangeEvent(state);
+                
+            }
+
+            if (LateOnStateChangeEvent != null)
+            {
                 LateOnStateChangeEvent(state);
             }
         }
