@@ -68,7 +68,7 @@ public class LevelManager : MonoBehaviour
     private void Update()
     {
         // this is temporary, just to demonstrate functionality
-        if(UnityEngine.InputSystem.Keyboard.current.spaceKey.wasReleasedThisFrame)
+        if(UnityEngine.InputSystem.Keyboard.current.qKey.wasReleasedThisFrame)
         {
             if(m_state == State.SideScroller)
             {
@@ -98,7 +98,7 @@ public class LevelManager : MonoBehaviour
 
     void TransitionToSlice(int index)
     {
-        // TODO: Move camera
+        // Move camera
         Camera.main.gameObject.GetComponent<CameraViewSpots>().CameraMoveToSideView();
 
         // Align Objects to slice
@@ -116,7 +116,7 @@ public class LevelManager : MonoBehaviour
 
     void TransitionToTopDown()
     {
-        // TODO: Move camera
+        // Move camera
         Camera.main.gameObject.GetComponent<CameraViewSpots>().CameraMoveToTopDownView();
 
         // Enable all other slices
