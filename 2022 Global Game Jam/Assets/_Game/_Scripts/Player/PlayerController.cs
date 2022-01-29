@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    private InputSystem input_;
+    private MasterInput input_;
     private Rigidbody m_rb;
 
     private Vector2 velocity;
@@ -29,7 +29,7 @@ public class PlayerController : MonoBehaviour
 
     private void Awake()
     {
-        input_ = new InputSystem();
+        input_ = new MasterInput();
         m_rb = GetComponent<Rigidbody>();
 
         Physics.gravity = new Vector3(0, -m_gravity, 0);
