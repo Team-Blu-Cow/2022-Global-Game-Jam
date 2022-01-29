@@ -26,5 +26,16 @@ namespace blu
 
         public static GameState CurrentGameState { get => m_currentGameState; }
         public static RotationState CurrentRotationState { get => m_currentRotationState; }
+
+        public delegate void OnStateChangeDelegate(RotationState state);
+        public OnStateChangeDelegate OnStateChangeEvent;
+
+        public void ChangeState(RotationState state)
+        {
+            if(OnStateChangeEvent != null)
+            {
+                OnStateChangeEvent(state);
+            }
+        }
     }
 }
