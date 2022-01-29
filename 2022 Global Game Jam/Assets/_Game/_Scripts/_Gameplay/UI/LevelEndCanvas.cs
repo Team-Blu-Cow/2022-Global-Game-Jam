@@ -17,21 +17,29 @@ public class LevelEndCanvas : MonoBehaviour
         Button[] buttons = GetComponentsInChildren<Button>();
 
         buttons[0].onClick.AddListener(Retry);
-        if (m_swapScenes.Count > 1)
+        buttons[1].onClick.AddListener(() => NextLevel());
+
+        if (m_swapScenes.Count > 0)
         {
-            buttons[1].onClick.AddListener(() => Swap(m_swapScenes[0]));
-            buttons[2].onClick.AddListener(() => Swap(m_swapScenes[1]));
+            buttons[2].onClick.AddListener(() => Swap(m_swapScenes[0]));
         }
     }
 
     public void Swap(string scene)
     {
-        blu.App.GetModule<blu.SceneModule>().SwitchScene(scene, blu.TransitionType.Fade, blu.LoadingBarType.BottomRightRadial);        
+        blu.App.GetModule<blu.SceneModule>().SwitchScene(scene, blu.TransitionType.Fade, blu.LoadingBarType.BottomRightRadial);
     }
     
     public void Retry()
     {
         blu.App.GetModule<blu.SceneModule>().SwitchScene(SceneManager.GetActiveScene().name, blu.TransitionType.Fade, blu.LoadingBarType.BottomRightRadial);
+    }
+
+    public void NextLevel()
+    {
+       string sceneName =SceneUtility.GetScenePathByBuildIndex(SceneManager.GetActiveScene().buildIndex + 1);
+
+        blu.App.GetModule<blu.SceneModule>().SwitchScene(sceneName, blu.TransitionType.Fade, blu.LoadingBarType.BottomRightRadial);
     }
 
     public void ShowCanvas(Canvas canvas)

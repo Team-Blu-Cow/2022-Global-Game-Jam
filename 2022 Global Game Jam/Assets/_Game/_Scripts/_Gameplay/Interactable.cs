@@ -28,8 +28,6 @@ public class Interactable : MonoBehaviour
             obj.transform.SetParent(transform);
         }
 
-        SetPopUpSprite();
-
         // todo make the editable in Editor
         if(TryGetComponent<SphereCollider>(out SphereCollider collider))
         {
