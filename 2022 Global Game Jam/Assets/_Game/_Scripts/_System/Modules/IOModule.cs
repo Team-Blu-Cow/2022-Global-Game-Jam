@@ -6,10 +6,9 @@ namespace blu
 {
     public class IOModule : Module
     {
-
-        const string filename = "savedata.blu";
-        const string listKey = "LevelsComplete";
-        Dictionary<int, bool> levelsComplete;
+        private const string filename = "savedata.blu";
+        private const string listKey = "LevelsComplete";
+        private Dictionary<int, bool> levelsComplete;
 
         protected override void Awake()
         {
@@ -24,7 +23,7 @@ namespace blu
 
         public bool IsLevelCompleted(int level)
         {
-            if(levelsComplete.ContainsKey(level))
+            if (levelsComplete.ContainsKey(level))
             {
                 return levelsComplete[level];
             }
@@ -48,6 +47,15 @@ namespace blu
 
         private void Read()
         {
+            //#TODO @Matthew: don't think this actually does anything
+            // it returns a dictionary of <int, bool> and nothing is using it?
+            // The final parameter is a default value if ES3 cant find anything
+            // but you're sending in the dictionary you want to assign to I think
+            // also having a function called read/write is a little ambiguous
+            // when this module also deals with loading/saving settings from disk
+            //
+            // for now imma just fire the settings data to player prefs but ideally
+            // it should be in here
             ES3.Load(listKey, filename, levelsComplete);
         }
 
@@ -55,6 +63,5 @@ namespace blu
         {
             ES3.Save(listKey, levelsComplete, filename);
         }
-
     }
 }
