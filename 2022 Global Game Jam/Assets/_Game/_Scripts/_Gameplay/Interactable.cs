@@ -5,11 +5,10 @@ using UnityEngine.InputSystem;
 
 public class Interactable : MonoBehaviour
 {
-
-
     Transform m_popUp;
     [SerializeField] bool sideView;
     [SerializeField, HideInInspector] PlayerController player;
+    [SerializeField] float m_radius;
 
     protected bool inTrigger = false;
 
@@ -35,17 +34,21 @@ public class Interactable : MonoBehaviour
         if(TryGetComponent<SphereCollider>(out SphereCollider collider))
         {
             collider.isTrigger = true;
-            collider.radius = 1;
+            collider.radius = m_radius;
         }
         else
         {
             SphereCollider sc = gameObject.AddComponent<SphereCollider>();
             sc.isTrigger = true;
             sc.radius = 1;
-        }
-        
+        }        
     }
 
+    private void Update()
+    {
+        if (TryGetComponent<SphereCollider>(out SphereCollider collider))        
+            collider.radius = m_radius;        
+    }
 
     private void Awake()
     {
