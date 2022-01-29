@@ -29,12 +29,15 @@ namespace blu
 
         public delegate void OnStateChangeDelegate(RotationState state);
         public OnStateChangeDelegate OnStateChangeEvent;
+        public OnStateChangeDelegate LateOnStateChangeEvent;
 
         public void ChangeState(RotationState state)
         {
+            m_currentRotationState = state;
             if(OnStateChangeEvent != null)
             {
                 OnStateChangeEvent(state);
+                LateOnStateChangeEvent(state);
             }
         }
     }

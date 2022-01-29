@@ -100,6 +100,9 @@ public class LevelSelectController : MonoBehaviour
 
         for (int i = 0; i < textCount; i++)
         {
+
+            LevelSelectInteract interact = m_textMeshes[i].gameObject.GetComponentInParent<LevelSelectInteract>();
+
             int levelNum = (m_pageNum * textCount) + i + 1;
             m_textMeshes[i].text = "Level " + levelNum.ToString();
 
@@ -114,10 +117,17 @@ public class LevelSelectController : MonoBehaviour
                     m_colors[i] = levelUncompleted;
                 }
 
+                if(interact)
+                {
+                    interact.sceneName = SceneNameFromIndex(levelNum);
+                    interact.enabled = true;
+                }
+
             }
             else
             {
                 m_colors[i] = levelNotFound;
+                interact.enabled = false;
             }
         }
     }

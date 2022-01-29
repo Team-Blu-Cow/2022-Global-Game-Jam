@@ -11,9 +11,9 @@ public class Interactable : MonoBehaviour
     [SerializeField] bool sideView;
     [SerializeField, HideInInspector] PlayerController player;
 
-    bool inTrigger = false;
+    protected bool inTrigger = false;
 
-    private void OnValidate()
+    protected virtual void OnValidate()
     {
         player = FindObjectOfType<PlayerController>();
 
@@ -30,6 +30,20 @@ public class Interactable : MonoBehaviour
         }
 
         SetPopUpSprite();
+
+        // todo make the editable in Editor
+        if(TryGetComponent<SphereCollider>(out SphereCollider collider))
+        {
+            collider.isTrigger = true;
+            collider.radius = 1;
+        }
+        else
+        {
+            SphereCollider sc = gameObject.AddComponent<SphereCollider>();
+            sc.isTrigger = true;
+            sc.radius = 1;
+        }
+        
     }
 
 
@@ -48,12 +62,10 @@ public class Interactable : MonoBehaviour
         if (!inTrigger)
             return false;
 
-        Debug.Log("Applied interactable");
-
         return true;
     }
 
-    private void OnTriggerEnter(Collider other)
+    protected virtual void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
@@ -62,7 +74,7 @@ public class Interactable : MonoBehaviour
         }
     }
 
-    private void OnTriggerExit(Collider other)
+    protected virtual void OnTriggerExit(Collider other)
     {
         if (other.CompareTag("Player"))
         {
@@ -71,16 +83,13 @@ public class Interactable : MonoBehaviour
         }
     }
 
-    private void ClosePopUp()
+    protected virtual void ClosePopUp()
     {
-        Debug.Log("Left interactable");
         m_popUp.gameObject.SetActive(false);
     }
 
-    private void OpenPopUp()
+    protected virtual void OpenPopUp()
     {
-        Debug.Log("Open interactable");
-
         if (sideView)
             m_popUp.localPosition = new Vector3(0.6f, 0.6f , 0.6f);
         else
