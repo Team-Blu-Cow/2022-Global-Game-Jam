@@ -58,6 +58,12 @@ public class LevelManager : MonoBehaviour
     {
         blu.App.GetModule<blu.GameStateModule>().OnStateChangeEvent += OnStateChange;
     }
+
+    public void OnDisable()
+    {
+        blu.App.GetModule<blu.GameStateModule>().OnStateChangeEvent -= OnStateChange;
+    }
+
     public void Start()
     {
         if (!m_dynamicObjects.Contains(m_playerObject))
