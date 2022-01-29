@@ -1,18 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class Interactable : MonoBehaviour
 {
-
-
     Transform m_popUp;
     [SerializeField] bool sideView;
     [SerializeField, HideInInspector] PlayerController player;
+    [SerializeField] float m_radius;
 
-    bool inTrigger = false;
+    protected bool inTrigger = false;
 
-    private void OnValidate()
+    protected virtual void OnValidate()
     {
         player = FindObjectOfType<PlayerController>();
 
@@ -21,16 +21,39 @@ public class Interactable : MonoBehaviour
         {
             GameObject obj = new GameObject();
             obj.name = "Interact Popup";
-            SpriteRenderer sr = obj.AddComponent<SpriteRenderer>();
+            obj.AddComponent<SpriteRenderer>();
             obj.AddComponent<Billboard>();
-
-            sr.sprite = Resources.Load<Sprite>("UI/Light/E_Key_Light");
 
             m_popUp = obj.transform;
             obj.transform.SetParent(transform);
         }
+
+        // todo make the editable in Editor
+        if(TryGetComponent<SphereCollider>(out SphereCollider collider))
+        {
+            collider.isTrigger = true;
+            if(m_radius != 0)
+            {
+                collider.radius = m_radius;
+            }
+            else
+            {
+                collider.radius = 1;
+            }
+        }
+        else
+        {
+            SphereCollider sc = gameObject.AddComponent<SphereCollider>();
+            sc.isTrigger = true;
+            sc.radius = 1;
+        }        
     }
 
+    private void Update()
+    {
+        if (TryGetComponent<SphereCollider>(out SphereCollider collider))        
+            collider.radius = m_radius;        
+    }
 
     private void Awake()
     {
@@ -47,12 +70,10 @@ public class Interactable : MonoBehaviour
         if (!inTrigger)
             return false;
 
-        Debug.Log("Applied interactable");
-
         return true;
     }
 
-    private void OnTriggerEnter(Collider other)
+    protected virtual void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
@@ -61,7 +82,7 @@ public class Interactable : MonoBehaviour
         }
     }
 
-    private void OnTriggerExit(Collider other)
+    protected virtual void OnTriggerExit(Collider other)
     {
         if (other.CompareTag("Player"))
         {
@@ -70,21 +91,40 @@ public class Interactable : MonoBehaviour
         }
     }
 
-    private void ClosePopUp()
+    protected virtual void ClosePopUp()
     {
-        Debug.Log("Left interactable");
         m_popUp.gameObject.SetActive(false);
     }
-    
-    private void OpenPopUp()
-    {
-        Debug.Log("Open interactable");
 
+    protected virtual void OpenPopUp()
+    {
         if (sideView)
             m_popUp.localPosition = new Vector3(0.6f, 0.6f , 0.6f);
         else
             m_popUp.localPosition = new Vector3(-0.6f, 0.6f, 0.6f);
 
+        SetPopUpSprite();
+
         m_popUp.gameObject.SetActive(true);
+    }
+
+    private void SetPopUpSprite()
+    {
+        int bindingIndex = player.PlayerInput.FindAction("Interact").GetBindingIndexForControl(player.PlayerInput.FindAction("Interact").controls[0]);
+
+        string key = InputControlPath.ToHumanReadableString(
+            player.PlayerInput.FindAction("Interact").bindings[bindingIndex].effectivePath,
+            InputControlPath.HumanReadableStringOptions.OmitDevice);
+
+        SpriteRenderer sr = m_popUp.GetComponent<SpriteRenderer>();
+
+        if (sr.sprite.name != "UI/Light/" + key + "_Key_Light")
+        {
+            Sprite keySprite = Resources.Load<Sprite>("UI/Light/" + key + "_Key_Light");
+            if (keySprite)
+                sr.sprite = keySprite;
+            else
+                sr.sprite = Resources.Load<Sprite>("UI/Light/E_Key_Light");
+        }
     }
 }

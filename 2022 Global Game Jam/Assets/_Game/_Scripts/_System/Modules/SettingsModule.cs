@@ -54,9 +54,9 @@ namespace blu
                 audioSettings.music = FMODUnity.RuntimeManager.GetBus("bus:/Master/Music");
                 audioSettings.sfx = FMODUnity.RuntimeManager.GetBus("bus:/Master/SFX");
             }
-            catch
+            catch(System.Exception ex)
             {
-                Debug.LogError("Settings Module: FMOD Failed");
+                Debug.LogError(ex.Message);
             }
 
         }

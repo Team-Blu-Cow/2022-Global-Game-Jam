@@ -24,6 +24,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float m_moveSpeed;
     [SerializeField] Transform m_footSensor;
 
+    [SerializeField] private Animator m_animator;
+
 
 
     private void OnEnable()
@@ -46,6 +48,8 @@ public class PlayerController : MonoBehaviour
             levelMagr.m_playerObject = this.gameObject;
         }
 
+        m_animator = GetComponent<Animator>();
+
     }
 
     private void Awake()
@@ -53,6 +57,13 @@ public class PlayerController : MonoBehaviour
         SetUpInput();
 
         m_rb = GetComponent<Rigidbody>();
+
+
+        if (m_topDown)
+            blu.App.GetModule<blu.GameStateModule>().ChangeState(blu.GameStateModule.RotationState.TOP_DOWN);
+        else
+            blu.App.GetModule<blu.GameStateModule>().ChangeState(blu.GameStateModule.RotationState.SIDE_ON);
+
     }
 
     public void SetUpInput()
@@ -114,8 +125,13 @@ public class PlayerController : MonoBehaviour
         m_grounded = Physics.OverlapSphere(m_footSensor.position + new Vector3(0, 0f, 0.45f), 0.15f).Length > 1;
         m_grounded |= Physics.OverlapSphere(m_footSensor.position - new Vector3(0, 0f, 0.45f), 0.15f).Length > 1;
 
+
         if (m_isPulling)
             PullObject();
+
+        m_animator.SetBool("topDown", m_topDown);
+        m_animator.SetFloat("moveSpeedZ", Mathf.Abs( velocity.x));
+
     }
 
     private void OnDrawGizmos()
