@@ -5,16 +5,35 @@ using UnityEngine;
 public class Interactable : MonoBehaviour
 {
 
+
     Transform m_popUp;
     [SerializeField] bool sideView;
-    [SerializeField] PlayerController player;
+    [SerializeField, HideInInspector] PlayerController player;
 
     bool inTrigger = false;
+
+    private void OnValidate()
+    {
+        player = FindObjectOfType<PlayerController>();
+
+        m_popUp = transform.Find("Interact Popup");
+        if(m_popUp == null)
+        {
+            GameObject obj = new GameObject();
+            obj.name = "Interact Popup";
+            SpriteRenderer sr = obj.AddComponent<SpriteRenderer>();
+            obj.AddComponent<Billboard>();
+
+            sr.sprite = Resources.Load<Sprite>("UI/Light/E_Key_Light");
+
+            m_popUp = obj.transform;
+            obj.transform.SetParent(transform);
+        }
+    }
 
 
     private void Awake()
     {
-        m_popUp = GetComponentsInChildren<Transform>()[1];
         m_popUp.gameObject.SetActive(false);
     }
 
@@ -62,9 +81,9 @@ public class Interactable : MonoBehaviour
         Debug.Log("Open interactable");
 
         if (sideView)
-            m_popUp.localPosition = new Vector3(0.6f, m_popUp.localPosition.y , m_popUp.localPosition.z);
+            m_popUp.localPosition = new Vector3(0.6f, 0.6f , 0.6f);
         else
-            m_popUp.localPosition = new Vector3(-0.6f, m_popUp.localPosition.y , m_popUp.localPosition.z);
+            m_popUp.localPosition = new Vector3(-0.6f, 0.6f, 0.6f);
 
         m_popUp.gameObject.SetActive(true);
     }
