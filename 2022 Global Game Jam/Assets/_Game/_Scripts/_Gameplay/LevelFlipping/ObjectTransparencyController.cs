@@ -1,10 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class ObjectTransparencyController : MonoBehaviour
 {
     [SerializeField, HideInInspector] private Material m_material;
+    [SerializeField, HideInInspector] private TextMeshPro m_tmPro;
+
 
     [SerializeField] private float m_opacity = 1;
     [SerializeField] private float m_targetOpacity = 1;
@@ -49,6 +52,10 @@ public class ObjectTransparencyController : MonoBehaviour
                         slice.AddDynamicObject(gameObject);
                     }
 
+                    if (TryGetComponent<RectTransform>(out RectTransform component))
+                    {
+                        component.localPosition = new Vector3(0, component.position.y, component.position.z);
+                    }
                 }
                 else
                 {
@@ -57,6 +64,8 @@ public class ObjectTransparencyController : MonoBehaviour
                 }
             }
         }
+
+        m_tmPro = GetComponentInChildren<TextMeshPro>();
     }
 
     public float opacity
@@ -73,13 +82,23 @@ public class ObjectTransparencyController : MonoBehaviour
 
     private void Start()
     {
-        m_material = GetComponent<MeshRenderer>().material;
+        if (TryGetComponent<MeshRenderer>(out MeshRenderer meshRenderer))
+        {
+            m_material = meshRenderer.material;
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-       m_material.SetFloat("_Opacity", m_opacity);
+        if(m_material)
+            m_material.SetFloat("_Opacity", m_opacity);
+
+        if(m_tmPro)
+        {
+            Color color = m_tmPro.color;
+            m_tmPro.color = new Color(color.r, color.b, color.g, m_opacity);
+        }
     }
 
     public void FadeOut(float time)
