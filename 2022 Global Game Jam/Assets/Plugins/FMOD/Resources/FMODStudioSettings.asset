@@ -534,10 +534,10 @@ MonoBehaviour:
   m_Name: FMODStudioSettings
   m_EditorClassIdentifier: 
   SwitchSettingsMigration: 1
-  HasSourceProject: 0
-  HasPlatforms: 0
+  HasSourceProject: 1
+  HasPlatforms: 1
   sourceProjectPath: 
-  sourceBankPath: Assets/FMODAssets
+  sourceBankPath: C:/Uni Work/.GameJam/2022-Global-Game-Jam/2022 Global Game Jam/Assets/FMODAssets
   SourceBankPathUnformatted: 
   BankRefreshCooldown: 5
   ShowBankRefreshWindow: 1
