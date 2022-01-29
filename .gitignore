@@ -76,4 +76,6 @@ sysinfo.txt
 # Log files can be ignored.
 fmod_editor.log
 
-*EditorUserSettings.asset
+**/Editor/FMODStudioCache.asset
+**/EditorUserSettings.asset
+
