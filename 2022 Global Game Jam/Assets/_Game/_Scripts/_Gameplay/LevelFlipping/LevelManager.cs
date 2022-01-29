@@ -69,6 +69,7 @@ public class LevelManager : MonoBehaviour
 
         AlignDynamicObjects();
         SetDepthLimits();
+        SpawnWalls();
     }
 
     private void Update()
@@ -190,4 +191,11 @@ public class LevelManager : MonoBehaviour
         return m_slices.Count;
     }
 
+    private void SpawnWalls()
+    {
+        GameObject wall = new GameObject();
+        wall.transform.parent = this.transform;
+        wall.AddComponent<BoxCollider>();
+        wall.GetComponent<BoxCollider>().size = new Vector3(1, 1, 1);
+    }
 }
