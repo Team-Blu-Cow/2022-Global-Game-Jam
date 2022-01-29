@@ -24,23 +24,16 @@ public class CameraViewSpots : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (IsSideView)
-        {
-            CameraMoveToSideView();
-        }
-        else
-        {
-            CameraMoveToTopDownView();
-        }
+
     }
 
-    void CameraMoveToTopDownView()
+    public void CameraMoveToTopDownView()
     {
         sideVirtualCamera.Priority = secondaryPriority;
         topVirtualCamera.Priority = primaryPriority;
     }
 
-    void CameraMoveToSideView()
+    public void CameraMoveToSideView()
     {
         sideVirtualCamera.Priority = primaryPriority;
         topVirtualCamera.Priority = secondaryPriority;

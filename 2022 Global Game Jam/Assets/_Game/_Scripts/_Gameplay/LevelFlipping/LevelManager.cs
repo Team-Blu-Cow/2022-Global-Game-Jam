@@ -78,6 +78,7 @@ public class LevelManager : MonoBehaviour
     void TransitionToSlice(int index)
     {
         // TODO: Move camera
+        Camera.main.gameObject.GetComponent<CameraViewSpots>().CameraMoveToSideView();
 
         // Align Objects to slice
         AlignDynamicObjects();
@@ -95,6 +96,7 @@ public class LevelManager : MonoBehaviour
     void TransitionToTopDown()
     {
         // TODO: Move camera
+        Camera.main.gameObject.GetComponent<CameraViewSpots>().CameraMoveToTopDownView();
 
         // Enable all other slices
         foreach (var slice in m_slices)
