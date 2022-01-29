@@ -8,23 +8,20 @@ public class PlayerController : MonoBehaviour
     public MasterInput PlayerInput => input_;
 
     private Rigidbody m_rb;
+    public Rigidbody rb => m_rb;
 
-    private Vector2 velocity;
-
-    [SerializeField] bool m_grounded = true;
-
-    [SerializeField] bool m_topDown;
-
-    [SerializeField] float m_jumpForce;
-    [SerializeField] float m_gravity;
-    [SerializeField] float m_moveSpeed;
     [SerializeField] Transform m_footSensor;
+    [SerializeField] float m_checkRadius;
 
-    [SerializeField] private Animator m_animator;
+    [SerializeField, HideInInspector] private Animator m_animator;
 
-    private SideScrollController m_sideScrollController;
-    private TopDownController m_topDownController;
+    [SerializeField] private SideScrollController m_sideScrollController = new SideScrollController();
+    [SerializeField] private TopDownController m_topDownController = new TopDownController();
 
+    bool m_topDown = true;
+
+    [SerializeField] private PlayerInfo m_info;
+    public PlayerInfo pInfo => m_info;
 
     private void OnEnable()
     {
@@ -52,34 +49,28 @@ public class PlayerController : MonoBehaviour
         SetUpInput();
 
         m_rb = GetComponent<Rigidbody>();
+
+        m_sideScrollController.Init(this, m_animator);
+
+        m_topDownController.Init(this, m_animator);
+
+        
     }
 
     public void SetUpInput()
     {
         input_ = new MasterInput();
 
-        /*input_.PlayerControls.Flip.performed += _ => Flip();
-        input_.PlayerControls.Jump.performed += _ => Jump();
+        input_.PlayerControls.Flip.performed += _ => Flip();
 
-        input_.PlayerControls.Move.performed += ctx => Move(ctx.ReadValue<Vector2>());
-        input_.PlayerControls.Move.canceled += _ => Move(new Vector2(0, 0));*/
+        //input_.PlayerControls.Jump.performed += _ => ;
+        //input_.PlayerControls.Jump.canceled += _ => ;
+
+        //input_.PlayerControls.Move.performed += ctx => Move(ctx.ReadValue<Vector2>());
+        //input_.PlayerControls.Move.canceled += _ => Move(new Vector2(0, 0));
 
         input_.UI.Disable();
         input_.PlayerControls.Enable();
-    }
-
-    private void Jump()
-    {
-        /*if (!m_topDown && m_grounded)
-        {
-            m_rb.AddForce(new Vector3(0, m_jumpForce, 0), ForceMode.Impulse);
-            m_grounded = false;
-        }*/
-    }
-
-    private void Move(Vector2 in_velocity)
-    {
-        /*velocity = in_velocity;*/
     }
 
     private void Flip()
@@ -91,32 +82,102 @@ public class PlayerController : MonoBehaviour
             blu.App.GetModule<blu.GameStateModule>().ChangeState(blu.GameStateModule.RotationState.SIDE_ON);
     }
 
+    private float maxVelocity = float.MinValue;
+    private float minVelocity = float.MaxValue;
+
+    private void Update()
+    {
+        if (m_rb.velocity.y > maxVelocity)
+        {
+            maxVelocity = m_rb.velocity.y;
+        }
+
+        if (m_rb.velocity.y < minVelocity)
+        {
+            minVelocity = m_rb.velocity.y;
+        }
+
+        ConsoleProDebug.Watch("RigidBody velocity.y", m_rb.velocity.y.ToString());
+        ConsoleProDebug.Watch("RigidBody max velocity.y", maxVelocity.ToString());
+        ConsoleProDebug.Watch("RigidBody min velocity.y", minVelocity.ToString());
+        CollectInput();
+    }
+
     private void FixedUpdate()
     {
-       if (m_topDown)
-           m_rb.velocity = new Vector3(-velocity.y* m_moveSpeed, m_rb.velocity.y, velocity.x* m_moveSpeed);
-       else
-           m_rb.velocity = new Vector3(0, m_rb.velocity.y, velocity.x*m_moveSpeed) ;
+        CheckForGrounded();
+        ApplyUniversalMovement();
+       
+        if (m_topDown)
+            m_topDownController.OnFixedUpdate();
+        else
+            m_sideScrollController.OnFixedUpdate();
 
-        if (!m_grounded)
-            m_rb.AddForce(new Vector2(0,-m_gravity), ForceMode.Impulse);
+        m_animator.SetBool("topDown", m_topDown);
 
     }
 
-    // Update is called once per frame
-    void Update()
+    void CollectInput()
     {
-        m_grounded = Physics.OverlapSphere(m_footSensor.position + new Vector3(0, 0f, 0.45f), 0.15f).Length > 1;
-        m_grounded |= Physics.OverlapSphere(m_footSensor.position - new Vector3(0, 0f, 0.45f), 0.15f).Length > 1;
+        Vector2 vec = input_.PlayerControls.Move.ReadValue<Vector2>();
 
-        m_animator.SetBool("topDown", m_topDown);
-        m_animator.SetFloat("moveSpeedZ", Mathf.Abs( velocity.x));
+        m_info.MovementH = vec.x;
+        m_info.MovementV = vec.y;
+
+        m_info.JumpPressedLastFrame = m_info.JumpPressedThisFrame;
+        m_info.JumpPressedThisFrame = input_.PlayerControls.Jump.WasPressedThisFrame();
+
+        m_info.JumpPressed = m_info.JumpPressedThisFrame || m_info.JumpPressedLastFrame;
+
+        m_info.JumpDown = input_.PlayerControls.Jump.IsPressed();
+        m_info.JumpReleased = input_.PlayerControls.Jump.WasReleasedThisFrame();
+    }
+
+    void CheckForGrounded()
+    {
+        m_info.IsGrounded = Physics.OverlapSphere(m_footSensor.position, m_checkRadius).Length > 1;
+        m_info.IsGrounded |= Physics.OverlapSphere(m_footSensor.position + new Vector3(0, 0f, -0.19f), m_checkRadius).Length > 1;
+        m_info.IsGrounded |= Physics.OverlapSphere(m_footSensor.position + new Vector3(0, 0f, 0.19f), m_checkRadius).Length > 1;
+
+        m_animator.SetBool("isGrounded", m_info.IsGrounded);
+    }
+
+    void ApplyUniversalMovement()
+    {
+        // calculate gravity
+        float fallMult = 1;
+        if (m_info.IsGrounded)
+            m_info.CurrentFallSpeed = 0;
+        else
+        {
+            if (rb.velocity.y < 0)
+            {
+                fallMult = m_info.FallMultiplier;
+            }
+
+            m_info.CurrentFallSpeed =  m_info.CurrentFallSpeed + (m_info.FallSpeed* fallMult);
+
+            
+        }
+
+        float velY = Mathf.Max(m_rb.velocity.y - m_info.CurrentFallSpeed, -m_info.MaxFallSpeed);
+
+        // calculate horizontal movement speed
+        m_rb.velocity = new Vector3(m_rb.velocity.x, velY, m_info.MovementH * m_info.groundMoveSpeed);
+
+        // update animations
+        m_animator.SetFloat("moveSpeedH", Mathf.Abs(m_info.MovementH));
     }
 
     private void OnDrawGizmos()
     {
-        Gizmos.DrawWireSphere(m_footSensor.position - new Vector3(0, 0f, 0.45f), 0.15f);
-        Gizmos.DrawWireSphere(m_footSensor.position + new Vector3(0, 0f, 0.45f), 0.15f);
+        
+        Gizmos.color = (m_info.IsGrounded)? Color.green : Color.red;
+        Gizmos.DrawWireSphere(m_footSensor.position, m_checkRadius);
+        Gizmos.DrawWireSphere(m_footSensor.position + new Vector3(0, 0f, -0.19f), m_checkRadius);
+        Gizmos.DrawWireSphere(m_footSensor.position + new Vector3(0, 0f, 0.19f), m_checkRadius);
+        Gizmos.color = Color.white;
+        //Gizmos.DrawWireSphere(m_footSensor.position , 0.15f);
     }
 }
 
@@ -124,6 +185,16 @@ public class PlayerStateController
 {
     protected PlayerController m_player;
     protected Animator m_animator;
+
+    public PlayerInfo pInfo
+    {
+        get { return m_player.pInfo; }
+    }
+
+    public Rigidbody rb
+    {
+        get { return m_player.rb; }
+    }
 
     public void Init(PlayerController p, Animator a)
     {
@@ -136,21 +207,30 @@ public class PlayerStateController
 }
 
 [System.Serializable]
-public class PlayerInputCollector
+public class PlayerInfo
 {
-    public float X;
+    public float MovementH;
+    public float MovementV;
+
+    [SerializeField] public float groundMoveSpeed;
+
+    public float xscaleMult = 1;
+
+    [SerializeField] public float MaxFallSpeed = 5f;
+    [SerializeField] public float FallSpeed = 0.1f;
+    public float CurrentFallSpeed;
+
+    [SerializeField] public float FallMultiplier = 2.5f;
+    [SerializeField] public float LowJumpMultiplier = 2f;
+
+    public bool IsGrounded;
+
+    [HideInInspector] public bool JumpPressedThisFrame;
+    [HideInInspector] public bool JumpPressedLastFrame;
+    public bool JumpPressed;
+
     public bool JumpDown;
-    public bool JumpUp;
+    public bool JumpReleased;
 
-    public bool JumpingThisFrame;
-    public bool LandingThisFrame;
-
-    public Vector3 Velocity;
-
-    public Vector3 RawMovement;
-
-    public bool Grounded;
-
-    private Vector3 _lastPosition;
-    private float _currentHorizontalSpeed, _currentVerticalSpeed;
+    
 }
