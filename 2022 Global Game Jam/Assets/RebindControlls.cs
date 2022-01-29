@@ -6,20 +6,35 @@ using TMPro;
 
 public class RebindControlls : MonoBehaviour
 {
-    [SerializeField] private InputActionReference jumpAction;
-    [SerializeField] private MasterInput input;
-    [SerializeField] private TMP_Text displayText;
-    [SerializeField] private GameObject startRebindGO;
-    [SerializeField] private GameObject waitingGO;
+    private TMP_Text displayText;
+    private GameObject startRebindGO;
+    private GameObject waitingGO;
+
+    [SerializeField] private PlayerController player;
+    [SerializeField] private string actionRebind;
 
     private InputActionRebindingExtensions.RebindingOperation rebindingOperation;
+
+    private void Awake()
+    {
+        displayText = GetComponentsInChildren<TextMeshProUGUI>()[1];
+        startRebindGO = transform.GetChild(0).gameObject;
+        waitingGO = transform.GetChild(1).gameObject;
+    }
+
+    private void Start()
+    {
+        UpdateUI();        
+    }
 
     public void StartRebind()
     {
         startRebindGO.SetActive(false);
         waitingGO.SetActive(true);
 
-        rebindingOperation = jumpAction.action.PerformInteractiveRebinding()
+        player.input_.FindAction(actionRebind).actionMap.Disable();
+
+        rebindingOperation = player.input_.FindAction(actionRebind).PerformInteractiveRebinding()
             .WithControlsExcluding("Mouse")
             .OnMatchWaitForAnother(0.1f)
             .OnComplete(operation => RebindComplete())
@@ -28,14 +43,23 @@ public class RebindControlls : MonoBehaviour
 
     private void RebindComplete()
     {
-        int bindingIndex = jumpAction.action.GetBindingIndexForControl(jumpAction.action.controls[0]);
+        player.input_.FindAction(actionRebind).actionMap.Disable();
 
-        displayText.text = InputControlPath.ToHumanReadableString(
-            jumpAction.action.bindings[bindingIndex].effectivePath,
-            InputControlPath.HumanReadableStringOptions.OmitDevice);
+        UpdateUI();
 
         rebindingOperation.Dispose();
 
+        player.input_.FindAction(actionRebind).actionMap.Enable();
+    }
+
+    private void UpdateUI()
+    {
+        int bindingIndex = player.input_.FindAction(actionRebind).GetBindingIndexForControl(player.input_.FindAction(actionRebind).controls[0]);
+
+        displayText.text = InputControlPath.ToHumanReadableString(
+            player.input_.FindAction(actionRebind).bindings[bindingIndex].effectivePath,
+            InputControlPath.HumanReadableStringOptions.OmitDevice);
+        
         startRebindGO.SetActive(true);
         waitingGO.SetActive(false);
     }
