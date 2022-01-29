@@ -11,9 +11,9 @@ public class PlayerController : MonoBehaviour
 
     private Vector2 velocity;
 
-    [SerializeField] private bool m_isColliding = false;
-    [SerializeField] private bool m_isPulling = false;
-    [SerializeField] private GameObject m_collidingBox;
+    private bool m_isColliding = false;
+    private bool m_isPulling = false;
+    private GameObject m_collidingBox;
 
     [SerializeField] bool m_grounded = true;
 
