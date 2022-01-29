@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public MasterInput input_;
+    private MasterInput input_;
+    public MasterInput PlayerInput => input_;
+
     private Rigidbody m_rb;
 
     private Vector2 velocity;
-    bool m_paused = false;
 
     [SerializeField] bool m_grounded = true;
 
@@ -19,7 +20,6 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float m_moveSpeed;
     [SerializeField] Transform m_footSensor;
 
-    [SerializeField] GameObject m_pauseGO;
 
     private void OnEnable()
     {
@@ -33,31 +33,23 @@ public class PlayerController : MonoBehaviour
 
     private void Awake()
     {
-        input_ = new MasterInput();
+        SetUpInput();
 
         m_rb = GetComponent<Rigidbody>();
+    }
 
-        Physics.gravity = new Vector3(0, -m_gravity, 0);
+    public void SetUpInput()
+    {
+        input_ = new MasterInput();
 
         input_.PlayerControls.Flip.performed += _ => Flip();
         input_.PlayerControls.Jump.performed += _ => Jump();
 
         input_.PlayerControls.Move.performed += ctx => Move(ctx.ReadValue<Vector2>());
-        input_.PlayerControls.Move.canceled += _ => Move(new Vector2(0,0));
+        input_.PlayerControls.Move.canceled += _ => Move(new Vector2(0, 0));
 
-        input_.UI.Pause.performed += _ => PauseGame();
-
-    }
-
-    public void PauseGame()
-    {
-        var canvases = m_pauseGO.GetComponentsInChildren<Canvas>();
-
-        foreach (Canvas canvas in canvases)        
-            canvas.enabled = false;        
-
-        m_paused = !m_paused;
-        canvases[1].enabled = m_paused;
+        input_.UI.Disable();
+        input_.PlayerControls.Enable();
     }
 
     private void Jump()
@@ -94,14 +86,13 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-            m_grounded = Physics.OverlapSphere(m_footSensor.position + new Vector3(0, 0f, 0.45f), 0.15f).Length > 1;
-            m_grounded |= Physics.OverlapSphere(m_footSensor.position - new Vector3(0, 0f, 0.45f), 0.15f).Length > 1;
+        m_grounded = Physics.OverlapSphere(m_footSensor.position + new Vector3(0, 0f, 0.45f), 0.15f).Length > 1;
+        m_grounded |= Physics.OverlapSphere(m_footSensor.position - new Vector3(0, 0f, 0.45f), 0.15f).Length > 1;
     }
 
     private void OnDrawGizmos()
     {
         Gizmos.DrawWireSphere(m_footSensor.position - new Vector3(0, 0f, 0.45f), 0.15f);
         Gizmos.DrawWireSphere(m_footSensor.position + new Vector3(0, 0f, 0.45f), 0.15f);
-
     }
 }

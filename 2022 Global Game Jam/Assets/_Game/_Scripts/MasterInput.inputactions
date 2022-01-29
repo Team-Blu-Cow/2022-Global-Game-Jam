@@ -31,6 +31,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "Pause",
+                    "type": "Button",
+                    "id": "367ded96-5171-4cfc-b890-8b78c1eab360",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -132,6 +141,17 @@
                     "action": "Jump",
                     "isComposite": false,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "7f07fddb-6158-4c1d-8add-9bba1078f59e",
+                    "path": "<Keyboard>/escape",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "KB+M",
+                    "action": "Pause",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         },
@@ -140,7 +160,7 @@
             "id": "79d6db4e-a921-4eb2-89d9-c2abdc32c5d3",
             "actions": [
                 {
-                    "name": "Move",
+                    "name": "Navigate",
                     "type": "Value",
                     "id": "2a64f6fa-12a4-4fdf-bacd-3887cea2eb80",
                     "expectedControlType": "Vector2",
@@ -175,7 +195,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Move",
+                    "action": "Navigate",
                     "isComposite": true,
                     "isPartOfComposite": false
                 },
@@ -186,7 +206,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "KB+M",
-                    "action": "Move",
+                    "action": "Navigate",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -197,7 +217,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "KB+M",
-                    "action": "Move",
+                    "action": "Navigate",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -208,7 +228,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "KB+M",
-                    "action": "Move",
+                    "action": "Navigate",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -219,7 +239,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "KB+M",
-                    "action": "Move",
+                    "action": "Navigate",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },

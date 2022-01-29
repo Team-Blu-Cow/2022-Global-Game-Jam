@@ -22,20 +22,16 @@ public class LevelEndCanvas : MonoBehaviour
             buttons[1].onClick.AddListener(() => Swap(m_swapScenes[0]));
             buttons[2].onClick.AddListener(() => Swap(m_swapScenes[1]));
         }
-
-        //canvas.enabled = false;
     }
 
     public void Swap(string scene)
     {
-        blu.App.GetModule<blu.SceneModule>().SwitchScene(scene, blu.TransitionType.Fade, blu.LoadingBarType.BottomRightRadial);
-        //canvas.enabled = false;
+        blu.App.GetModule<blu.SceneModule>().SwitchScene(scene, blu.TransitionType.Fade, blu.LoadingBarType.BottomRightRadial);        
     }
     
     public void Retry()
     {
         blu.App.GetModule<blu.SceneModule>().SwitchScene(SceneManager.GetActiveScene().name, blu.TransitionType.Fade, blu.LoadingBarType.BottomRightRadial);
-        //canvas.enabled = false;
     }
 
     public void ShowCanvas(Canvas canvas)
