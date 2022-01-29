@@ -2629,6 +2629,7 @@ GameObject:
   - component: {fileID: 1038867277}
   - component: {fileID: 1038867276}
   - component: {fileID: 1038867275}
+  - component: {fileID: 1038867278}
   m_Layer: 5
   m_Name: Screen Resolution
   m_TagString: Untagged
@@ -2756,6 +2757,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1038867273}
   m_CullTransparentMesh: 1
+--- !u!114 &1038867278
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1038867273}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 488a9d0a973550146a37dddb973138d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1079783190
 GameObject:
   m_ObjectHideFlags: 0
@@ -4168,6 +4181,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1548458842}
   - component: {fileID: 1548458843}
+  - component: {fileID: 1548458844}
   m_Layer: 5
   m_Name: SFX Slider
   m_TagString: Untagged
@@ -4248,6 +4262,19 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1548458844
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1548458841}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d311bb0cb67b824b9fa45b9f0524a7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _type: 2
 --- !u!1 &1551041038
 GameObject:
   m_ObjectHideFlags: 0
@@ -4392,6 +4419,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1725589255}
   - component: {fileID: 1725589256}
+  - component: {fileID: 1725589257}
   m_Layer: 5
   m_Name: Music Slider
   m_TagString: Untagged
@@ -4472,6 +4500,19 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1725589257
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1725589254}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d311bb0cb67b824b9fa45b9f0524a7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _type: 3
 --- !u!1 &1831782083
 GameObject:
   m_ObjectHideFlags: 0
@@ -4797,6 +4838,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1969571347}
   - component: {fileID: 1969571348}
+  - component: {fileID: 1969571349}
   m_Layer: 5
   m_Name: Master Slider
   m_TagString: Untagged
@@ -4877,6 +4919,19 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1969571349
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1969571346}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d311bb0cb67b824b9fa45b9f0524a7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _type: 1
 --- !u!1 &1999699176
 GameObject:
   m_ObjectHideFlags: 0
