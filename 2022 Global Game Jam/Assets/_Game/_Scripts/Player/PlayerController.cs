@@ -34,6 +34,7 @@ public class PlayerController : MonoBehaviour
     private void Awake()
     {
         input_ = new MasterInput();
+
         m_rb = GetComponent<Rigidbody>();
 
         Physics.gravity = new Vector3(0, -m_gravity, 0);
