@@ -19,7 +19,9 @@ public class LevelSelectController : MonoBehaviour
     blu.IOModule iomodule;
 
     [SerializeField] List<TextMeshPro> m_textMeshes = new List<TextMeshPro>();
-    
+    [SerializeField] List<TextMeshPro> m_sideTextMeshes = new List<TextMeshPro>();
+
+
     // the color is flickering and i dont know why
     // we will set these colors in the update loop
     List<Color> m_colors = new List<Color>();
@@ -73,6 +75,7 @@ public class LevelSelectController : MonoBehaviour
             c.b = m_colors[i].b;
 
             m_textMeshes[i].color = c;
+            m_sideTextMeshes[i].color = c;
         }
     }
 
@@ -105,6 +108,7 @@ public class LevelSelectController : MonoBehaviour
 
             int levelNum = (m_pageNum * textCount) + i + 1;
             m_textMeshes[i].text = "Level " + levelNum.ToString();
+            m_sideTextMeshes[i].text = "Level " + levelNum.ToString();
 
             if(LevelExists(levelNum))
             {

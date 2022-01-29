@@ -12,7 +12,7 @@ public class CameraViewSpots : MonoBehaviour
     private int secondaryPriority = 9;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         GameObject sideCamObject = GameObject.Find("SideCam");
         sideVirtualCamera = sideCamObject.GetComponent<Cinemachine.CinemachineVirtualCamera>();
