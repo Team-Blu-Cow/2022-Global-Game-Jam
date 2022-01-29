@@ -20,6 +20,9 @@ namespace blu
             else instance = this;
 
             DontDestroyOnLoad(gameObject);
+
+            AddModule<InputModule>();
+            AddModule<SceneModule>();
         }
 
         //<summary>
