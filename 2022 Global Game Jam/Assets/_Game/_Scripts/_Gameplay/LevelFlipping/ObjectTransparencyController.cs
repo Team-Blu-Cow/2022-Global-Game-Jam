@@ -11,6 +11,14 @@ public class ObjectTransparencyController : MonoBehaviour
 
     private LevelManager m_manager;
 
+    public enum ObjectType
+    {
+        Static,
+        Dynamic
+    }
+
+    [SerializeField] private ObjectType m_type = ObjectType.Static;
+
     public LevelManager manager
     {
         set { m_manager = value; }
@@ -30,14 +38,22 @@ public class ObjectTransparencyController : MonoBehaviour
                 LevelSlice slice = m_manager.GetSlice(s);
                 if (s == closest)
                 {
-                    slice.AddStaticObject(this.gameObject);
-                    transform.SetParent(slice.transform);
-                    transform.localPosition = new Vector3(0, transform.position.y, transform.position.z);
+                    if (m_type == ObjectType.Static)
+                    {
+                        slice.AddStaticObject(this.gameObject);
+                        transform.SetParent(slice.transform);
+                        transform.localPosition = new Vector3(0, transform.position.y, transform.position.z);
+                    }
+                    else
+                    {
+                        slice.AddDynamicObject(gameObject);
+                    }
 
                 }
                 else
                 {
                     slice.RemoveStaticObject(this.gameObject);
+                    slice.RemoveDynamicObject(gameObject);
                 }
             }
         }
