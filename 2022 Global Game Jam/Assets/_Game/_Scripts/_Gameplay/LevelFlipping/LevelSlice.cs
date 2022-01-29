@@ -152,6 +152,16 @@ public class LevelSlice : MonoBehaviour
         }
     }
 
+    public bool HasObject(GameObject obj)
+    {
+        if (m_staticObjects.Contains(obj))
+            return true;
+        if (m_dynamicObjects.Contains(obj))
+            return true;
+
+        return false;
+    }
+
 }
 
 public struct SliceDimentions
