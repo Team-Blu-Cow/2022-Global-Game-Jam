@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Cinemachine;
 
 public class LevelManager : MonoBehaviour
 {
@@ -14,6 +15,12 @@ public class LevelManager : MonoBehaviour
 
     [SerializeField] private List<GameObject> m_dynamicObjects;
     [SerializeField] private GameObject m_playerObject;
+
+    [SerializeField] private CinemachineBrain m_cameraBrain;
+
+    [SerializeField] private float m_cameraBlend = 1;
+    public float cameraBlend
+    { get { return m_cameraBlend; } }
 
     // this is temp stuff, change this to work with game state singletons (or whatever they are called)
     enum State
@@ -29,16 +36,31 @@ public class LevelManager : MonoBehaviour
         {
             LevelSlice[] slices = transform.GetComponentsInChildren<LevelSlice>();
 
+            foreach(var slice in slices)
+            {
+                slice.manager = this;
+            }
+
             m_slices = new List<LevelSlice>(slices);
 
             SetDepthLimits(m_editorSliceDistance);
         }
+
     }
 
     public void Start()
     {
         if (!m_dynamicObjects.Contains(m_playerObject))
             m_dynamicObjects.Add(m_playerObject);
+        foreach (var obj in m_dynamicObjects)
+        {
+            var transparencyController = obj.GetComponent<ObjectTransparencyController>();
+            if (transparencyController)
+                transparencyController.manager = this;
+        }
+
+        m_cameraBrain.m_DefaultBlend.m_Time = m_cameraBlend;
+
         AlignDynamicObjects();
         SetDepthLimits();
     }
@@ -98,9 +120,12 @@ public class LevelManager : MonoBehaviour
         Camera.main.gameObject.GetComponent<CameraViewSpots>().CameraMoveToTopDownView();
 
         // Enable all other slices
+        int i = 0;
         foreach (var slice in m_slices)
         {
-            slice.SetSliceEnabled(true);
+            if (i != m_currentSlice)
+                slice.SetSliceEnabled(true);
+            i++;
         }
     }
 
