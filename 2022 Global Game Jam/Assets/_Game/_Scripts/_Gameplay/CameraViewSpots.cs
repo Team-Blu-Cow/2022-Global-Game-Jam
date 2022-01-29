@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class CameraViewSpots : MonoBehaviour
 {
-    [SerializeField] private bool IsSideView = true;
-
     private Cinemachine.CinemachineVirtualCamera sideVirtualCamera;
     private Cinemachine.CinemachineVirtualCamera topVirtualCamera;
     private int primaryPriority = 10;
@@ -21,12 +19,6 @@ public class CameraViewSpots : MonoBehaviour
         topVirtualCamera = topDownCamObject.GetComponent<Cinemachine.CinemachineVirtualCamera>();
 
         CameraMoveToTopDownView();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
     }
 
     public void CameraMoveToTopDownView()
