@@ -101,8 +101,7 @@ public class LevelSelectController : MonoBehaviour
         for (int i = 0; i < textCount; i++)
         {
 
-            LevelSelectInteract interact = m_textMeshes[i].gameObject.GetComponent<LevelSelectInteract>();
-
+            LevelSelectInteract interact = m_textMeshes[i].gameObject.GetComponentInParent<LevelSelectInteract>();
 
             int levelNum = (m_pageNum * textCount) + i + 1;
             m_textMeshes[i].text = "Level " + levelNum.ToString();
