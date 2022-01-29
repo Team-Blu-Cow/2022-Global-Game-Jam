@@ -15,6 +15,7 @@ public class Interactable : MonoBehaviour
     private void Awake()
     {
         m_popUp = GetComponentsInChildren<Transform>()[1];
+        m_popUp.gameObject.SetActive(false);
     }
 
     private void Start()
@@ -22,7 +23,7 @@ public class Interactable : MonoBehaviour
         player.PlayerInput.PlayerControls.Interact.performed += _ => OnInteract();        
     }
 
-    protected bool OnInteract()
+    virtual protected bool OnInteract()
     {
         if (!inTrigger)
             return false;
