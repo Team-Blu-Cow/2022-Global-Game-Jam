@@ -193,9 +193,30 @@ public class LevelManager : MonoBehaviour
 
     private void SpawnWalls()
     {
-        GameObject wall = new GameObject();
-        wall.transform.parent = this.transform;
-        wall.AddComponent<BoxCollider>();
-        wall.GetComponent<BoxCollider>().size = new Vector3(1, 1, 1);
+        List<GameObject> walls = new List<GameObject>();
+
+        for (int i = 0; i < 4; i++)
+        {
+            walls.Add(new GameObject());
+            walls[i].name = "Wall " + (i + 1);
+            walls[i].transform.parent = this.transform;
+            walls[i].AddComponent<BoxCollider>();
+        }
+
+        //Top
+        walls[0].transform.position = new Vector3(-1, 0, m_levelWidth / 2.0f);
+        walls[0].GetComponent<BoxCollider>().size = new Vector3(1, 5, m_levelWidth);
+
+        //Left
+        walls[1].transform.position = new Vector3(((m_slices.Count * m_sliceDepth) / 2.0f) - 0.5f, 0, -1);
+        walls[1].GetComponent<BoxCollider>().size = new Vector3((m_slices.Count * m_sliceDepth), 5, 1);
+
+        //Bottom
+        walls[2].transform.position = new Vector3((m_slices.Count * m_sliceDepth), 0, m_levelWidth / 2.0f);
+        walls[2].GetComponent<BoxCollider>().size = new Vector3(1, 5, m_levelWidth);
+
+        //Right
+        walls[3].transform.position = new Vector3(((m_slices.Count * m_sliceDepth) / 2.0f) - 0.5f, 0, m_levelWidth + 0.5f);
+        walls[3].GetComponent<BoxCollider>().size = new Vector3((m_slices.Count * m_sliceDepth), 5, 1);
     }
 }

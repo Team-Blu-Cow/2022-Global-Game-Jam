@@ -433,6 +433,7 @@ MonoBehaviour:
   m_material: {fileID: 1955299247}
   m_opacity: 1
   m_targetOpacity: 1
+  m_type: 0
 --- !u!65 &140784640
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -692,6 +693,7 @@ MonoBehaviour:
   m_material: {fileID: 1928220194}
   m_opacity: 1
   m_targetOpacity: 1
+  m_type: 0
 --- !u!21 &535625366
 Material:
   serializedVersion: 6
@@ -1136,7 +1138,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 112
+  m_Constraints: 32
   m_CollisionDetection: 0
 --- !u!114 &726805695
 MonoBehaviour:
@@ -1153,6 +1155,7 @@ MonoBehaviour:
   m_material: {fileID: 719553322}
   m_opacity: 1
   m_targetOpacity: 1
+  m_type: 1
 --- !u!65 &726805696
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1223,11 +1226,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 726805693}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 4}
+  m_LocalPosition: {x: 8.6, y: 0, z: 4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1079991759}
-  m_RootOrder: 2
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &831208138
 GameObject:
@@ -1340,6 +1343,7 @@ MonoBehaviour:
   m_material: {fileID: 1955299247}
   m_opacity: 1
   m_targetOpacity: 1
+  m_type: 0
 --- !u!1 &831837313
 GameObject:
   m_ObjectHideFlags: 0
@@ -1451,6 +1455,7 @@ MonoBehaviour:
   m_material: {fileID: 2138720860}
   m_opacity: 1
   m_targetOpacity: 1
+  m_type: 0
 --- !u!1 &854399680
 GameObject:
   m_ObjectHideFlags: 0
@@ -1562,6 +1567,7 @@ MonoBehaviour:
   m_material: {fileID: 164875265}
   m_opacity: 1
   m_targetOpacity: 1
+  m_type: 0
 --- !u!1 &856027683
 GameObject:
   m_ObjectHideFlags: 0
@@ -1673,6 +1679,7 @@ MonoBehaviour:
   m_material: {fileID: 136302705}
   m_opacity: 1
   m_targetOpacity: 1
+  m_type: 0
 --- !u!1 &948259812
 GameObject:
   m_ObjectHideFlags: 0
@@ -1708,6 +1715,7 @@ MonoBehaviour:
   m_material: {fileID: 1955299247}
   m_opacity: 1
   m_targetOpacity: 1
+  m_type: 0
 --- !u!65 &948259814
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1895,6 +1903,7 @@ MonoBehaviour:
   m_material: {fileID: 535625366}
   m_opacity: 1
   m_targetOpacity: 1
+  m_type: 0
 --- !u!1 &1079991758
 GameObject:
   m_ObjectHideFlags: 0
@@ -1925,7 +1934,6 @@ Transform:
   m_Children:
   - {fileID: 967530155}
   - {fileID: 1212461974}
-  - {fileID: 726805699}
   m_Father: {fileID: 1688983995}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1944,8 +1952,8 @@ MonoBehaviour:
   m_staticObjects:
   - {fileID: 1212461973}
   - {fileID: 967530154}
+  m_dynamicObjects:
   - {fileID: 726805693}
-  m_dynamicObjects: []
   m_manager: {fileID: 1688983994}
 --- !u!1 &1112821381
 GameObject:
@@ -2063,6 +2071,7 @@ MonoBehaviour:
   m_material: {fileID: 1955299247}
   m_opacity: 1
   m_targetOpacity: 1
+  m_type: 0
 --- !u!65 &1212461976
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2280,6 +2289,7 @@ MonoBehaviour:
   m_material: {fileID: 1955299247}
   m_opacity: 1
   m_targetOpacity: 1
+  m_type: 0
 --- !u!65 &1433439721
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2651,6 +2661,7 @@ MonoBehaviour:
   m_material: {fileID: 1955299247}
   m_opacity: 1
   m_targetOpacity: 1
+  m_type: 0
 --- !u!65 &1648304475
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2938,6 +2949,7 @@ MonoBehaviour:
   m_material: {fileID: 719553322}
   m_opacity: 1
   m_targetOpacity: 1
+  m_type: 0
 --- !u!21 &1928220194
 Material:
   serializedVersion: 6
@@ -3135,6 +3147,7 @@ MonoBehaviour:
   m_material: {fileID: 183011258}
   m_opacity: 1
   m_targetOpacity: 1
+  m_type: 0
 --- !u!1 &2002189651
 GameObject:
   m_ObjectHideFlags: 0
@@ -3246,6 +3259,7 @@ MonoBehaviour:
   m_material: {fileID: 636699494}
   m_opacity: 1
   m_targetOpacity: 1
+  m_type: 0
 --- !u!1 &2077731925
 GameObject:
   m_ObjectHideFlags: 0
@@ -3295,6 +3309,7 @@ MonoBehaviour:
   m_material: {fileID: 1955299247}
   m_opacity: 1
   m_targetOpacity: 1
+  m_type: 0
 --- !u!65 &2077731928
 BoxCollider:
   m_ObjectHideFlags: 0
