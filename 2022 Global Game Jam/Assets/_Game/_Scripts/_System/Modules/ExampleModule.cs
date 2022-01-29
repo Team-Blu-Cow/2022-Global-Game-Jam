@@ -17,7 +17,6 @@ namespace blu
         private void OnEnable()
         {
             Debug.Log("Enable!");
-            base.Awake();
         }
 
         public override void Initialize() //
