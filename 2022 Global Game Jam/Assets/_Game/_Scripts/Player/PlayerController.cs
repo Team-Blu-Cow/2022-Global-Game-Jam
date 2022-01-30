@@ -114,7 +114,7 @@ public class PlayerController : MonoBehaviour
         if (m_topDown)
         {
             m_rb.velocity = new Vector3(-velocity.y * m_moveSpeed, m_rb.velocity.y, velocity.x * m_moveSpeed);
-            m_rb.constraints = RigidbodyConstraints.FreezePositionY | RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationY | RigidbodyConstraints.FreezeRotationZ;
+            m_rb.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationY | RigidbodyConstraints.FreezeRotationZ;
         }
         else
         {

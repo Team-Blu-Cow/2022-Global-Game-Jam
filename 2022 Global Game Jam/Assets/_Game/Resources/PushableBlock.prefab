@@ -113,7 +113,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_material: {fileID: 0}
   m_tmPro: []
-  m_opacity: 0
+  m_opacity: 1
   m_targetOpacity: 1
   m_type: 1
 --- !u!54 &2825776924845836946
