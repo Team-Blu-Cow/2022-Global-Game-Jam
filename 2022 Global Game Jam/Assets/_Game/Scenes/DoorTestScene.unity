@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 2100000, guid: 792929bab894e6147b2904bf0eab7ecf, type: 2}
+  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.5926662, g: 0.5926662, b: 0.5926662, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -31092,7 +31092,7 @@ MonoBehaviour:
   m_levelWidth: 20
   m_dynamicObjects:
   - {fileID: 1466491201}
-  m_playerObject: {fileID: 1265221247}
+  m_playerObject: {fileID: 7966750297532486446, guid: 46de20f1f867eca40a21a9bf7fce4a8c, type: 3}
   m_cameraBrain: {fileID: 1479724230}
   m_cameraBlend: 1
   topDown: 0
@@ -36112,11 +36112,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1264009651}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &1265221247 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7966750297532486446, guid: 46de20f1f867eca40a21a9bf7fce4a8c, type: 3}
-  m_PrefabInstance: {fileID: 1991675607}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1266746821
 GameObject:
   m_ObjectHideFlags: 0
@@ -56055,7 +56050,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7966750297532486443, guid: 46de20f1f867eca40a21a9bf7fce4a8c, type: 3}
   m_PrefabInstance: {fileID: 1991675607}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1265221247}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 98697511769e95d40b4e6be7c477fbc5, type: 3}
