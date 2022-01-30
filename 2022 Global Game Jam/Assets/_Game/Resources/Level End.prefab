@@ -1667,7 +1667,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6438189142278907063}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 9.9, y: 1, z: -16.93}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1488176852}
@@ -1766,6 +1766,7 @@ MonoBehaviour:
   m_opacity: 1
   m_targetOpacity: 1
   overrideGreyScale: 0
+  disabledObjects: []
   m_type: 1
   height: 0
   lerpval: 0

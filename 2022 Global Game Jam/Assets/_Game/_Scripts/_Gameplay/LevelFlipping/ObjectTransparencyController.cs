@@ -16,6 +16,8 @@ public class ObjectTransparencyController : MonoBehaviour
 
     [SerializeField] bool overrideGreyScale = true;
 
+    [SerializeField] List<GameObject> disabledObjects = new List<GameObject>();
+
     public enum ObjectType
     {
         Static,
@@ -27,6 +29,45 @@ public class ObjectTransparencyController : MonoBehaviour
     public LevelManager manager
     {
         set { m_manager = value; }
+    }
+
+    public void OnEnable()
+    {
+        blu.App.GetModule<blu.GameStateModule>().OnStateChangeEvent += OnStateChange;
+    }
+
+    public void OnDisable()
+    {
+        blu.App.GetModule<blu.GameStateModule>().OnStateChangeEvent -= OnStateChange;
+    }
+
+    static bool AlmostEqual(float a, int b)
+    {
+        return (Mathf.RoundToInt(a) == b);
+    }
+
+    public void OnStateChange(blu.GameStateModule.RotationState state)
+    {
+        if (state == blu.GameStateModule.RotationState.SIDE_ON)
+        {
+            
+            foreach (var obj in disabledObjects)
+            {
+                
+                if (!AlmostEqual(transform.position.x, m_manager.currentSlice))
+                {
+                    obj.SetActive(false);
+                }
+            }
+            
+        }
+        else if (state == blu.GameStateModule.RotationState.TOP_DOWN)
+        {
+            foreach (var obj in disabledObjects)
+            {
+                obj.SetActive(true);
+            }
+        }
     }
 
     public void OnValidate()
@@ -90,6 +131,19 @@ public class ObjectTransparencyController : MonoBehaviour
         {
             m_material = meshRenderer.material;
         }
+
+        if(!m_manager.topDown)
+        {
+            if(m_opacity < 0.5f)
+            {
+                foreach (var obj in disabledObjects)
+                {
+                    obj.SetActive(false);
+                }
+            }
+        }
+
+        
     }
 
     public float height;
@@ -118,6 +172,7 @@ public class ObjectTransparencyController : MonoBehaviour
                 m_tmPro[i].color = new Color(color.r, color.b, color.g, m_opacity);
             }
         }
+        
     }
 
     public void FadeOut(float time)
