@@ -37,7 +37,7 @@ namespace blu
         public override void Initialize() //
         {
             base.Initialize();
-            //InitAudioSettings();
+            InitAudioSettings();
             InitGraphicsSettings();
         }
 
@@ -54,11 +54,10 @@ namespace blu
                 audioSettings.music = FMODUnity.RuntimeManager.GetBus("bus:/Master/Music");
                 audioSettings.sfx = FMODUnity.RuntimeManager.GetBus("bus:/Master/SFX");
             }
-            catch(System.Exception ex)
+            catch (System.Exception ex)
             {
                 Debug.LogError(ex.Message);
             }
-
         }
 
         private void InitGraphicsSettings()

@@ -35,7 +35,7 @@ namespace blu
         {
             base.Initialize();
 
-            LeanTween.init(600);
+            // LeanTween.init(600);
         }
 
         public void ChangeState(RotationState state)
