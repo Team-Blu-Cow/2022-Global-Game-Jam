@@ -5,7 +5,6 @@ using UnityEngine;
 public class SwitchInteractable : Interactable
 {
     bool flipped = false;
-
     public bool SwitchFlipped => flipped;
 
     protected override bool OnInteract()

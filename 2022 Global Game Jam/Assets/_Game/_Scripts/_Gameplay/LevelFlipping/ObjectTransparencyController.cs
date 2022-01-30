@@ -14,6 +14,8 @@ public class ObjectTransparencyController : MonoBehaviour
 
     private LevelManager m_manager;
 
+    [SerializeField] bool overrideGreyScale = true;
+
     public enum ObjectType
     {
         Static,
@@ -90,11 +92,20 @@ public class ObjectTransparencyController : MonoBehaviour
         }
     }
 
+    public float height;
+    public float lerpval;
+
     // Update is called once per frame
     void Update()
     {
         if(m_material)
         {
+            if (overrideGreyScale)
+            {
+                height = transform.position.y;
+                lerpval = Mathf.InverseLerp(-1, 5, height);
+                m_material.SetFloat("_Grayscale", lerpval);
+            }
             //m_material.SetFloat("_GreyScale", m_opacity);
             m_material.SetFloat("_Opacity", m_opacity);
         }
