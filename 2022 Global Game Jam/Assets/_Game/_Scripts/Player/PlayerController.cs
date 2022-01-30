@@ -11,9 +11,11 @@ public class PlayerController : MonoBehaviour
 
     private Vector2 velocity;
 
-    private bool m_isColliding = false;
+    private bool m_isCollidingWithPullable = false;
     private bool m_isPulling = false;
     private GameObject m_collidingBox;
+    private bool m_isOnJumpPad = false;
+
 
     [SerializeField] bool m_grounded = true;
 
@@ -171,7 +173,7 @@ public class PlayerController : MonoBehaviour
 
     private void PullObject()
     {
-        if (m_isColliding && m_collidingBox != null)
+        if (m_isCollidingWithPullable && m_collidingBox != null)
         {
             Rigidbody boxRb = m_collidingBox.GetComponent<Rigidbody>();
             boxRb.velocity = m_rb.velocity;
@@ -179,11 +181,35 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    private void OnCollisionStay(Collision collision)
+    {
+        if (collision.gameObject.tag == "JumpPad" && !m_isOnJumpPad)
+        {
+            if (transform.position.z > collision.transform.position.z - 0.5f && transform.position.z < collision.transform.position.z + 0.5f)
+            {
+                m_jumpForce *= collision.gameObject.GetComponent<JumpPad>().GetJumpMultiplier();
+                m_isOnJumpPad = true;
+            }
+        }
+    }
+
+    private void OnCollisionExit(Collision collision)
+    {
+        if(collision.gameObject.tag == "JumpPad")
+        {
+            if (m_isOnJumpPad)
+            {
+                m_isOnJumpPad = false;
+                m_jumpForce /= collision.gameObject.GetComponent<JumpPad>().GetJumpMultiplier();
+            }
+        }
+    }
+
     private void OnTriggerStay(Collider other)
     {
         if(other.gameObject.tag == "Pullable")
         {
-            m_isColliding = true;
+            m_isCollidingWithPullable = true;
             m_collidingBox = other.gameObject.transform.parent.gameObject;
         }
     }
@@ -192,7 +218,7 @@ public class PlayerController : MonoBehaviour
     {
         if (other.gameObject.tag == "Pullable")
         {
-            m_isColliding = false;
+            m_isCollidingWithPullable = false;
             m_collidingBox = null;
         }
     }

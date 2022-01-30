@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Pullable
+  - JumpPad
   layers:
   - Default
   - TransparentFX
