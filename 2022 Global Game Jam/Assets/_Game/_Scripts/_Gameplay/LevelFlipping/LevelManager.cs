@@ -138,6 +138,8 @@ public class LevelManager : MonoBehaviour
         // Align Objects to slice
         AlignDynamicObjects();
 
+        m_playerObject.GetComponent<PlayerController>().SetXPos();
+
         // Disable all other slices
         int i = 0;
         foreach (var slice in m_slices)

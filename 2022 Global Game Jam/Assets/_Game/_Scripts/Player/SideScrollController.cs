@@ -15,11 +15,14 @@ public class SideScrollController : PlayerStateController
     [SerializeField] public float JumpBuffer = 0.2f;
     private float JumpBufferCounter;
 
+    public float XPos;
+
     public override void OnFixedUpdate()
     {
         CheckMoveDirection();
         TryJump();
         AnimateJump();
+        rb.velocity = new Vector3(0, rb.velocity.y, rb.velocity.z);
     }
 
     private void CheckMoveDirection()
