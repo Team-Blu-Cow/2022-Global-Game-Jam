@@ -3,14 +3,26 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using blu;
+using UnityEngine.SceneManagement;
+
 
 public class MainMenuManager : MonoBehaviour
 {
     MasterInput tempInput;
     RebindControlls[] rebindControlls;
+    List<string> scenesInBuild = new List<string>();
 
     private void Awake()
     {
+        // http://answers.unity.com/answers/1394340/view.html
+        // fuck i hate unity sometimes
+        for (int i = 1; i < SceneManager.sceneCountInBuildSettings; i++)
+        {
+            string scenePath = SceneUtility.GetScenePathByBuildIndex(i);
+            int lastSlash = scenePath.LastIndexOf("/");
+            scenesInBuild.Add(scenePath.Substring(lastSlash + 1, scenePath.LastIndexOf(".") - lastSlash - 1));
+        }
+
         tempInput = new MasterInput();
         rebindControlls = GetComponentsInChildren<RebindControlls>();      
     }
@@ -34,15 +46,24 @@ public class MainMenuManager : MonoBehaviour
 
     public void PlayLastLevel()
     {
-        int level = 0;
-        bool found = true;
-        while (found)
+        string lastValidScene = SceneManager.GetActiveScene().name;
+
+        for(int i = 1; i <= 20; i++)
         {
-            level++;
-            found = App.GetModule<IOModule>().IsLevelCompleted(level);
+            string sceneName = SceneNameFromIndex(i);
+
+            if(LevelExists(sceneName))
+            {
+                lastValidScene = sceneName;
+
+                if(App.GetModule<IOModule>().IsLevelCompleted(i) == false)
+                {
+                    App.GetModule<SceneModule>().SwitchScene(sceneName, TransitionType.Fade, LoadingBarType.BottomRightRadial);
+                }
+            }
         }
 
-        App.GetModule<SceneModule>().SwitchScene("Level " + level, TransitionType.Fade, LoadingBarType.BottomRightRadial);
+        App.GetModule<SceneModule>().SwitchScene(lastValidScene, TransitionType.Fade, LoadingBarType.BottomRightRadial);
     }
 
     public void ExitGame()
@@ -76,4 +97,21 @@ public class MainMenuManager : MonoBehaviour
             control.Reset();
         }
     }
+
+    private string SceneNameFromIndex(int index)
+    {
+        return "Level " + index.ToString();
+    }
+
+    private bool LevelExists(string name)
+    {
+        if (scenesInBuild.Contains(name))
+        {
+            return true;
+        }
+
+        return false;
+    }
+
+
 }
