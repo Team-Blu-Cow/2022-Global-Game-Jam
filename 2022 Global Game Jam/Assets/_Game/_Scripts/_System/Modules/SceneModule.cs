@@ -38,6 +38,7 @@ namespace blu
             else
                 switching = true;
 
+            LeanTween.cancelAll();
             float delay;
 
             InitiailizeTransitionValues(out delay, in_transitionType, in_loadingBarType);

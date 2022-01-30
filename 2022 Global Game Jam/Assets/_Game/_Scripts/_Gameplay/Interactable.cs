@@ -20,6 +20,8 @@ public class Interactable : MonoBehaviour
     protected bool inTrigger = false;
     protected bool playerInSlice = false;
 
+    private bool allowRun = true;
+
     protected virtual void OnValidate()
     {
         m_player = FindObjectOfType<PlayerController>();
@@ -61,11 +63,13 @@ public class Interactable : MonoBehaviour
     private void OnEnable()
     {
         App.GetModule<GameStateModule>().LateOnStateChangeEvent += OnFlip;
+        allowRun = true;
     }
 
     private void OnDisable()
     {
         App.GetModule<GameStateModule>().LateOnStateChangeEvent -= OnFlip;
+        allowRun = false;
     }
 
     virtual protected void OnFlip(GameStateModule.RotationState state)
@@ -124,7 +128,7 @@ public class Interactable : MonoBehaviour
         if (GameStateModule.CurrentRotationState == GameStateModule.RotationState.SIDE_ON && !playerInSlice)
             return false;
 
-        return true;
+        return allowRun;
     }
 
     protected virtual void OnTriggerEnter(Collider other)

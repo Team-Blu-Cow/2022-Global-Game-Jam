@@ -29,18 +29,11 @@ public class LevelSelectController : MonoBehaviour
 
     [SerializeField] List<TextMeshPro> m_textMeshes = new List<TextMeshPro>();
     [SerializeField] List<TextMeshPro> m_sideTextMeshes = new List<TextMeshPro>();
-
-
-    // the color is flickering and i dont know why
-    // we will set these colors in the update loop
-    List<Color> m_colors = new List<Color>();
     List<string> scenesInBuild = new List<string>();
 
-
-    Color levelCompleted = Color.green;
-    Color levelUncompleted = Color.red;
-    Color levelNotFound = Color.grey;
-
+    [SerializeField] Sprite completeSprite;
+    [SerializeField] Sprite uncompleteSprite;
+    [SerializeField] Sprite notFoundSprite;
 
     private void OnValidate()
     {
@@ -63,29 +56,17 @@ public class LevelSelectController : MonoBehaviour
     private void Start()
     {
         iomodule = App.GetModule<IOModule>();
-
-        for(int i = 0; i < m_textMeshes.Count; i++)
-        {
-            m_colors.Add(Color.black);
-        }
-
         UpdateTextMeshes();
     }
 
     // Update is called once per frame
     private void Update()
     {
-        
+        return;
         for(int i = 0; i < m_textMeshes.Count; i++)
         {
-            Color c = m_textMeshes[i].color;
-
-            c.r = m_colors[i].r;
-            c.g = m_colors[i].g;
-            c.b = m_colors[i].b;
-
-            m_textMeshes[i].color = c;
-            m_sideTextMeshes[i].color = c;
+            m_textMeshes[i].color = Color.gray;
+            m_sideTextMeshes[i].color = Color.gray;
         }
     }
 
@@ -119,15 +100,33 @@ public class LevelSelectController : MonoBehaviour
             m_textMeshes[i].text = "Level " + levelNum.ToString();
             m_sideTextMeshes[i].text = "Level " + levelNum.ToString();
 
-            if(LevelExists(levelNum))
+            SpriteRenderer sr_top = null;
+            SpriteRenderer sr_side = null;
+
+            {
+                Transform p = m_textMeshes[i].transform.parent;
+                sr_top = p.GetComponentInChildren<SpriteRenderer>();
+            }
+
+            {
+                Transform p = m_sideTextMeshes[i].transform.parent;
+                sr_side = p.GetComponentInChildren<SpriteRenderer>();
+            }
+            
+            sr_top.color = Color.grey;
+            sr_side.color = Color.grey;
+
+            if (LevelExists(levelNum))
             {
                 if(iomodule.IsLevelCompleted(levelNum))
                 {
-                    m_colors[i] = levelCompleted;
+                    sr_top.sprite = completeSprite;
+                    sr_side.sprite = completeSprite;
                 }
                 else
                 {
-                    m_colors[i] = levelUncompleted;
+                    sr_top.sprite = uncompleteSprite;
+                    sr_side.sprite = uncompleteSprite;
                 }
 
                 if(interact)
@@ -139,8 +138,9 @@ public class LevelSelectController : MonoBehaviour
             }
             else
             {
-                m_colors[i] = levelNotFound;
                 interact.enabled = false;
+                sr_top.sprite = notFoundSprite;
+                sr_side.sprite = notFoundSprite;
             }
         }
     }

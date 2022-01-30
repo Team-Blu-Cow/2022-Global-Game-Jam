@@ -4,7 +4,7 @@ using UnityEngine;
 using blu;
 public class LevelSelectInteract : Interactable
 {
-    [HideInInspector] public string sceneName = "";
+    [SerializeField] public string sceneName = "";
 
     protected override bool OnInteract()
     {
