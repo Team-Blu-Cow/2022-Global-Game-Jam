@@ -1765,4 +1765,7 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 0
   m_type: 1
+  height: 0
+  lerpval: 0
