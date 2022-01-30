@@ -243,8 +243,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Main Menu
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 9cacfd26c407bbe438a9754cb1ca10ac, type: 2}
+  m_sharedMaterial: {fileID: 1836942259033194537, guid: 9cacfd26c407bbe438a9754cb1ca10ac, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -613,8 +613,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Replay
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 9cacfd26c407bbe438a9754cb1ca10ac, type: 2}
+  m_sharedMaterial: {fileID: 1836942259033194537, guid: 9cacfd26c407bbe438a9754cb1ca10ac, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1437,8 +1437,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Level Select
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 9cacfd26c407bbe438a9754cb1ca10ac, type: 2}
+  m_sharedMaterial: {fileID: 1836942259033194537, guid: 9cacfd26c407bbe438a9754cb1ca10ac, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1571,8 +1571,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Next Level
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 9cacfd26c407bbe438a9754cb1ca10ac, type: 2}
+  m_sharedMaterial: {fileID: 1836942259033194537, guid: 9cacfd26c407bbe438a9754cb1ca10ac, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1763,8 +1763,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_material: {fileID: 0}
   m_tmPro: []
+  m_sr: []
   m_opacity: 1
   m_targetOpacity: 1
+  m_manager: {fileID: 0}
   overrideGreyScale: 0
   disabledObjects: []
   m_type: 1
