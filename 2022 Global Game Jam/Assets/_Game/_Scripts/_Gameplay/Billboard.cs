@@ -15,7 +15,8 @@ public class Billboard : MonoBehaviour
 
     private void OnValidate()
     {
-        sprTransform = transform.GetChild(0);
+        if(transform.childCount > 0)
+            sprTransform = transform.GetChild(0);
     }
 
     // Update is called once per frame
@@ -30,7 +31,7 @@ public class Billboard : MonoBehaviour
 
         isSideView = (rot <= 45);
 
-        if(isSideView)
+        if(isSideView && sprTransform != null)
             sprTransform.localEulerAngles = new Vector3(0f, 0f, 0f);
     }
 
