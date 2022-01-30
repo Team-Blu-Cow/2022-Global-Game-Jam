@@ -83,6 +83,8 @@ public class Interactable : MonoBehaviour
         {
             playerInSlice = false;
         }
+
+        ClosePopUp();
     }
 
     private void Awake()
