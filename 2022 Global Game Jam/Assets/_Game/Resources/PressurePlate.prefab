@@ -62,7 +62,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 51128b66e2773874187a2ad56f562384, type: 2}
+  - {fileID: 2100000, guid: 2ea4422bfaa61fc489c0d2a2a211dd3f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -123,9 +123,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_material: {fileID: 0}
   m_tmPro: []
+  m_sr: []
   m_opacity: 1
   m_targetOpacity: 1
   overrideGreyScale: 1
+  disabledObjects: []
   m_type: 0
   height: 0
   lerpval: 0

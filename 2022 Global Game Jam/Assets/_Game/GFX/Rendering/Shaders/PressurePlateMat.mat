@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: EndFlagMat
+  m_Name: PressurePlateMat
   m_Shader: {fileID: -6465566751694194690, guid: 50fa8fa44734ced4e8edcc770d7672b0, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
@@ -20,7 +20,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: ff6e926271b1b2d49a4a73da2621fec2, type: 3}
+        m_Texture: {fileID: 2800000, guid: 4c98c4f3facc5c64089993f7e1a258bb, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
