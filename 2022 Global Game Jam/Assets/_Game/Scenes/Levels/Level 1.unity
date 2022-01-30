@@ -171,6 +171,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_material: {fileID: 0}
   m_tmPro: []
+  m_sr: []
   m_opacity: 1
   m_targetOpacity: 1
   overrideGreyScale: 1
@@ -288,6 +289,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_material: {fileID: 0}
   m_tmPro: []
+  m_sr: []
   m_opacity: 1
   m_targetOpacity: 1
   overrideGreyScale: 1
@@ -405,6 +407,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_material: {fileID: 0}
   m_tmPro: []
+  m_sr: []
   m_opacity: 1
   m_targetOpacity: 1
   overrideGreyScale: 1
@@ -557,6 +560,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_material: {fileID: 0}
   m_tmPro: []
+  m_sr: []
   m_opacity: 1
   m_targetOpacity: 1
   overrideGreyScale: 1
@@ -734,6 +738,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_material: {fileID: 0}
   m_tmPro: []
+  m_sr: []
   m_opacity: 1
   m_targetOpacity: 1
   overrideGreyScale: 1
@@ -894,6 +899,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_material: {fileID: 0}
   m_tmPro: []
+  m_sr: []
   m_opacity: 1
   m_targetOpacity: 1
   overrideGreyScale: 1
@@ -1011,6 +1017,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_material: {fileID: 0}
   m_tmPro: []
+  m_sr: []
   m_opacity: 1
   m_targetOpacity: 1
   overrideGreyScale: 1
@@ -1128,6 +1135,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_material: {fileID: 0}
   m_tmPro: []
+  m_sr: []
   m_opacity: 1
   m_targetOpacity: 1
   overrideGreyScale: 1
@@ -1375,6 +1383,18 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6438189142278907066, guid: eaf75950e7e5374428cefb02483aed2f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6438189142278907066, guid: eaf75950e7e5374428cefb02483aed2f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6438189142278907066, guid: eaf75950e7e5374428cefb02483aed2f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eaf75950e7e5374428cefb02483aed2f, type: 3}
 --- !u!1 &191375703 stripped
@@ -1435,6 +1455,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_material: {fileID: 0}
   m_tmPro: []
+  m_sr: []
   m_opacity: 1
   m_targetOpacity: 1
   overrideGreyScale: 1
@@ -1584,6 +1605,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_material: {fileID: 0}
   m_tmPro: []
+  m_sr: []
   m_opacity: 1
   m_targetOpacity: 1
   overrideGreyScale: 1
@@ -1701,6 +1723,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_material: {fileID: 0}
   m_tmPro: []
+  m_sr: []
   m_opacity: 1
   m_targetOpacity: 1
   overrideGreyScale: 1
@@ -1818,6 +1841,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_material: {fileID: 0}
   m_tmPro: []
+  m_sr: []
   m_opacity: 1
   m_targetOpacity: 1
   overrideGreyScale: 1
@@ -1992,6 +2016,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_material: {fileID: 0}
   m_tmPro: []
+  m_sr: []
   m_opacity: 1
   m_targetOpacity: 1
   overrideGreyScale: 1
@@ -2109,6 +2134,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_material: {fileID: 0}
   m_tmPro: []
+  m_sr: []
   m_opacity: 1
   m_targetOpacity: 1
   overrideGreyScale: 1
@@ -2226,6 +2252,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_material: {fileID: 0}
   m_tmPro: []
+  m_sr: []
   m_opacity: 1
   m_targetOpacity: 1
   overrideGreyScale: 1
@@ -2343,6 +2370,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_material: {fileID: 0}
   m_tmPro: []
+  m_sr: []
   m_opacity: 1
   m_targetOpacity: 1
   overrideGreyScale: 1
@@ -2460,6 +2488,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_material: {fileID: 0}
   m_tmPro: []
+  m_sr: []
   m_opacity: 1
   m_targetOpacity: 1
   overrideGreyScale: 1
@@ -2577,6 +2606,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_material: {fileID: 0}
   m_tmPro: []
+  m_sr: []
   m_opacity: 1
   m_targetOpacity: 1
   overrideGreyScale: 1
@@ -2694,6 +2724,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_material: {fileID: 0}
   m_tmPro: []
+  m_sr: []
   m_opacity: 1
   m_targetOpacity: 1
   overrideGreyScale: 1
@@ -2811,6 +2842,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_material: {fileID: 0}
   m_tmPro: []
+  m_sr: []
   m_opacity: 1
   m_targetOpacity: 1
   overrideGreyScale: 1
@@ -2928,6 +2960,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_material: {fileID: 0}
   m_tmPro: []
+  m_sr: []
   m_opacity: 1
   m_targetOpacity: 1
   overrideGreyScale: 1
@@ -3045,6 +3078,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_material: {fileID: 0}
   m_tmPro: []
+  m_sr: []
   m_opacity: 1
   m_targetOpacity: 1
   overrideGreyScale: 1
@@ -3162,6 +3196,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_material: {fileID: 0}
   m_tmPro: []
+  m_sr: []
   m_opacity: 1
   m_targetOpacity: 1
   overrideGreyScale: 1
@@ -3345,6 +3380,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_material: {fileID: 0}
   m_tmPro: []
+  m_sr: []
   m_opacity: 1
   m_targetOpacity: 1
   overrideGreyScale: 1
@@ -3579,6 +3615,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_material: {fileID: 0}
   m_tmPro: []
+  m_sr: []
   m_opacity: 1
   m_targetOpacity: 1
   overrideGreyScale: 1
@@ -3696,6 +3733,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_material: {fileID: 0}
   m_tmPro: []
+  m_sr: []
   m_opacity: 1
   m_targetOpacity: 1
   overrideGreyScale: 1
@@ -3825,7 +3863,7 @@ MonoBehaviour:
   m_levelWidth: 10
   m_dynamicObjects:
   - {fileID: 191375703}
-  m_playerObject: {fileID: 1611536778}
+  m_playerObject: {fileID: 7966750297532486446, guid: 46de20f1f867eca40a21a9bf7fce4a8c, type: 3}
   m_cameraBrain: {fileID: 724560265}
   m_cameraBlend: 1
   topDown: 0
@@ -3918,6 +3956,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_material: {fileID: 0}
   m_tmPro: []
+  m_sr: []
   m_opacity: 1
   m_targetOpacity: 1
   overrideGreyScale: 1
@@ -4075,6 +4114,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_material: {fileID: 0}
   m_tmPro: []
+  m_sr: []
   m_opacity: 1
   m_targetOpacity: 1
   overrideGreyScale: 1
@@ -4192,6 +4232,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_material: {fileID: 0}
   m_tmPro: []
+  m_sr: []
   m_opacity: 1
   m_targetOpacity: 1
   overrideGreyScale: 1
@@ -4309,6 +4350,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_material: {fileID: 0}
   m_tmPro: []
+  m_sr: []
   m_opacity: 1
   m_targetOpacity: 1
   overrideGreyScale: 1
@@ -4426,6 +4468,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_material: {fileID: 0}
   m_tmPro: []
+  m_sr: []
   m_opacity: 1
   m_targetOpacity: 1
   overrideGreyScale: 1
@@ -4600,6 +4643,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_material: {fileID: 0}
   m_tmPro: []
+  m_sr: []
   m_opacity: 1
   m_targetOpacity: 1
   overrideGreyScale: 1
@@ -4717,6 +4761,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_material: {fileID: 0}
   m_tmPro: []
+  m_sr: []
   m_opacity: 1
   m_targetOpacity: 1
   overrideGreyScale: 1
@@ -4834,6 +4879,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_material: {fileID: 0}
   m_tmPro: []
+  m_sr: []
   m_opacity: 1
   m_targetOpacity: 1
   overrideGreyScale: 1
@@ -4951,6 +4997,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_material: {fileID: 0}
   m_tmPro: []
+  m_sr: []
   m_opacity: 1
   m_targetOpacity: 1
   overrideGreyScale: 1
@@ -5068,6 +5115,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_material: {fileID: 0}
   m_tmPro: []
+  m_sr: []
   m_opacity: 1
   m_targetOpacity: 1
   overrideGreyScale: 1
@@ -5185,6 +5233,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_material: {fileID: 0}
   m_tmPro: []
+  m_sr: []
   m_opacity: 1
   m_targetOpacity: 1
   overrideGreyScale: 1
@@ -5302,6 +5351,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_material: {fileID: 0}
   m_tmPro: []
+  m_sr: []
   m_opacity: 1
   m_targetOpacity: 1
   overrideGreyScale: 1
@@ -5419,6 +5469,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_material: {fileID: 0}
   m_tmPro: []
+  m_sr: []
   m_opacity: 1
   m_targetOpacity: 1
   overrideGreyScale: 1
@@ -5536,6 +5587,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_material: {fileID: 0}
   m_tmPro: []
+  m_sr: []
   m_opacity: 1
   m_targetOpacity: 1
   overrideGreyScale: 1
@@ -5653,6 +5705,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_material: {fileID: 0}
   m_tmPro: []
+  m_sr: []
   m_opacity: 1
   m_targetOpacity: 1
   overrideGreyScale: 1
@@ -5770,6 +5823,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_material: {fileID: 0}
   m_tmPro: []
+  m_sr: []
   m_opacity: 1
   m_targetOpacity: 1
   overrideGreyScale: 1
@@ -5962,6 +6016,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_material: {fileID: 0}
   m_tmPro: []
+  m_sr: []
   m_opacity: 1
   m_targetOpacity: 1
   overrideGreyScale: 1
@@ -6079,6 +6134,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_material: {fileID: 0}
   m_tmPro: []
+  m_sr: []
   m_opacity: 1
   m_targetOpacity: 1
   overrideGreyScale: 1
@@ -6196,6 +6252,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_material: {fileID: 0}
   m_tmPro: []
+  m_sr: []
   m_opacity: 1
   m_targetOpacity: 1
   overrideGreyScale: 1
@@ -6313,6 +6370,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_material: {fileID: 0}
   m_tmPro: []
+  m_sr: []
   m_opacity: 1
   m_targetOpacity: 1
   overrideGreyScale: 1
@@ -6430,6 +6488,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_material: {fileID: 0}
   m_tmPro: []
+  m_sr: []
   m_opacity: 1
   m_targetOpacity: 1
   overrideGreyScale: 1
@@ -6547,6 +6606,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_material: {fileID: 0}
   m_tmPro: []
+  m_sr: []
   m_opacity: 1
   m_targetOpacity: 1
   overrideGreyScale: 1
@@ -6678,7 +6738,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7966750297532486443, guid: 46de20f1f867eca40a21a9bf7fce4a8c, type: 3}
   m_PrefabInstance: {fileID: 1611536775}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1611536778}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 98697511769e95d40b4e6be7c477fbc5, type: 3}
@@ -6687,11 +6747,6 @@ MonoBehaviour:
 --- !u!4 &1611536777 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7966750297532486442, guid: 46de20f1f867eca40a21a9bf7fce4a8c, type: 3}
-  m_PrefabInstance: {fileID: 1611536775}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1611536778 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7966750297532486446, guid: 46de20f1f867eca40a21a9bf7fce4a8c, type: 3}
   m_PrefabInstance: {fileID: 1611536775}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1715015160
@@ -7304,6 +7359,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_material: {fileID: 0}
   m_tmPro: []
+  m_sr: []
   m_opacity: 1
   m_targetOpacity: 1
   overrideGreyScale: 1
@@ -7421,6 +7477,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_material: {fileID: 0}
   m_tmPro: []
+  m_sr: []
   m_opacity: 1
   m_targetOpacity: 1
   overrideGreyScale: 1
@@ -7538,6 +7595,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_material: {fileID: 0}
   m_tmPro: []
+  m_sr: []
   m_opacity: 1
   m_targetOpacity: 1
   overrideGreyScale: 1
@@ -7694,6 +7752,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_material: {fileID: 0}
   m_tmPro: []
+  m_sr: []
   m_opacity: 1
   m_targetOpacity: 1
   overrideGreyScale: 1
@@ -7811,6 +7870,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_material: {fileID: 0}
   m_tmPro: []
+  m_sr: []
   m_opacity: 1
   m_targetOpacity: 1
   overrideGreyScale: 1
@@ -7928,6 +7988,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_material: {fileID: 0}
   m_tmPro: []
+  m_sr: []
   m_opacity: 1
   m_targetOpacity: 1
   overrideGreyScale: 1
@@ -8045,6 +8106,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_material: {fileID: 0}
   m_tmPro: []
+  m_sr: []
   m_opacity: 1
   m_targetOpacity: 1
   overrideGreyScale: 1
@@ -8162,6 +8224,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_material: {fileID: 0}
   m_tmPro: []
+  m_sr: []
   m_opacity: 1
   m_targetOpacity: 1
   overrideGreyScale: 1
@@ -8279,6 +8342,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_material: {fileID: 0}
   m_tmPro: []
+  m_sr: []
   m_opacity: 1
   m_targetOpacity: 1
   overrideGreyScale: 1
@@ -8396,6 +8460,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_material: {fileID: 0}
   m_tmPro: []
+  m_sr: []
   m_opacity: 1
   m_targetOpacity: 1
   overrideGreyScale: 1
