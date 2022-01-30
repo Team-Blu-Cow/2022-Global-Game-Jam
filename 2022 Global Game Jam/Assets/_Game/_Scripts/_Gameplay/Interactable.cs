@@ -83,6 +83,8 @@ public class Interactable : MonoBehaviour
         {
             playerInSlice = false;
         }
+
+        ClosePopUp();
     }
 
     private void Awake()
@@ -93,6 +95,22 @@ public class Interactable : MonoBehaviour
     private void Start()
     {
         m_player.PlayerInput.PlayerControls.Interact.performed += _ => OnInteract();        
+    }
+
+    private void Update()
+    {
+        if (inTrigger && playerInSlice)
+        { 
+            if (GameStateModule.CurrentRotationState == GameStateModule.RotationState.SIDE_ON && m_interactSideOn)
+                OpenPopUp();
+
+            if (GameStateModule.CurrentRotationState == GameStateModule.RotationState.TOP_DOWN && m_interactTopDown)
+                OpenPopUp();
+        }
+        else
+        {
+            ClosePopUp();
+        }
     }
 
     virtual protected bool OnInteract()
@@ -117,13 +135,7 @@ public class Interactable : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             inTrigger = true;
-
-            if (GameStateModule.CurrentRotationState == GameStateModule.RotationState.SIDE_ON && m_interactSideOn)
-                OpenPopUp();
-
-            if (GameStateModule.CurrentRotationState == GameStateModule.RotationState.TOP_DOWN && m_interactTopDown)
-                OpenPopUp();
-        }
+        }            
     }
 
     protected virtual void OnTriggerExit(Collider other)
@@ -131,8 +143,6 @@ public class Interactable : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             inTrigger = false;
-
-            ClosePopUp();
         }
     }
 
