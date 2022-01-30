@@ -44,7 +44,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5bcf9549e63b4de439bff371b47d4a42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactbleControl: {fileID: 0}
+  switchInteractable: {fileID: 0}
+  pressureInteractable: {fileID: 0}
   animSpeed: 0.2
 --- !u!1 &812145973471565315
 GameObject:
@@ -151,7 +152,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 51128b66e2773874187a2ad56f562384, type: 2}
+  - {fileID: 2100000, guid: 05bdf7ec6ae41b440b75085d2d93f721, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -187,9 +188,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_material: {fileID: 0}
   m_tmPro: []
+  m_sr: []
   m_opacity: 1
   m_targetOpacity: 1
   overrideGreyScale: 1
+  disabledObjects: []
   m_type: 0
   height: 0
   lerpval: 0
