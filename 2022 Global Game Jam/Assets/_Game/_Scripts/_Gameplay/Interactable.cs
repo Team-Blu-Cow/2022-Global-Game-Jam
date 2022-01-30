@@ -32,9 +32,6 @@ public class Interactable : MonoBehaviour
             GameObject obj = new GameObject();
             obj.name = "Interact Popup";
             obj.AddComponent<SpriteRenderer>();
-            Billboard bb = obj.AddComponent<Billboard>();
-
-            bb.sprTransform = obj.transform;
 
             m_popUp = obj.transform;
             obj.transform.SetParent(transform);
