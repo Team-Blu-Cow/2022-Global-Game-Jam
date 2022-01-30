@@ -38,7 +38,7 @@ Material:
     m_Floats:
     - Opacity: 1
     - Vector1_b3df7b8140b54d0d875abcd1059e77af: 1
-    - _DitherSize: 1
+    - _DitherSize: 4
     - _Grayscale: 1
     - _Opacity: 1
     m_Colors:

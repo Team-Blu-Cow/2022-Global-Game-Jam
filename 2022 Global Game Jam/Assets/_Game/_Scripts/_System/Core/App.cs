@@ -26,6 +26,7 @@ namespace blu
             AddModule<SceneModule>();
             AddModule<SettingsModule>();
             AddModule<GameStateModule>();
+            AddModule<AudioModule>();
         }
 
         //<summary>

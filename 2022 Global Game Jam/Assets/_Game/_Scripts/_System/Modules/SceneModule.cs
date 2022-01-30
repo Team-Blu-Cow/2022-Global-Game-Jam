@@ -190,7 +190,7 @@ namespace blu
 
         public override void Initialize()
         {
-            Debug.Log("[App]: Initializing scene module");
+            base.Initialize();
         }
     }
 }

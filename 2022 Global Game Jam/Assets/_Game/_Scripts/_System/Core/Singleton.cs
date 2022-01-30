@@ -32,6 +32,7 @@ namespace blu
     {
         public virtual void Initialize()
         {
+            Debug.Log("[Module]: Initializing " + GetType().ToString());
         }
     }
 }

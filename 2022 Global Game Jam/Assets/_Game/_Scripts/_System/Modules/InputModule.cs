@@ -18,8 +18,8 @@ namespace blu
 
         public override void Initialize()
         {
+            base.Initialize();
             // If functions run twice after scene switch take a look at this: https://answers.unity.com/questions/1767382/removing-event-from-new-input-system-not-working.html
-            Debug.Log("[App]: Initializing input module");
             SetUpControllers();
         }
 
