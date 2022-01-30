@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Idle
+  m_Name: JumpBegin
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -20,11 +20,13 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: 21300000, guid: e7df506166d097b47813def913f515a0, type: 3}
-    - time: 0.33333334
-      value: {fileID: 21300000, guid: e924375d32311db4ba069df0b86d5301, type: 3}
-    - time: 0.6666667
-      value: {fileID: 21300000, guid: e7df506166d097b47813def913f515a0, type: 3}
+      value: {fileID: 21300000, guid: a7e47c3f8f5355e4bb88d83a037aaa5e, type: 3}
+    - time: 0.016666668
+      value: {fileID: 21300000, guid: e10ce30d8efca2c44a6c2b4772436588, type: 3}
+    - time: 0.033333335
+      value: {fileID: 21300000, guid: 2d3d41b72553cd7429bf97ce23c7f12b, type: 3}
+    - time: 0.06666667
+      value: {fileID: 21300000, guid: 7abd791171f89704aadd0d11a475a049, type: 3}
     attribute: m_Sprite
     path: BillBoard/Square
     classID: 212
@@ -44,15 +46,16 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: 21300000, guid: e7df506166d097b47813def913f515a0, type: 3}
-    - {fileID: 21300000, guid: e924375d32311db4ba069df0b86d5301, type: 3}
-    - {fileID: 21300000, guid: e7df506166d097b47813def913f515a0, type: 3}
+    - {fileID: 21300000, guid: a7e47c3f8f5355e4bb88d83a037aaa5e, type: 3}
+    - {fileID: 21300000, guid: e10ce30d8efca2c44a6c2b4772436588, type: 3}
+    - {fileID: 21300000, guid: 2d3d41b72553cd7429bf97ce23c7f12b, type: 3}
+    - {fileID: 21300000, guid: 7abd791171f89704aadd0d11a475a049, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.68333334
+    m_StopTime: 0.083333336
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
