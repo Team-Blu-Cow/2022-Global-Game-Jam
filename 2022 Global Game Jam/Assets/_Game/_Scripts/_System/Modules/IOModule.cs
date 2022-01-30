@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 namespace blu
 {
@@ -29,6 +30,14 @@ namespace blu
             }
 
             return false;
+        }
+
+        public void SetLevelComplete(string sceneName, bool complete)
+        {
+            int space = sceneName.LastIndexOf(' ');
+            string name = sceneName.Substring(space + 1);
+
+            SetLevelComplete(Int32.Parse(name), complete);
         }
 
         public void SetLevelComplete(int level, bool complete)

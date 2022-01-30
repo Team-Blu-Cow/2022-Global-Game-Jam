@@ -37,7 +37,7 @@ public class LevelSelectController : MonoBehaviour
     List<string> scenesInBuild = new List<string>();
 
 
-    Color levelCompleted = new Color(0, 255, 0);
+    Color levelCompleted = Color.green;
     Color levelUncompleted = Color.red;
     Color levelNotFound = Color.grey;
 
@@ -75,6 +75,7 @@ public class LevelSelectController : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
+        
         for(int i = 0; i < m_textMeshes.Count; i++)
         {
             Color c = m_textMeshes[i].color;
