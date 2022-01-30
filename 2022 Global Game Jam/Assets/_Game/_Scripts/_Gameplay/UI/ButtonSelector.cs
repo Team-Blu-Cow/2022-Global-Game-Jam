@@ -70,8 +70,10 @@ public class ButtonSelector : MonoBehaviour
         }
     }
 
-    public void AbilityToggle(bool input)
+    public void SetSelected(GameObject selected)
     {
-        //App.GetModule<LevelModule>().SetHoldForAbilityMode(input);
+        m_selected = selected;
+        ES.SetSelectedGameObject(m_selected);
     }
+
 }

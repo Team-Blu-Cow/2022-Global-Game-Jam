@@ -80,6 +80,15 @@ public partial class @MasterInput : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Retry"",
+                    ""type"": ""Button"",
+                    ""id"": ""bb4ed860-e364-4a4a-9bd2-1b741a3a1ad4"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -212,6 +221,17 @@ public partial class @MasterInput : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": ""KB+M"",
                     ""action"": ""Pull"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""866f583a-4e8a-4e4d-bfca-4d360feb00a8"",
+                    ""path"": ""<Keyboard>/r"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""KB+M"",
+                    ""action"": ""Retry"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -368,6 +388,7 @@ public partial class @MasterInput : IInputActionCollection2, IDisposable
         m_PlayerControls_Pause = m_PlayerControls.FindAction("Pause", throwIfNotFound: true);
         m_PlayerControls_Interact = m_PlayerControls.FindAction("Interact", throwIfNotFound: true);
         m_PlayerControls_Pull = m_PlayerControls.FindAction("Pull", throwIfNotFound: true);
+        m_PlayerControls_Retry = m_PlayerControls.FindAction("Retry", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Navigate = m_UI.FindAction("Navigate", throwIfNotFound: true);
@@ -438,6 +459,7 @@ public partial class @MasterInput : IInputActionCollection2, IDisposable
     private readonly InputAction m_PlayerControls_Pause;
     private readonly InputAction m_PlayerControls_Interact;
     private readonly InputAction m_PlayerControls_Pull;
+    private readonly InputAction m_PlayerControls_Retry;
     public struct PlayerControlsActions
     {
         private @MasterInput m_Wrapper;
@@ -448,6 +470,7 @@ public partial class @MasterInput : IInputActionCollection2, IDisposable
         public InputAction @Pause => m_Wrapper.m_PlayerControls_Pause;
         public InputAction @Interact => m_Wrapper.m_PlayerControls_Interact;
         public InputAction @Pull => m_Wrapper.m_PlayerControls_Pull;
+        public InputAction @Retry => m_Wrapper.m_PlayerControls_Retry;
         public InputActionMap Get() { return m_Wrapper.m_PlayerControls; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -475,6 +498,9 @@ public partial class @MasterInput : IInputActionCollection2, IDisposable
                 @Pull.started -= m_Wrapper.m_PlayerControlsActionsCallbackInterface.OnPull;
                 @Pull.performed -= m_Wrapper.m_PlayerControlsActionsCallbackInterface.OnPull;
                 @Pull.canceled -= m_Wrapper.m_PlayerControlsActionsCallbackInterface.OnPull;
+                @Retry.started -= m_Wrapper.m_PlayerControlsActionsCallbackInterface.OnRetry;
+                @Retry.performed -= m_Wrapper.m_PlayerControlsActionsCallbackInterface.OnRetry;
+                @Retry.canceled -= m_Wrapper.m_PlayerControlsActionsCallbackInterface.OnRetry;
             }
             m_Wrapper.m_PlayerControlsActionsCallbackInterface = instance;
             if (instance != null)
@@ -497,6 +523,9 @@ public partial class @MasterInput : IInputActionCollection2, IDisposable
                 @Pull.started += instance.OnPull;
                 @Pull.performed += instance.OnPull;
                 @Pull.canceled += instance.OnPull;
+                @Retry.started += instance.OnRetry;
+                @Retry.performed += instance.OnRetry;
+                @Retry.canceled += instance.OnRetry;
             }
         }
     }
@@ -567,6 +596,7 @@ public partial class @MasterInput : IInputActionCollection2, IDisposable
         void OnPause(InputAction.CallbackContext context);
         void OnInteract(InputAction.CallbackContext context);
         void OnPull(InputAction.CallbackContext context);
+        void OnRetry(InputAction.CallbackContext context);
     }
     public interface IUIActions
     {

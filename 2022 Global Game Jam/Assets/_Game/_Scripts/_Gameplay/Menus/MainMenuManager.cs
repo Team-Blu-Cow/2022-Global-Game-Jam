@@ -6,8 +6,6 @@ using blu;
 
 public class MainMenuManager : MonoBehaviour
 {
-    private const string defaultBind = "{ \"bindings\":[{ \"action\":\"Player Controls/Move\",\"id\":\"a0398539-6d39-453c-b4c2-750082127243\",\"path\":\"<Keyboard>/s\",\"interactions\":\"\",\"processors\":\"\"},{ \"action\":\"Player Controls/Move\",\"id\":\"7282b1ec-b16e-49e8-bbeb-3fb0b896749a\",\"path\":\"<Keyboard>/a\",\"interactions\":\"\",\"processors\":\"\"},{ \"action\":\"Player Controls/Jump\",\"id\":\"b9fe5cae-9ff8-4d10-8441-7aa7f4e3727a\",\"path\":\"<Keyboard>/space\",\"interactions\":\"\",\"processors\":\"\"},{ \"action\":\"Player Controls/Jump\",\"id\":\"d416a4f9-2fc7-4d27-a4cc-f3316853529c\",\"path\":\"<Keyboard>/space\",\"interactions\":\"\",\"processors\":\"\"}]}";
-
     MasterInput tempInput;
     RebindControlls[] rebindControlls;
 
@@ -69,7 +67,9 @@ public class MainMenuManager : MonoBehaviour
 
     public void ResetControlls()
     {
-        PlayerPrefs.SetString("rebinds", defaultBind);
+        PlayerPrefs.SetString("rebinds", "");
+
+        tempInput.LoadBindingOverridesFromJson("");
 
         foreach (RebindControlls control in rebindControlls)
         {

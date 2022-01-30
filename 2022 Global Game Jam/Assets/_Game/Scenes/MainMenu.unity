@@ -1229,7 +1229,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fb6681b0246dd341b2b011ab265ed60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
   actionRebind: Jump
   m_composite: 
   m_compositePart: 
@@ -3360,7 +3359,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fb6681b0246dd341b2b011ab265ed60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
   actionRebind: Move
   m_composite: WASD
   m_compositePart: Left
@@ -5991,7 +5989,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fb6681b0246dd341b2b011ab265ed60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
   actionRebind: Move
   m_composite: WASD
   m_compositePart: Right
@@ -7740,7 +7737,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fb6681b0246dd341b2b011ab265ed60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
   actionRebind: Interact
   m_composite: 
   m_compositePart: 
@@ -10919,7 +10915,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fb6681b0246dd341b2b011ab265ed60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
   actionRebind: Pull
   m_composite: 
   m_compositePart: 
@@ -12418,7 +12413,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fb6681b0246dd341b2b011ab265ed60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
   actionRebind: Move
   m_composite: WASD
   m_compositePart: Up
@@ -12645,7 +12639,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fb6681b0246dd341b2b011ab265ed60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
   actionRebind: Flip
   m_composite: 
   m_compositePart: 
@@ -14276,7 +14269,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fb6681b0246dd341b2b011ab265ed60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
   actionRebind: Retry
   m_composite: 
   m_compositePart: 
@@ -14300,7 +14292,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Interact
+  m_text: Retry
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -14712,7 +14704,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fb6681b0246dd341b2b011ab265ed60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
   actionRebind: Move
   m_composite: WASD
   m_compositePart: Down

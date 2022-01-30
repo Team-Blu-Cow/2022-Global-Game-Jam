@@ -5,12 +5,10 @@ using UnityEngine.InputSystem;
 
 public class PauseManager : MonoBehaviour
 {
-    private const string defaultBind = "{ \"bindings\":[{ \"action\":\"Player Controls/Move\",\"id\":\"a0398539-6d39-453c-b4c2-750082127243\",\"path\":\"<Keyboard>/s\",\"interactions\":\"\",\"processors\":\"\"},{ \"action\":\"Player Controls/Move\",\"id\":\"7282b1ec-b16e-49e8-bbeb-3fb0b896749a\",\"path\":\"<Keyboard>/a\",\"interactions\":\"\",\"processors\":\"\"},{ \"action\":\"Player Controls/Jump\",\"id\":\"b9fe5cae-9ff8-4d10-8441-7aa7f4e3727a\",\"path\":\"<Keyboard>/space\",\"interactions\":\"\",\"processors\":\"\"},{ \"action\":\"Player Controls/Jump\",\"id\":\"d416a4f9-2fc7-4d27-a4cc-f3316853529c\",\"path\":\"<Keyboard>/space\",\"interactions\":\"\",\"processors\":\"\"}]}";
-
     [SerializeField] private PlayerController player;
 
     bool m_paused = false;
-    [SerializeField, HideInInspector] RebindControlls[] rebindControlls;
+    RebindControlls[] rebindControlls;
 
     private void Start()
     {
@@ -18,11 +16,13 @@ public class PauseManager : MonoBehaviour
 
         player.PlayerInput.UI.Pause.performed += _ => PauseGame();
         player.PlayerInput.PlayerControls.Pause.performed += _ => PauseGame();
-    }
-    private void OnValidate()
-    {
+        
         rebindControlls = GetComponentsInChildren<RebindControlls>();
+
+        foreach (RebindControlls controll in rebindControlls)
+            controll.input = player.PlayerInput;
     }
+
     public void LoadBinds()
     {
         string rebinds = PlayerPrefs.GetString("rebinds", string.Empty);
@@ -40,7 +40,7 @@ public class PauseManager : MonoBehaviour
 
     public void ResetControlls()
     {
-        player.PlayerInput.LoadBindingOverridesFromJson(defaultBind);
+        player.PlayerInput.LoadBindingOverridesFromJson("");
 
         foreach (RebindControlls controll in rebindControlls)        
             controll.Reset();

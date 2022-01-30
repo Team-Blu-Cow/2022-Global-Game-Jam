@@ -12,6 +12,9 @@ public class Exit : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             m_levelEndCanvas.ShowCanvas(m_levelEndCanvas.GetComponentInChildren<Canvas>());
+            PlayerController player = other.GetComponent<PlayerController>();
+            player.PlayerInput.PlayerControls.Disable();
+            player.PlayerInput.UI.Enable();
         }        
     }
 

@@ -10,7 +10,6 @@ public class RebindControlls : MonoBehaviour
     private GameObject startRebindGO;
     private GameObject waitingGO;
 
-    [SerializeField] private PlayerController player;
     public MasterInput input;
     [SerializeField] private string actionRebind;
 
@@ -24,9 +23,6 @@ public class RebindControlls : MonoBehaviour
         displayText = GetComponentsInChildren<TextMeshProUGUI>()[1];
         startRebindGO = transform.GetChild(0).gameObject;
         waitingGO = transform.GetChild(1).gameObject;
-
-        if (player)
-            input = player.PlayerInput;
     }
 
     public void StartRebind()
