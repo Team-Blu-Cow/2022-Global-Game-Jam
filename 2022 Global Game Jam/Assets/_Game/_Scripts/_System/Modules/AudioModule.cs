@@ -15,6 +15,11 @@ namespace blu
         }
 
         [SerializeField]
+        private EventReference m_BGM;
+
+        private EventInstance m_BGMinstance;
+
+        [SerializeField]
         private EventReference[] m_events;
 
         private List<EventInstance> m_instances = new List<EventInstance>();
@@ -59,10 +64,15 @@ namespace blu
         public override void Initialize()
         {
             base.Initialize();
+
+            m_BGMinstance = RuntimeManager.CreateInstance(m_BGM);
+
             for (int i = 0; i < m_events.Length; i++)
             {
                 m_instances.Add(RuntimeManager.CreateInstance(m_events[i]));
             }
+
+            m_BGMinstance.start();
         }
     }
 }

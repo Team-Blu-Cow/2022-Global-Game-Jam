@@ -43,6 +43,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d665785d44ce7840afcdedc51cf771e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_BGM:
+    Guid:
+      Data1: -1641191217
+      Data2: 1118391657
+      Data3: 2138933645
+      Data4: 1106344442
+    Path: event:/Music/orb
   m_events:
   - Guid:
       Data1: 709452007
