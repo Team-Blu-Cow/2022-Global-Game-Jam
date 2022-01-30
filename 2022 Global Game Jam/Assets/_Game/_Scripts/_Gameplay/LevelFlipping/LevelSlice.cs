@@ -15,6 +15,8 @@ public class LevelSlice : MonoBehaviour
 
     [SerializeField] private LevelManager m_manager;
 
+    private float m_opacity = 0;
+
     public LevelManager manager
     {
         set { m_manager = value; }
@@ -59,39 +61,62 @@ public class LevelSlice : MonoBehaviour
             m_dynamicObjects.Remove(obj);
     }
 
+    void UpdateOpacity(float opacity)
+    {
+        foreach (var obj in m_dynamicObjects)
+        {
+            var mat = obj.GetComponent<ObjectTransparencyController>();
+            if (mat)
+                mat.SetOpacity(opacity);
+        }
+
+        foreach (var obj in m_staticObjects)
+        {
+            var mat = obj.GetComponent<ObjectTransparencyController>();
+            if (mat)
+                mat.SetOpacity(opacity);
+        }
+
+        m_opacity = opacity;
+    }
+
     public void SetSliceEnabled(bool enabled)
     {
         if(enabled)
         {
-            foreach (var obj in m_dynamicObjects)
-            {
-                var mat = obj.GetComponent<ObjectTransparencyController>();
-                if(mat)
-                    mat.FadeIn(m_manager.cameraBlend);
-            }
+            LeanTween.value(m_opacity, 1, m_manager.cameraBlend).setEaseInOutCirc().setOnUpdate(UpdateOpacity);
 
-            foreach (var obj in m_staticObjects)
-            {
-                var mat = obj.GetComponent<ObjectTransparencyController>();
-                if (mat)
-                    mat.FadeIn(m_manager.cameraBlend);
-            }
+            //foreach (var obj in m_dynamicObjects)
+            //{
+            //    var mat = obj.GetComponent<ObjectTransparencyController>();
+            //    if(mat)
+            //        mat.FadeIn(m_manager.cameraBlend);
+            //}
+            //
+            //foreach (var obj in m_staticObjects)
+            //{
+            //    var mat = obj.GetComponent<ObjectTransparencyController>();
+            //    if (mat)
+            //        mat.FadeIn(m_manager.cameraBlend);
+            //}
         }
         else
-        {
-            foreach (var obj in m_dynamicObjects)
-            {
-                var mat = obj.GetComponent<ObjectTransparencyController>();
-                if (mat)
-                    mat.FadeOut(m_manager.cameraBlend);
-            }
+        {            
+            LeanTween.value(m_opacity, 0, m_manager.cameraBlend).setEaseInOutCirc().setOnUpdate(UpdateOpacity);
 
-            foreach (var obj in m_staticObjects)
-            {
-                var mat = obj.GetComponent<ObjectTransparencyController>();
-                if (mat)
-                    mat.FadeOut(m_manager.cameraBlend);
-            }
+            //foreach (var obj in m_dynamicObjects)
+            //{
+            //    var mat = obj.GetComponent<ObjectTransparencyController>();
+            //    if (mat)
+            //        mat.FadeOut(m_manager.cameraBlend);
+            //}
+            //
+            //foreach (var obj in m_staticObjects)
+            //{
+            //    var mat = obj.GetComponent<ObjectTransparencyController>();
+            //    if (mat)
+            //        mat.FadeOut(m_manager.cameraBlend);
+            //}
         }
     }
 
