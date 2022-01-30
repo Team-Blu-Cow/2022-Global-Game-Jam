@@ -32,9 +32,6 @@ public class Interactable : MonoBehaviour
             GameObject obj = new GameObject();
             obj.name = "Interact Popup";
             obj.AddComponent<SpriteRenderer>();
-            Billboard bb = obj.AddComponent<Billboard>();
-
-            bb.sprTransform = obj.transform;
 
             m_popUp = obj.transform;
             obj.transform.SetParent(transform);
@@ -94,12 +91,12 @@ public class Interactable : MonoBehaviour
 
     private void Start()
     {
-        m_player.PlayerInput.PlayerControls.Interact.performed += _ => OnInteract();        
+        m_player.PlayerInput.PlayerControls.Interact.performed += _ => OnInteract(); 
     }
 
     private void Update()
     {
-        if (inTrigger && playerInSlice)
+        if (inTrigger && (playerInSlice || GameStateModule.CurrentRotationState == GameStateModule.RotationState.TOP_DOWN))
         { 
             if (GameStateModule.CurrentRotationState == GameStateModule.RotationState.SIDE_ON && m_interactSideOn)
                 OpenPopUp();
@@ -124,7 +121,7 @@ public class Interactable : MonoBehaviour
         if (GameStateModule.CurrentRotationState == GameStateModule.RotationState.SIDE_ON && !m_interactSideOn)
             return false;
 
-        if (!playerInSlice)
+        if (GameStateModule.CurrentRotationState == GameStateModule.RotationState.SIDE_ON && !playerInSlice)
             return false;
 
         return true;

@@ -1271,10 +1271,6 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1466491203, guid: eaf75950e7e5374428cefb02483aed2f, type: 3}
-      propertyPath: overrideGreyScale
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6438189141233557612, guid: eaf75950e7e5374428cefb02483aed2f, type: 3}
       propertyPath: m_RootOrder
       value: 0

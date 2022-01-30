@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -77,9 +78,15 @@ public class PlayerController : MonoBehaviour
         input_ = new MasterInput();
 
         input_.PlayerControls.Flip.performed += _ => Flip();
+        input_.PlayerControls.Retry.performed += _ => Restart();
 
         input_.UI.Disable();
         input_.PlayerControls.Enable();
+    }
+
+    public void SetXPos()
+    {
+        m_sideScrollController.XPos = transform.position.x;
     }
 
     private void Flip()
@@ -117,7 +124,13 @@ public class PlayerController : MonoBehaviour
         if (m_info.PullReleased)
             OnPullCanceled();
 
+
         blu.App.GetModule<blu.AudioModule>().PlayFootstep(gameObject, 0);
+
+        if(transform.position.y < -2)
+        {
+            blu.App.GetModule<blu.SceneModule>().SwitchScene(SceneManager.GetActiveScene().name, blu.TransitionType.Fade, blu.LoadingBarType.BottomRightRadial);
+        }
     }
 
     private void FixedUpdate()
@@ -159,7 +172,13 @@ public class PlayerController : MonoBehaviour
         m_animator.SetBool("isGrounded", m_info.IsGrounded);
     }
 
-    private void ApplyUniversalMovement()
+
+    private void Restart()
+    {
+        blu.App.GetModule<blu.SceneModule>().SwitchScene(SceneManager.GetActiveScene().name, blu.TransitionType.Fade, blu.LoadingBarType.BottomRightRadial);
+    }
+
+    void ApplyUniversalMovement()
     {
         // calculate gravity
         float fallMult = 1;
@@ -178,7 +197,7 @@ public class PlayerController : MonoBehaviour
         float velY = Mathf.Max(m_rb.velocity.y - m_info.CurrentFallSpeed, -m_info.MaxFallSpeed);
 
         // calculate horizontal movement speed
-        m_rb.velocity = new Vector3(m_rb.velocity.x, velY, m_info.MovementH * m_info.groundMoveSpeed);
+        m_rb.velocity = new Vector3(m_rb.velocity.x, velY, m_info.MovementH * m_info.groundMoveSpeed * ((m_info.PullDown)? m_info.PullSpeedMult : 1));
 
         // update animations
         m_animator.SetFloat("moveSpeedH", Mathf.Abs(m_info.MovementH));
@@ -191,6 +210,7 @@ public class PlayerController : MonoBehaviour
             Rigidbody boxRb = m_collidingBox.GetComponent<Rigidbody>();
             boxRb.velocity = m_rb.velocity;
             boxRb.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationY | RigidbodyConstraints.FreezeRotationZ;
+            boxRb.drag = 0.1f;
         }
     }
 
@@ -198,9 +218,11 @@ public class PlayerController : MonoBehaviour
     {
         if (m_collidingBox != null)
         {
+            m_collidingBox.GetComponent<Rigidbody>().drag = 10f;
+
             if (m_topDown)
             {
-                m_collidingBox.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ;
+                m_collidingBox.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationY | RigidbodyConstraints.FreezeRotationZ;
             }
             else
             {
@@ -312,4 +334,6 @@ public class PlayerInfo
 
     public bool PullDown;
     public bool PullReleased;
+
+    [SerializeField] public float PullSpeedMult = 0.5f;
 }
