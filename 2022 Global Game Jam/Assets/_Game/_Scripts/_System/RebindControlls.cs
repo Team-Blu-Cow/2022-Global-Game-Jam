@@ -11,6 +11,7 @@ public class RebindControlls : MonoBehaviour
     private GameObject waitingGO;
 
     [SerializeField] private PlayerController player;
+    public MasterInput input;
     [SerializeField] private string actionRebind;
 
     [SerializeField] private string m_composite;
@@ -23,19 +24,22 @@ public class RebindControlls : MonoBehaviour
         displayText = GetComponentsInChildren<TextMeshProUGUI>()[1];
         startRebindGO = transform.GetChild(0).gameObject;
         waitingGO = transform.GetChild(1).gameObject;
+
+        if (player)
+            input = player.PlayerInput;
     }
 
     public void StartRebind()
     {
-        if (player.PlayerInput.FindAction(actionRebind) == null)
+        if (input.FindAction(actionRebind) == null)
             return;
 
         startRebindGO.SetActive(false);
         waitingGO.SetActive(true);
 
-        player.PlayerInput.FindAction(actionRebind).actionMap.Disable();
+        input.FindAction(actionRebind).actionMap.Disable();
 
-        rebindingOperation = player.PlayerInput.FindAction(actionRebind).PerformInteractiveRebinding()
+        rebindingOperation = input.FindAction(actionRebind).PerformInteractiveRebinding()
             .WithControlsExcluding("Mouse")
             .OnMatchWaitForAnother(0.1f)
             .OnComplete(operation => RebindComplete())
@@ -44,19 +48,19 @@ public class RebindControlls : MonoBehaviour
 
     public void StartCompRebind()
     {
-        if (player.PlayerInput.FindAction(actionRebind) == null)
+        if (input.FindAction(actionRebind) == null)
             return;
 
         startRebindGO.SetActive(false);
         waitingGO.SetActive(true);
 
-        player.PlayerInput.FindAction(actionRebind).actionMap.Disable();
+        input.FindAction(actionRebind).actionMap.Disable();
 
-        var move = player.PlayerInput.FindAction(actionRebind).ChangeBinding(m_composite);
+        var move = input.FindAction(actionRebind).ChangeBinding(m_composite);
 
         var comp = move.NextPartBinding(m_compositePart);
 
-        rebindingOperation = player.PlayerInput.FindAction(actionRebind).PerformInteractiveRebinding(comp.bindingIndex)
+        rebindingOperation = input.FindAction(actionRebind).PerformInteractiveRebinding(comp.bindingIndex)
             .WithControlsExcluding("Mouse")
             .OnMatchWaitForAnother(0.1f)
             .OnComplete(operation => RebindComplete(true))
@@ -69,25 +73,25 @@ public class RebindControlls : MonoBehaviour
 
         rebindingOperation.Dispose();
 
-        player.PlayerInput.FindAction(actionRebind).actionMap.Enable();
+        input.FindAction(actionRebind).actionMap.Enable();
     }
 
     private void UpdateUI(bool composite = false)
     {
-        if (player.PlayerInput.FindAction(actionRebind) == null)
+        if (input.FindAction(actionRebind) == null)
             return;
 
-        int bindingIndex = player.PlayerInput.FindAction(actionRebind).GetBindingIndexForControl(player.PlayerInput.FindAction(actionRebind).controls[0]);
+        int bindingIndex = input.FindAction(actionRebind).GetBindingIndexForControl(input.FindAction(actionRebind).controls[0]);
 
         if (composite)
         {
-            var move = player.PlayerInput.FindAction(actionRebind).ChangeBinding(m_composite);
+            var move = input.FindAction(actionRebind).ChangeBinding(m_composite);
             var comp = move.NextPartBinding(m_compositePart);
             bindingIndex = comp.bindingIndex;
         }
 
         displayText.text = InputControlPath.ToHumanReadableString(
-            player.PlayerInput.FindAction(actionRebind).bindings[bindingIndex].effectivePath,
+            input.FindAction(actionRebind).bindings[bindingIndex].effectivePath,
             InputControlPath.HumanReadableStringOptions.OmitDevice);
         
         startRebindGO.SetActive(true);

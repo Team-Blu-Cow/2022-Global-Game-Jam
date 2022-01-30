@@ -10,7 +10,7 @@ public class PauseManager : MonoBehaviour
     [SerializeField] private PlayerController player;
 
     bool m_paused = false;
-    RebindControlls[] rebindControlls;
+    [SerializeField, HideInInspector] RebindControlls[] rebindControlls;
 
     private void Start()
     {
@@ -19,9 +19,6 @@ public class PauseManager : MonoBehaviour
         player.PlayerInput.UI.Pause.performed += _ => PauseGame();
         player.PlayerInput.PlayerControls.Pause.performed += _ => PauseGame();
     }
-
-    
-
     private void OnValidate()
     {
         rebindControlls = GetComponentsInChildren<RebindControlls>();
@@ -76,5 +73,18 @@ public class PauseManager : MonoBehaviour
             player.PlayerInput.UI.Disable();
             LoadBinds();
         }
+    }
+    public void ShowCanvas(Canvas canvas)
+    {
+        canvas.enabled = true;
+    }
+
+    public void HideCanvas(Canvas canvas)
+    {
+        canvas.enabled = false;
+    }
+    public void Swap(string scene)
+    {
+        blu.App.GetModule<blu.SceneModule>().SwitchScene(scene, blu.TransitionType.Fade, blu.LoadingBarType.BottomRightRadial);
     }
 }
