@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -125,6 +126,11 @@ public class PlayerController : MonoBehaviour
 
         if (m_info.PullReleased)
             OnPullCanceled();
+
+        if(transform.position.y < -2)
+        {
+            blu.App.GetModule<blu.SceneModule>().SwitchScene(SceneManager.GetActiveScene().name, blu.TransitionType.Fade, blu.LoadingBarType.BottomRightRadial);
+        }
     }
 
     private void FixedUpdate()
