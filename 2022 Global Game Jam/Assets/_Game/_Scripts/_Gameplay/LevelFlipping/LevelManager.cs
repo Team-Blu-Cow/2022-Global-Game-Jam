@@ -25,6 +25,11 @@ public class LevelManager : MonoBehaviour
 
     public bool topDown;
 
+    public int currentSlice
+    {
+        get { return Mathf.RoundToInt(m_playerObject.transform.position.x); }
+    }
+
     // this is temp stuff, change this to work with game state singletons (or whatever they are called)
     enum State
     {
@@ -89,8 +94,8 @@ public class LevelManager : MonoBehaviour
         if(state == blu.GameStateModule.RotationState.SIDE_ON)
         {
             topDown = false;
-            m_currentSlice = FindClosestSlice(m_playerObject);
-            TransitionToSlice(m_currentSlice);
+            
+            TransitionToSlice();
         }
         else if(state == blu.GameStateModule.RotationState.TOP_DOWN)
         {
@@ -130,7 +135,7 @@ public class LevelManager : MonoBehaviour
         }
     }
 
-    void TransitionToSlice(int index)
+    void TransitionToSlice()
     {
         // Move camera
         Camera.main.gameObject.GetComponent<CameraViewSpots>().CameraMoveToSideView();
@@ -139,12 +144,13 @@ public class LevelManager : MonoBehaviour
         AlignDynamicObjects();
 
         m_playerObject.GetComponent<PlayerController>().SetXPos();
+        m_currentSlice = Mathf.RoundToInt( m_playerObject.transform.position.x);
 
         // Disable all other slices
         int i = 0;
         foreach (var slice in m_slices)
         {
-            if (i != index)
+            if (i != m_currentSlice)
                 slice.SetSliceEnabled(false);
             i++;
         }
