@@ -13,7 +13,7 @@ public class ObjectTransparencyController : MonoBehaviour
     [SerializeField] private float m_opacity = 1;
     [SerializeField] private float m_targetOpacity = 1;
 
-    private LevelManager m_manager;
+    [SerializeField] private LevelManager m_manager;
 
     [SerializeField] bool overrideGreyScale = true;
 

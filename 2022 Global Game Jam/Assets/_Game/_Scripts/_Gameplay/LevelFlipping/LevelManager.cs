@@ -15,7 +15,7 @@ public class LevelManager : MonoBehaviour
     [SerializeField] private float m_levelWidth = 10;
 
     [SerializeField] private List<GameObject> m_dynamicObjects;
-    public GameObject m_playerObject;
+    [SerializeField] public GameObject m_playerObject;
 
     [SerializeField] private CinemachineBrain m_cameraBrain;
 

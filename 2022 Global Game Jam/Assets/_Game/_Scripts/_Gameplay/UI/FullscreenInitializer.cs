@@ -11,14 +11,14 @@ public class FullscreenInitializer : MonoBehaviour
     private void OnEnable()
     {
         _fullscreenToggle = GetComponent<Toggle>();
-        //_fullscreenToggle.isOn = App.GetModule<SettingsModule>().m_graphicsSettings.Fullscreen;
+        _fullscreenToggle.isOn = App.GetModule<SettingsModule>().graphicsSettings.fullscreen;
     }
 
     public void ToggleFullscreen(bool in_value)
     {
-        //Resolution _currentResolution = App.GetModule<SettingsModule>().m_graphicsSettings.Resolution;
-        //Screen.SetResolution(_currentResolution.width, _currentResolution.height, in_value, _currentResolution.refreshRate);
-        //App.GetModule<SettingsModule>().m_graphicsSettings.Fullscreen = in_value;
+        Resolution _currentResolution = App.GetModule<SettingsModule>().graphicsSettings.screenResolution;
+        Screen.SetResolution(_currentResolution.width, _currentResolution.height, in_value, _currentResolution.refreshRate);
+        App.GetModule<SettingsModule>().graphicsSettings.fullscreen = in_value;
         //SettingsModule.Save();
     }
 }

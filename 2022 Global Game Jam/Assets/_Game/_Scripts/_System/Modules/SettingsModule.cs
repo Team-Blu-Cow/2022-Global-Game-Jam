@@ -70,6 +70,7 @@ namespace blu
 
         public void Update()
         {
+            audioSettings.master.setMute(audioSettings.mute);
             audioSettings.master.setVolume(audioSettings.masterVolume);
             audioSettings.master.setVolume(audioSettings.masterVolume);
             audioSettings.music.setVolume(audioSettings.musicVolume);
