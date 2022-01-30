@@ -85,6 +85,11 @@ public class PlayerController : MonoBehaviour
         input_.PlayerControls.Enable();
     }
 
+    public void SetXPos()
+    {
+        m_sideScrollController.XPos = transform.position.x;
+    }
+
     private void Flip()
     {
        

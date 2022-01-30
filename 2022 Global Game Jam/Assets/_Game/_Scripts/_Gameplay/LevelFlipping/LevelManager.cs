@@ -23,6 +23,8 @@ public class LevelManager : MonoBehaviour
     public float cameraBlend
     { get { return m_cameraBlend; } }
 
+    public bool topDown;
+
     // this is temp stuff, change this to work with game state singletons (or whatever they are called)
     enum State
     {
@@ -86,11 +88,13 @@ public class LevelManager : MonoBehaviour
     {
         if(state == blu.GameStateModule.RotationState.SIDE_ON)
         {
+            topDown = false;
             m_currentSlice = FindClosestSlice(m_playerObject);
             TransitionToSlice(m_currentSlice);
         }
         else if(state == blu.GameStateModule.RotationState.TOP_DOWN)
         {
+            topDown = true;
             TransitionToTopDown();
         }
     }
@@ -133,6 +137,8 @@ public class LevelManager : MonoBehaviour
 
         // Align Objects to slice
         AlignDynamicObjects();
+
+        m_playerObject.GetComponent<PlayerController>().SetXPos();
 
         // Disable all other slices
         int i = 0;
