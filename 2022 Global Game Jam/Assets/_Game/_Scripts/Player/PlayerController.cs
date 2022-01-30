@@ -212,7 +212,7 @@ public class PlayerController : MonoBehaviour
 
             if (m_topDown)
             {
-                m_collidingBox.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ;
+                m_collidingBox.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationY | RigidbodyConstraints.FreezeRotationZ;
             }
             else
             {
