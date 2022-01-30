@@ -124,6 +124,9 @@ public class Interactable : MonoBehaviour
         if (GameStateModule.CurrentRotationState == GameStateModule.RotationState.SIDE_ON && !m_interactSideOn)
             return false;
 
+        if (GameStateModule.CurrentRotationState == GameStateModule.RotationState.SIDE_ON && !playerInSlice)
+            return false;
+
         return true;
     }
 
