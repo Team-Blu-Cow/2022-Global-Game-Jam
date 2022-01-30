@@ -7,6 +7,7 @@ public class ObjectTransparencyController : MonoBehaviour
 {
     [SerializeField, HideInInspector] private Material m_material;
     [SerializeField, HideInInspector] private List<TextMeshPro> m_tmPro;
+    [SerializeField, HideInInspector] private List<SpriteRenderer> m_sr;
 
 
     [SerializeField] private float m_opacity = 1;
@@ -111,6 +112,7 @@ public class ObjectTransparencyController : MonoBehaviour
         }*/
 
         m_tmPro = new List<TextMeshPro>(GetComponentsInChildren<TextMeshPro>());
+        m_sr = new List<SpriteRenderer>(GetComponentsInChildren<SpriteRenderer>());
     }
 
     public float opacity
@@ -172,7 +174,15 @@ public class ObjectTransparencyController : MonoBehaviour
                 m_tmPro[i].color = new Color(color.r, color.b, color.g, m_opacity);
             }
         }
-        
+
+        for (int i = 0; i < m_sr.Count; i++)
+        {
+            if (m_sr[i])
+            {
+                Color color = m_sr[i].color;
+                m_sr[i].color = new Color(color.r, color.b, color.g, m_opacity);
+            }
+        }
     }
 
     public void FadeOut(float time)
