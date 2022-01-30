@@ -119,7 +119,7 @@ public class ObjectTransparencyController : MonoBehaviour
         LeanTween.value(gameObject, 0, 1, time).setEaseInOutCirc().setOnUpdate(SetOpacity);
     }
 
-    void SetOpacity(float f)
+    public void SetOpacity(float f)
     {
         m_opacity = f;
     }

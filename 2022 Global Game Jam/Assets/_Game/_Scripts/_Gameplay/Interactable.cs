@@ -11,6 +11,9 @@ public class Interactable : MonoBehaviour
     [SerializeField, HideInInspector] PlayerController m_player;
     [SerializeField] float m_radius;
 
+    [SerializeField] bool m_interactSideOn;
+    [SerializeField] bool m_interactTopDown;
+
     [SerializeField, HideInInspector] protected LevelSelectController m_controller;
     [SerializeField, HideInInspector] protected LevelManager m_manager;
 
@@ -38,7 +41,7 @@ public class Interactable : MonoBehaviour
         }
 
         // todo make the editable in Editor
-        if(TryGetComponent<SphereCollider>(out SphereCollider collider))
+        if(TryGetComponent(out SphereCollider collider))
         {
             collider.isTrigger = true;
             if(m_radius != 0)
@@ -82,14 +85,6 @@ public class Interactable : MonoBehaviour
         }
     }
 
-    private void Update()
-    {
-        if (inTrigger && playerInSlice && GameStateModule.CurrentRotationState == GameStateModule.RotationState.SIDE_ON)
-            OpenPopUp();
-        else
-            ClosePopUp();    
-    }
-
     private void Awake()
     {
         m_popUp.gameObject.SetActive(false);
@@ -105,7 +100,10 @@ public class Interactable : MonoBehaviour
         if (!inTrigger)
             return false;
 
-        if (GameStateModule.CurrentRotationState == GameStateModule.RotationState.TOP_DOWN)
+        if (GameStateModule.CurrentRotationState == GameStateModule.RotationState.TOP_DOWN && !m_interactTopDown)
+            return false;
+        
+        if (GameStateModule.CurrentRotationState == GameStateModule.RotationState.SIDE_ON && !m_interactSideOn)
             return false;
 
         if (!playerInSlice)
@@ -119,6 +117,12 @@ public class Interactable : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             inTrigger = true;
+
+            if (GameStateModule.CurrentRotationState == GameStateModule.RotationState.SIDE_ON && m_interactSideOn)
+                OpenPopUp();
+
+            if (GameStateModule.CurrentRotationState == GameStateModule.RotationState.TOP_DOWN && m_interactTopDown)
+                OpenPopUp();
         }
     }
 
@@ -127,6 +131,8 @@ public class Interactable : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             inTrigger = false;
+
+            ClosePopUp();
         }
     }
 
@@ -137,7 +143,10 @@ public class Interactable : MonoBehaviour
 
     protected virtual void OpenPopUp()
     {
-        m_popUp.localPosition = new Vector3(0.6f, 0.6f , 0.6f);
+        if (GameStateModule.CurrentRotationState == GameStateModule.RotationState.TOP_DOWN)
+            m_popUp.localPosition = new Vector3(0.6f, 0.6f , 0.6f);
+        else
+            m_popUp.localPosition = new Vector3(-0.6f, 0.6f , 0.6f);
 
         SetPopUpSprite();
 
