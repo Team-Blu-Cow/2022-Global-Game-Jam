@@ -43,11 +43,11 @@ public class ResolutionDropdown : MonoBehaviour
         _dropdown.AddOptions(acceptedRes);
         for (int i = 0; i < listResolutions.Count; i++)
         {
-            //if (listResolutions[i].Equals(App.GetModule<SettingsModule>().m_graphicsSettings.Resolution))
-            //{
-            //    _dropdown.value = i;
-            //    break;
-            //}
+            if (listResolutions[i].Equals(App.GetModule<SettingsModule>().graphicsSettings.screenResolution))
+            {
+                _dropdown.value = i;
+                break;
+            }
         }
     }
 
@@ -60,8 +60,8 @@ public class ResolutionDropdown : MonoBehaviour
     {
         Resolution newResolution = listResolutions[in_value];
         Application.targetFrameRate = newResolution.refreshRate;
-       // Screen.SetResolution(newResolution.width, newResolution.height, App.GetModule<SettingsModule>().m_graphicsSettings.Fullscreen, newResolution.refreshRate);
-       // App.GetModule<SettingsModule>().m_graphicsSettings.Resolution = newResolution;
+        Screen.SetResolution(newResolution.width, newResolution.height, App.GetModule<SettingsModule>().graphicsSettings.fullscreen, newResolution.refreshRate);
+        App.GetModule<SettingsModule>().graphicsSettings.screenResolution = newResolution;
        // SettingsModule.Save();
     }
 }
