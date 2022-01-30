@@ -81,11 +81,13 @@ public class PlayerController : MonoBehaviour
         if (m_topDown)
         {
             blu.App.GetModule<blu.GameStateModule>().ChangeState(blu.GameStateModule.RotationState.TOP_DOWN);
+            m_topDownController.isShifting = false;
             m_topDownController.SetMoveDirection(m_sideScrollController.facingRight);
         }
         else
         {
             blu.App.GetModule<blu.GameStateModule>().ChangeState(blu.GameStateModule.RotationState.SIDE_ON);
+            m_topDownController.isShifting = true;
             m_sideScrollController.SetFacing(m_topDownController.GetFacingDirection());
             //m_topDownController.ResetRotation();
         }

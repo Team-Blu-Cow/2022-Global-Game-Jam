@@ -7,6 +7,7 @@ public class TopDownController : PlayerStateController
 {
     [SerializeField] float rotationSpeed;
     bool facingRight;
+    public bool isShifting = false;
 
     public override void OnFixedUpdate()
     {
@@ -18,6 +19,9 @@ public class TopDownController : PlayerStateController
 
     public void CheckMoveDirection()
     {
+        if (isShifting)
+            return;
+
         Vector3 moveDir = new Vector3(pInfo.MovementV, 0, pInfo.MovementH );
         moveDir.Normalize();
 
