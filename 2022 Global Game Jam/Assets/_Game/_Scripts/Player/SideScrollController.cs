@@ -32,18 +32,6 @@ public class SideScrollController : PlayerStateController
 
     private void TryJump()
     {
-        // calculate coyote time
-        if (pInfo.IsGrounded)
-            CoyoteTimeCounter = CoyoteTime;
-        else
-            CoyoteTimeCounter -= Time.deltaTime;
-
-        // calculate jump buffer
-        if (pInfo.JumpPressed)
-            JumpBufferCounter = JumpBuffer;
-        else
-            JumpBufferCounter -= Time.deltaTime;
-
         // attempt to jump
         if (JumpBufferCounter > 0 && CoyoteTimeCounter > 0)
         {
@@ -79,5 +67,20 @@ public class SideScrollController : PlayerStateController
         Vector3 Scaler = m_player.transform.localScale;
         Scaler.x = Mathf.Abs(m_player.transform.localScale.x) * m_player.pInfo.xscaleMult;
         m_player.transform.localScale = Scaler;
+    }
+
+    public override void OnUpdate()
+    {
+        // calculate coyote time
+        if (pInfo.IsGrounded)
+            CoyoteTimeCounter = CoyoteTime;
+        else
+            CoyoteTimeCounter -= Time.deltaTime;
+
+        // calculate jump buffer
+        if (pInfo.JumpPressed)
+            JumpBufferCounter = JumpBuffer;
+        else
+            JumpBufferCounter -= Time.deltaTime;
     }
 }

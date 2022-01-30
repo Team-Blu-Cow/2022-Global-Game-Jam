@@ -95,6 +95,11 @@ public class PlayerController : MonoBehaviour
         CollectInput();
 
         m_animator.SetBool("topDown", m_billboard.isTopView);
+
+        if (m_topDown)
+            m_topDownController.OnUpdate();
+        else
+            m_sideScrollController.OnUpdate();
     }
 
     private void FixedUpdate()
