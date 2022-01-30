@@ -95,6 +95,12 @@ public class Interactable : MonoBehaviour
         m_player.PlayerInput.PlayerControls.Interact.performed += _ => OnInteract();        
     }
 
+    private void Update()
+    {
+        if (!inTrigger)
+            ClosePopUp();
+    }
+
     virtual protected bool OnInteract()
     {
         if (!inTrigger)
@@ -131,8 +137,6 @@ public class Interactable : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             inTrigger = false;
-
-            ClosePopUp();
         }
     }
 
