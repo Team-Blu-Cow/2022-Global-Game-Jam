@@ -10,8 +10,8 @@ public class PlayerController : MonoBehaviour
     private Rigidbody m_rb;
     public Rigidbody rb => m_rb;
 
-    [SerializeField] Transform m_footSensor;
-    [SerializeField] float m_checkRadius;
+    [SerializeField] private Transform m_footSensor;
+    [SerializeField] private float m_checkRadius;
 
     [SerializeField, HideInInspector] private Animator m_animator;
     [SerializeField, HideInInspector] private Billboard m_billboard;
@@ -19,7 +19,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private SideScrollController m_sideScrollController = new SideScrollController();
     [SerializeField] private TopDownController m_topDownController = new TopDownController();
 
-    bool m_topDown = true;
+    private bool m_topDown = true;
 
     [SerializeField] private PlayerInfo m_info;
     public PlayerInfo pInfo => m_info;
@@ -36,7 +36,7 @@ public class PlayerController : MonoBehaviour
 
     private void OnEnable()
     {
-        input_.Enable();        
+        input_.Enable();
     }
 
     private void OnDisable()
@@ -44,11 +44,10 @@ public class PlayerController : MonoBehaviour
         input_.Disable();
     }
 
-
     private void OnValidate()
     {
         var levelMagr = FindObjectOfType<LevelManager>();
-        if(levelMagr)
+        if (levelMagr)
         {
             levelMagr.m_playerObject = this.gameObject;
         }
@@ -65,8 +64,6 @@ public class PlayerController : MonoBehaviour
         m_sideScrollController.Init(this, m_animator);
 
         m_topDownController.Init(this, m_animator);
-
-        
     }
 
     private void Start()
@@ -87,7 +84,6 @@ public class PlayerController : MonoBehaviour
 
     private void Flip()
     {
-       
         m_topDown = !m_topDown;
         if (m_topDown)
         {
@@ -120,20 +116,22 @@ public class PlayerController : MonoBehaviour
 
         if (m_info.PullReleased)
             OnPullCanceled();
+
+        blu.App.GetModule<blu.AudioModule>().PlayFootstep(gameObject, 0);
     }
 
     private void FixedUpdate()
     {
         CheckForGrounded();
         ApplyUniversalMovement();
-       
+
         if (m_topDown)
             m_topDownController.OnFixedUpdate();
         else
             m_sideScrollController.OnFixedUpdate();
     }
 
-    void CollectInput()
+    private void CollectInput()
     {
         Vector2 vec = input_.PlayerControls.Move.ReadValue<Vector2>();
 
@@ -152,16 +150,16 @@ public class PlayerController : MonoBehaviour
         m_info.PullReleased = input_.PlayerControls.Pull.WasReleasedThisFrame();
     }
 
-    void CheckForGrounded()
+    private void CheckForGrounded()
     {
         m_info.IsGrounded = Physics.OverlapSphere(m_footSensor.position, m_checkRadius, 1).Length > 1;
-        m_info.IsGrounded |= Physics.OverlapSphere(m_footSensor.position + new Vector3(0, 0f, -0.19f), m_checkRadius,1).Length > 1;
-        m_info.IsGrounded |= Physics.OverlapSphere(m_footSensor.position + new Vector3(0, 0f, 0.19f), m_checkRadius,1).Length > 1;
+        m_info.IsGrounded |= Physics.OverlapSphere(m_footSensor.position + new Vector3(0, 0f, -0.19f), m_checkRadius, 1).Length > 1;
+        m_info.IsGrounded |= Physics.OverlapSphere(m_footSensor.position + new Vector3(0, 0f, 0.19f), m_checkRadius, 1).Length > 1;
 
         m_animator.SetBool("isGrounded", m_info.IsGrounded);
     }
 
-    void ApplyUniversalMovement()
+    private void ApplyUniversalMovement()
     {
         // calculate gravity
         float fallMult = 1;
@@ -174,9 +172,7 @@ public class PlayerController : MonoBehaviour
                 fallMult = m_info.FallMultiplier;
             }
 
-            m_info.CurrentFallSpeed =  m_info.CurrentFallSpeed + (m_info.FallSpeed* fallMult);
-
-            
+            m_info.CurrentFallSpeed = m_info.CurrentFallSpeed + (m_info.FallSpeed * fallMult);
         }
 
         float velY = Mathf.Max(m_rb.velocity.y - m_info.CurrentFallSpeed, -m_info.MaxFallSpeed);
@@ -188,9 +184,9 @@ public class PlayerController : MonoBehaviour
         m_animator.SetFloat("moveSpeedH", Mathf.Abs(m_info.MovementH));
     }
 
-    void OnPullPerformed()
+    private void OnPullPerformed()
     {
-        if(m_isCollidingWithPullable && m_collidingBox != null)
+        if (m_isCollidingWithPullable && m_collidingBox != null)
         {
             Rigidbody boxRb = m_collidingBox.GetComponent<Rigidbody>();
             boxRb.velocity = m_rb.velocity;
@@ -198,7 +194,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    void OnPullCanceled()
+    private void OnPullCanceled()
     {
         if (m_collidingBox != null)
         {
@@ -215,8 +211,7 @@ public class PlayerController : MonoBehaviour
 
     private void OnDrawGizmos()
     {
-        
-        Gizmos.color = (m_info.IsGrounded)? Color.green : Color.red;
+        Gizmos.color = (m_info.IsGrounded) ? Color.green : Color.red;
         Gizmos.DrawWireSphere(m_footSensor.position, m_checkRadius);
         Gizmos.DrawWireSphere(m_footSensor.position + new Vector3(0, 0f, -0.19f), m_checkRadius);
         Gizmos.DrawWireSphere(m_footSensor.position + new Vector3(0, 0f, 0.19f), m_checkRadius);
@@ -255,9 +250,8 @@ public class PlayerController : MonoBehaviour
             if (m_isOnJumpPad)
             {
                 m_isOnJumpPad = false;
-                m_sideScrollController.jumpForce /= other.gameObject.GetComponent<JumpPad>().GetJumpMultiplier();  
+                m_sideScrollController.jumpForce /= other.gameObject.GetComponent<JumpPad>().GetJumpMultiplier();
             }
-          
         }
     }
 }
@@ -283,8 +277,11 @@ public class PlayerStateController
         m_animator = a;
     }
 
-    virtual public void OnUpdate() { }
-    virtual public void OnFixedUpdate() { }
+    public virtual void OnUpdate()
+    { }
+
+    public virtual void OnFixedUpdate()
+    { }
 }
 
 [System.Serializable]
