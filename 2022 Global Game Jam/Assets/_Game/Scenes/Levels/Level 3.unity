@@ -173,7 +173,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1074516
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -286,7 +289,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &2486468
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -399,7 +405,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &6728997
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -512,7 +521,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &10310934
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -690,7 +702,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &14824427
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -803,7 +818,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &20464304
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -902,7 +920,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &23865692
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1029,7 +1050,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &23868384
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1142,7 +1166,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &29798275
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1255,7 +1282,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &34720857
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1368,7 +1398,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &37677156
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1481,7 +1514,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &39712637
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1594,7 +1630,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &41240917
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1707,7 +1746,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &43565547
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1820,7 +1862,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &44198361
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1933,7 +1978,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &56792335
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2046,7 +2094,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &67175534
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2159,7 +2210,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &69009601
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2258,7 +2312,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &73315528
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2385,7 +2442,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &77202609
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2498,7 +2558,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &88201995
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2611,7 +2674,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &90588955
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2724,7 +2790,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &99682360
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2837,7 +2906,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &105641188
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2950,7 +3022,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &109857642
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3063,7 +3138,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &117760909
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3162,7 +3240,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &118507732
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3289,7 +3370,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &129939917
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3402,7 +3486,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &131750065
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3515,7 +3602,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &133669456
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3628,7 +3718,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &156931549
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3741,7 +3834,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &161020692
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3854,7 +3950,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &161673488
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3967,7 +4066,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &164123158
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4080,7 +4182,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &165057530
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4193,7 +4298,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &171051334
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4332,9 +4440,11 @@ MonoBehaviour:
   - {fileID: 1552272625}
   - {fileID: 1314361317}
   - {fileID: 1673294865}
+  - {fileID: 1188722796}
   m_playerObject: {fileID: 995656779}
   m_cameraBrain: {fileID: 1936223951}
   m_cameraBlend: 1
+  topDown: 0
   m_state: 0
 --- !u!1 &176931963
 GameObject:
@@ -4386,7 +4496,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &176931966
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4499,7 +4612,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &182203832
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4612,7 +4728,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &183797000
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4725,7 +4844,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &183925481
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4838,7 +4960,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &184198600
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4951,7 +5076,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &188135018
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5064,7 +5192,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &192418262
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5177,7 +5308,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &202488008
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5290,7 +5424,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &204466624
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5403,7 +5540,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &214422204
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5502,7 +5642,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &219942315
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5629,7 +5772,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &220571468
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5742,7 +5888,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &225596151
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6377,7 +6526,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &253563456
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6490,7 +6642,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &258878273
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6603,7 +6758,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &261577475
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6716,7 +6874,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &266801739
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6829,7 +6990,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &266990766
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6928,7 +7092,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &269897944
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7055,7 +7222,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &272801121
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7168,7 +7338,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &276798289
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7281,7 +7454,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &277415661
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7394,7 +7570,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &287836413
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7507,7 +7686,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &307996917
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7606,7 +7788,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &311821071
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7733,7 +7918,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &323327841
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7832,7 +8020,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &335441772
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7959,7 +8150,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &341260107
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8072,7 +8266,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &350003845
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8185,7 +8382,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &355427811
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8298,7 +8498,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &358277778
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8411,7 +8614,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &369278878
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8524,7 +8730,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &369607263
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8637,7 +8846,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &376008277
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8750,7 +8962,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &378913533
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8863,7 +9078,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &381207393
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8976,7 +9194,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &385321323
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9089,7 +9310,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &385905522
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9202,7 +9426,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &386949114
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9315,7 +9542,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &388465727
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9428,7 +9658,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &389430574
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9541,7 +9774,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &391028213
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9654,7 +9890,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &394081001
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9767,7 +10006,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &397847796
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9880,7 +10122,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &398327444
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9993,7 +10238,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &408907196
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10106,7 +10354,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &409647443
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10219,7 +10470,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &410943873
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10332,7 +10586,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &412462855
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10445,7 +10702,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &419325846
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10558,7 +10818,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &419950250
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10671,7 +10934,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &425908828
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10784,7 +11050,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &426128433
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10897,7 +11166,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &428360077
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11010,7 +11282,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &431184764
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11123,7 +11398,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &442920455
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11236,7 +11514,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &444640466
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11349,7 +11630,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &451676031
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11462,7 +11746,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &455079831
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11575,7 +11862,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &456093791
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11674,7 +11964,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &463229304
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11801,7 +12094,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &467085179
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11914,7 +12210,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &477750879
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12102,7 +12401,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &493652694
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12215,7 +12517,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &494093142
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12328,7 +12633,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &496321086
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12441,7 +12749,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &504349410
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12554,7 +12865,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &504489282
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12667,7 +12981,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &508277378
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12780,7 +13097,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &517076797
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12893,7 +13213,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &521393392
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13006,7 +13329,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &526713377
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13145,6 +13471,7 @@ Transform:
   - {fileID: 910143564}
   - {fileID: 225596149}
   - {fileID: 1758098543}
+  - {fileID: 1804889943}
   m_Father: {fileID: 1415268890}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -13198,7 +13525,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &541432528
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13311,7 +13641,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &543861887
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13424,7 +13757,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &548757904
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13537,7 +13873,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &551035832
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13650,7 +13989,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &552156948
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13763,7 +14105,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &555912631
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13876,7 +14221,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &570307568
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13989,7 +14337,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &570497970
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14196,7 +14547,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &579549930
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14309,7 +14663,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &579959565
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14422,7 +14779,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &584389137
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14521,7 +14881,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &589210968
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14648,7 +15011,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &591439689
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14761,7 +15127,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &601090643
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14874,7 +15243,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &602603936
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14987,7 +15359,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &605571827
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15100,7 +15475,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &606419939
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15213,7 +15591,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &606877512
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15326,7 +15707,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &608649336
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15439,7 +15823,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &609706737
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15538,7 +15925,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &641242154
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15665,7 +16055,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &652254364
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15764,7 +16157,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &657295987
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15891,7 +16287,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &658044599
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16004,7 +16403,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &659198876
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16117,7 +16519,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &661338066
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16230,7 +16635,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &674616793
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16343,7 +16751,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &675377855
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16456,7 +16867,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &679923217
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16569,7 +16983,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &684541867
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16682,7 +17099,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &688459947
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16795,7 +17215,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &696444669
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16908,7 +17331,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &703459449
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17021,7 +17447,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &717918781
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17134,7 +17563,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &718329539
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17247,7 +17679,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &719241696
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17360,7 +17795,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &724691397
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17473,7 +17911,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &725484735
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17586,7 +18027,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &733712882
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17699,7 +18143,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &737285481
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17812,7 +18259,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &737803048
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17925,7 +18375,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &748211091
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18038,7 +18491,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &749471700
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18151,7 +18607,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &751596879
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18264,7 +18723,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &752604356
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18377,7 +18839,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &755331555
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18490,7 +18955,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &760354813
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18603,7 +19071,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &763759073
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18716,7 +19187,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &765479882
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18829,7 +19303,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &765557488
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18942,7 +19419,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &774563449
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19055,7 +19535,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &778920258
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19168,7 +19651,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &780045391
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19281,7 +19767,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &789480637
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19380,7 +19869,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &791410594
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19507,7 +19999,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &796329781
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19620,7 +20115,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &801305543
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19733,7 +20231,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &804160997
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19846,7 +20347,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &806529148
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20013,7 +20517,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &809691267
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20126,7 +20633,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &818602692
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20239,7 +20749,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &823401488
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20352,7 +20865,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &830955829
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20465,7 +20981,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &832498646
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20578,7 +21097,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &839781825
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20677,7 +21199,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &846016433
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20804,7 +21329,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &850125941
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20917,7 +21445,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &857267943
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21141,7 +21672,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &865025132
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21254,7 +21788,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &868063624
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21353,7 +21890,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &876987108
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21480,7 +22020,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &879999063
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21645,7 +22188,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &885784271
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21772,7 +22318,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &895586638
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21885,7 +22434,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &909404426
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21998,7 +22550,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &910143566
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22111,7 +22666,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &910480379
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22224,7 +22782,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &917012466
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22337,7 +22898,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &923719546
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22450,7 +23014,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &927293214
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22563,7 +23130,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &930433212
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22702,6 +23272,8 @@ Transform:
   - {fileID: 1347245946}
   - {fileID: 608649334}
   - {fileID: 955962509}
+  - {fileID: 1398600152}
+  - {fileID: 994019786}
   m_Father: {fileID: 1874194315}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -22755,7 +23327,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &939793812
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22868,7 +23443,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &943709307
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22981,7 +23559,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &948768851
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23094,7 +23675,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &955525835
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23193,7 +23777,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &955962506
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23320,7 +23907,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &957662062
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23433,7 +24023,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &967301172
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23546,7 +24139,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &970923220
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23659,7 +24255,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &993519356
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23722,6 +24321,122 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 993519353}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &994019781
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 994019786}
+  - component: {fileID: 994019785}
+  - component: {fileID: 994019784}
+  - component: {fileID: 994019783}
+  - component: {fileID: 994019782}
+  m_Layer: 0
+  m_Name: Cube (50)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &994019782
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 994019781}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37f92d78b03b64a4bbb1c099de376f1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_material: {fileID: 0}
+  m_tmPro: []
+  m_opacity: 1
+  m_targetOpacity: 1
+  overrideGreyScale: 1
+  m_type: 0
+  height: 0
+  lerpval: 0
+--- !u!65 &994019783
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 994019781}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &994019784
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 994019781}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 51128b66e2773874187a2ad56f562384, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &994019785
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 994019781}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &994019786
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 994019781}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 3, z: 19.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 938491043}
+  m_RootOrder: 50
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &995656776
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23850,7 +24565,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &997148097
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23963,7 +24681,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &997683363
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24076,7 +24797,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &998104621
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24189,7 +24913,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1003215457
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24302,7 +25029,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1005064849
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24401,7 +25131,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1007103708
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24528,7 +25261,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1010930467
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24641,7 +25377,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1015878117
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24754,7 +25493,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1019636544
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24867,7 +25609,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1019900529
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24980,7 +25725,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1025243321
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -25093,7 +25841,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1030935487
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -25206,7 +25957,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1032507707
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -25319,7 +26073,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1039882578
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -25432,7 +26189,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1040592074
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -25545,7 +26305,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1046711624
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -25658,7 +26421,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1053369350
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -25771,7 +26537,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1059433280
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -25884,7 +26653,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1065932800
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -25997,7 +26769,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1067605637
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -26110,7 +26885,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1067830080
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -26223,7 +27001,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1069644360
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -26322,7 +27103,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1071941593
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -26435,7 +27219,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1076898035
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -26562,7 +27349,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1080254675
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -26675,7 +27465,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1081012322
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -26774,7 +27567,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1085141709
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -26901,7 +27697,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1089540037
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -27014,7 +27813,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1096820140
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -27127,7 +27929,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1097775044
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -27240,7 +28045,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1097971781
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -27353,7 +28161,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1102346022
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -27466,7 +28277,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1108773014
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -27579,7 +28393,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1108817119
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -27692,7 +28509,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1116264715
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -27805,7 +28625,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1116363441
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -27904,7 +28727,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1119911670
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -28031,7 +28857,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1121939943
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -28144,7 +28973,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1124850480
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -28257,7 +29089,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1127122449
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -28370,7 +29205,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1134554972
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -28483,7 +29321,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1136396652
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -28596,7 +29437,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1139499060
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -28709,7 +29553,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1140022269
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -28822,7 +29669,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1140727714
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -28935,7 +29785,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1147988481
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -29048,7 +29901,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1149688007
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -29161,7 +30017,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1155948297
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -29224,6 +30083,63 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1155948294}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &1158999576
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2825776924845836945, guid: 3df06b4a93dda7d4fa20b866abc59f80, type: 3}
+      propertyPath: m_Name
+      value: PushableBlock (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2825776924845837039, guid: 3df06b4a93dda7d4fa20b866abc59f80, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2825776924845837039, guid: 3df06b4a93dda7d4fa20b866abc59f80, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 2825776924845837039, guid: 3df06b4a93dda7d4fa20b866abc59f80, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2825776924845837039, guid: 3df06b4a93dda7d4fa20b866abc59f80, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 19.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2825776924845837039, guid: 3df06b4a93dda7d4fa20b866abc59f80, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2825776924845837039, guid: 3df06b4a93dda7d4fa20b866abc59f80, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2825776924845837039, guid: 3df06b4a93dda7d4fa20b866abc59f80, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2825776924845837039, guid: 3df06b4a93dda7d4fa20b866abc59f80, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2825776924845837039, guid: 3df06b4a93dda7d4fa20b866abc59f80, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2825776924845837039, guid: 3df06b4a93dda7d4fa20b866abc59f80, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2825776924845837039, guid: 3df06b4a93dda7d4fa20b866abc59f80, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3df06b4a93dda7d4fa20b866abc59f80, type: 3}
 --- !u!1 &1166444643
 GameObject:
   m_ObjectHideFlags: 0
@@ -29274,7 +30190,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1166444646
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -29373,7 +30292,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1166846877
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -29500,7 +30422,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1173508042
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -29563,6 +30488,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1173508039}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1188722796 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2825776924845836945, guid: 3df06b4a93dda7d4fa20b866abc59f80, type: 3}
+  m_PrefabInstance: {fileID: 1158999576}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1189006476
 GameObject:
   m_ObjectHideFlags: 0
@@ -29665,7 +30595,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1189183468
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -29778,7 +30711,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1198058334
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -29891,7 +30827,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1202673513
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -30004,7 +30943,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1208659258
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -30117,7 +31059,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1221570506
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -30230,7 +31175,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1224526286
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -30343,7 +31291,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1225347477
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -30456,7 +31407,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1247495020
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -30569,7 +31523,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1253123976
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -30682,7 +31639,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1259611636
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -30795,7 +31755,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1261716539
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -30908,7 +31871,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1264670590
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -31007,7 +31973,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1266840425
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -31134,7 +32103,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1273320434
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -31247,7 +32219,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1273508990
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -31360,7 +32335,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1274068477
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -31473,7 +32451,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1281882811
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -31586,7 +32567,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1282368325
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -31699,7 +32683,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1282851411
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -31762,6 +32749,122 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1282851408}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1283724050
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1283724051}
+  - component: {fileID: 1283724055}
+  - component: {fileID: 1283724054}
+  - component: {fileID: 1283724053}
+  - component: {fileID: 1283724052}
+  m_Layer: 0
+  m_Name: Cube (51)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1283724051
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1283724050}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 3, z: 19.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1997986594}
+  m_RootOrder: 51
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1283724052
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1283724050}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37f92d78b03b64a4bbb1c099de376f1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_material: {fileID: 0}
+  m_tmPro: []
+  m_opacity: 1
+  m_targetOpacity: 1
+  overrideGreyScale: 1
+  m_type: 0
+  height: 0
+  lerpval: 0
+--- !u!65 &1283724053
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1283724050}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &1283724054
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1283724050}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 51128b66e2773874187a2ad56f562384, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1283724055
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1283724050}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1307780686
 GameObject:
   m_ObjectHideFlags: 0
@@ -31792,7 +32895,7 @@ Transform:
   - {fileID: 491446149}
   - {fileID: 227599358}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1309476807
 GameObject:
@@ -31844,7 +32947,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1309476810
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -31962,7 +33068,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1314544455
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -32075,7 +33184,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1318305755
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -32188,7 +33300,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1318763725
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -32287,7 +33402,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1320532303
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -32373,7 +33491,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 823105107230280834, guid: 9f4ae6df31aea194ca7a7ca2f24fedc4, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 823105107230280834, guid: 9f4ae6df31aea194ca7a7ca2f24fedc4, type: 3}
       propertyPath: m_LocalScale.x
@@ -32433,6 +33551,122 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9f4ae6df31aea194ca7a7ca2f24fedc4, type: 3}
+--- !u!1 &1324475163
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1324475164}
+  - component: {fileID: 1324475168}
+  - component: {fileID: 1324475167}
+  - component: {fileID: 1324475166}
+  - component: {fileID: 1324475165}
+  m_Layer: 0
+  m_Name: Cube (50)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1324475164
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1324475163}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 2, z: 19.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1997986594}
+  m_RootOrder: 50
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1324475165
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1324475163}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37f92d78b03b64a4bbb1c099de376f1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_material: {fileID: 0}
+  m_tmPro: []
+  m_opacity: 1
+  m_targetOpacity: 1
+  overrideGreyScale: 1
+  m_type: 0
+  height: 0
+  lerpval: 0
+--- !u!65 &1324475166
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1324475163}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &1324475167
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1324475163}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 51128b66e2773874187a2ad56f562384, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1324475168
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1324475163}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1339312585
 GameObject:
   m_ObjectHideFlags: 0
@@ -32483,7 +33717,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1339312588
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -32596,7 +33833,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1342330665
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -32714,7 +33954,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1345054511
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -32827,7 +34070,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1346543473
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -32940,7 +34186,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1347245948
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -33053,7 +34302,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1348848503
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -33166,7 +34418,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1365843027
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -33279,7 +34534,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1367345655
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -33378,7 +34636,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1369611217
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -33505,7 +34766,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1372350567
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -33618,7 +34882,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1382846205
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -33731,7 +34998,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1390139989
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -33844,7 +35114,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1391865964
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -33991,7 +35264,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1395883284
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -34104,7 +35380,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1398258603
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -34167,6 +35446,122 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1398258600}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1398600151
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1398600152}
+  - component: {fileID: 1398600156}
+  - component: {fileID: 1398600155}
+  - component: {fileID: 1398600154}
+  - component: {fileID: 1398600153}
+  m_Layer: 0
+  m_Name: Cube (49)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1398600152
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1398600151}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 2, z: 19.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 938491043}
+  m_RootOrder: 49
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1398600153
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1398600151}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37f92d78b03b64a4bbb1c099de376f1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_material: {fileID: 0}
+  m_tmPro: []
+  m_opacity: 1
+  m_targetOpacity: 1
+  overrideGreyScale: 1
+  m_type: 0
+  height: 0
+  lerpval: 0
+--- !u!65 &1398600154
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1398600151}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &1398600155
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1398600151}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 51128b66e2773874187a2ad56f562384, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1398600156
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1398600151}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1399164061
 GameObject:
   m_ObjectHideFlags: 0
@@ -34203,7 +35598,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1399164063
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -34330,7 +35728,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1403957618
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -34443,7 +35844,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1405070704
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -34556,7 +35960,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1414802541
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -34698,6 +36105,7 @@ MonoBehaviour:
   - {fileID: 910143563}
   - {fileID: 225596148}
   - {fileID: 1758098538}
+  - {fileID: 1804889938}
   m_dynamicObjects: []
   m_manager: {fileID: 176862642}
 --- !u!4 &1415268890
@@ -34765,7 +36173,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1421680119
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -34835,6 +36246,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1393694929}
     m_Modifications:
+    - target: {fileID: 219761226, guid: eaf75950e7e5374428cefb02483aed2f, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 219761226, guid: eaf75950e7e5374428cefb02483aed2f, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 219761226, guid: eaf75950e7e5374428cefb02483aed2f, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 219761226, guid: eaf75950e7e5374428cefb02483aed2f, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6438189141233557612, guid: eaf75950e7e5374428cefb02483aed2f, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -34975,7 +36402,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 1
+  height: 0
+  lerpval: 0
 --- !u!1 &1425729537
 GameObject:
   m_ObjectHideFlags: 0
@@ -35026,7 +36456,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1425729540
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -35139,7 +36572,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1426463944
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -35335,7 +36771,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1446649726
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -35448,7 +36887,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1448199461
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -35561,7 +37003,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1449571511
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -35674,7 +37119,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1454642883
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -35787,7 +37235,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1456091511
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -35900,7 +37351,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1456202582
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -36013,7 +37467,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1458600920
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -36126,7 +37583,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1461810074
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -36239,7 +37699,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1463975334
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -36352,7 +37815,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1466609292
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -36465,7 +37931,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1467402813
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -36578,7 +38047,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1471808388
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -36691,7 +38163,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1478189068
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -36804,7 +38279,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1482906620
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -36917,7 +38395,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1484888347
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -37030,7 +38511,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1499219144
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -37200,7 +38684,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1514339709
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -37313,7 +38800,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1520032901
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -37426,7 +38916,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1524905549
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -37539,7 +39032,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1525369741
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -37652,7 +39148,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1526505627
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -37765,7 +39264,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1528119034
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -37878,7 +39380,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1538594481
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -38060,7 +39565,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1543590464
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -38173,7 +39681,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1544240222
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -38277,7 +39788,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1557537713
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -38404,7 +39918,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1561272848
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -38517,7 +40034,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1562451703
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -38630,7 +40150,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1565940707
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -38743,7 +40266,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1574877877
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -38886,6 +40412,8 @@ MonoBehaviour:
   - {fileID: 584389134}
   - {fileID: 1403957615}
   - {fileID: 658044596}
+  - {fileID: 1324475163}
+  - {fileID: 1283724050}
   m_dynamicObjects: []
   m_manager: {fileID: 176862642}
 --- !u!4 &1578569056
@@ -39021,7 +40549,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1580080000
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -39178,7 +40709,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 823105107230280834, guid: 9f4ae6df31aea194ca7a7ca2f24fedc4, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 823105107230280834, guid: 9f4ae6df31aea194ca7a7ca2f24fedc4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -39276,7 +40807,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1616464865
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -39375,7 +40909,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1627149177
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -39502,7 +41039,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1629925803
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -39615,7 +41155,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1635634839
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -39728,7 +41271,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1642588035
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -39841,7 +41387,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1643034037
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -40053,7 +41602,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1653489660
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -40166,7 +41718,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1654242347
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -40265,7 +41820,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1655177986
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -40392,7 +41950,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1669720408
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -40510,7 +42071,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1675408928
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -40623,7 +42187,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1680784563
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -40736,7 +42303,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1685105486
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -40849,7 +42419,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1697948744
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -40962,7 +42535,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1702001498
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -41075,7 +42651,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1703087766
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -41174,7 +42753,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1703231293
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -41301,7 +42883,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1715204878
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -41414,7 +42999,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1720170251
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -41527,7 +43115,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1726430525
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -41640,7 +43231,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1734977957
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -41739,7 +43333,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1735146440
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -41866,7 +43463,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1745207430
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -41979,7 +43579,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1749639449
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -42092,7 +43695,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1750785212
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -42205,7 +43811,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1752474648
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -42318,7 +43927,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1753250595
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -42431,7 +44043,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1753525683
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -42530,7 +44145,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1758098540
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -42657,7 +44275,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1761365511
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -42844,7 +44465,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1769449688
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -42957,7 +44581,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1769925817
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -43070,7 +44697,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1781949306
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -43183,7 +44813,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1784184973
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -43296,7 +44929,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1798203841
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -43409,7 +45045,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1798850442
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -43472,6 +45111,122 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1798850439}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1804889938
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1804889943}
+  - component: {fileID: 1804889942}
+  - component: {fileID: 1804889941}
+  - component: {fileID: 1804889940}
+  - component: {fileID: 1804889939}
+  m_Layer: 0
+  m_Name: Cube (50)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1804889939
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1804889938}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37f92d78b03b64a4bbb1c099de376f1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_material: {fileID: 0}
+  m_tmPro: []
+  m_opacity: 1
+  m_targetOpacity: 1
+  overrideGreyScale: 1
+  m_type: 0
+  height: 0
+  lerpval: 0
+--- !u!65 &1804889940
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1804889938}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &1804889941
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1804889938}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 51128b66e2773874187a2ad56f562384, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1804889942
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1804889938}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1804889943
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1804889938}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 3, z: 19.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 539859375}
+  m_RootOrder: 49
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1805162529
 GameObject:
   m_ObjectHideFlags: 0
@@ -43522,7 +45277,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1805162532
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -43635,7 +45393,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1807538366
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -43748,7 +45509,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1807543734
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -43861,7 +45625,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1817655510
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -43974,7 +45741,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1817870971
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -44087,7 +45857,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1821133793
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -44200,7 +45973,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1822154544
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -44313,7 +46089,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1826000776
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -44426,7 +46205,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1826262209
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -44593,7 +46375,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1836447830
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -44706,7 +46491,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1837685884
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -44819,7 +46607,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1840098793
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -44918,7 +46709,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1844449015
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -45045,7 +46839,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1847078811
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -45158,7 +46955,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1849051769
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -45271,7 +47071,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1849958386
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -45384,7 +47187,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1852590169
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -45497,7 +47303,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1859437590
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -45610,7 +47419,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1862355708
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -45723,7 +47535,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1864587976
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -45836,7 +47651,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1867231362
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -45949,7 +47767,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1869863785
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -46062,7 +47883,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1872922142
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -46204,6 +48028,8 @@ MonoBehaviour:
   - {fileID: 1347245945}
   - {fileID: 608649333}
   - {fileID: 955962504}
+  - {fileID: 1398600151}
+  - {fileID: 994019781}
   m_dynamicObjects: []
   m_manager: {fileID: 176862642}
 --- !u!4 &1874194315
@@ -46271,7 +48097,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1881567570
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -46384,7 +48213,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1887580092
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -46497,7 +48329,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1891434475
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -46610,7 +48445,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1906958396
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -46723,7 +48561,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1917010476
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -46836,7 +48677,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1919092199
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -46912,7 +48756,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2825776924845837039, guid: 3df06b4a93dda7d4fa20b866abc59f80, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2825776924845837039, guid: 3df06b4a93dda7d4fa20b866abc59f80, type: 3}
       propertyPath: m_LocalPosition.x
@@ -47006,7 +48850,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1920633068
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -47119,7 +48966,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1921388909
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -47314,7 +49164,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1933378763
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -47544,7 +49397,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1939075154
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -47657,7 +49513,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1940558992
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -47770,7 +49629,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1941069892
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -47869,7 +49731,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1944546151
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -47996,7 +49861,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1963858819
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -48109,7 +49977,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1969963892
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -48222,7 +50093,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1973397595
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -48335,7 +50209,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1974939471
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -48448,7 +50325,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1976377091
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -48561,7 +50441,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1978509292
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -48674,7 +50557,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &1995708928
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -48814,6 +50700,8 @@ Transform:
   - {fileID: 584389135}
   - {fileID: 1403957616}
   - {fileID: 658044597}
+  - {fileID: 1324475164}
+  - {fileID: 1283724051}
   m_Father: {fileID: 1578569056}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -48867,7 +50755,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &2002048298
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -48980,7 +50871,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &2009086559
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -49093,7 +50987,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &2011029904
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -49206,7 +51103,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &2013784254
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -49319,7 +51219,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &2014285576
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -49391,7 +51294,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 823105107230280834, guid: 9f4ae6df31aea194ca7a7ca2f24fedc4, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 823105107230280834, guid: 9f4ae6df31aea194ca7a7ca2f24fedc4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -49475,7 +51378,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &2020121707
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -49602,7 +51508,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &2026458712
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -49715,7 +51624,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &2030974886
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -49828,7 +51740,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &2033662116
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -49941,7 +51856,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &2041312891
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -50054,7 +51972,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &2041936007
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -50167,7 +52088,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &2050294837
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -50280,7 +52204,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &2057315191
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -50393,7 +52320,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &2061852853
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -50506,7 +52436,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &2063619578
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -50619,7 +52552,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &2064636374
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -50732,7 +52668,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &2077497743
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -50845,7 +52784,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &2083920254
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -50958,7 +52900,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &2089678943
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -51071,7 +53016,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &2091809411
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -51255,7 +53203,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &2094448800
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -51368,7 +53319,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &2105366545
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -51481,7 +53435,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &2106496950
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -51580,7 +53537,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &2116338997
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -51707,7 +53667,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &2116646937
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -51820,7 +53783,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &2129108292
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -51933,7 +53899,10 @@ MonoBehaviour:
   m_tmPro: []
   m_opacity: 1
   m_targetOpacity: 1
+  overrideGreyScale: 1
   m_type: 0
+  height: 0
+  lerpval: 0
 --- !u!65 &2134909150
 BoxCollider:
   m_ObjectHideFlags: 0
