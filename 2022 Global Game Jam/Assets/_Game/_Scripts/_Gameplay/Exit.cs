@@ -11,6 +11,8 @@ public class Exit : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            blu.App.GetModule<blu.IOModule>().SetLevelComplete(SceneManager.GetActiveScene().name, true);
+
             m_levelEndCanvas.ShowCanvas(m_levelEndCanvas.GetComponentInChildren<Canvas>());
             PlayerController player = other.GetComponent<PlayerController>();
             player.PlayerInput.PlayerControls.Disable();
