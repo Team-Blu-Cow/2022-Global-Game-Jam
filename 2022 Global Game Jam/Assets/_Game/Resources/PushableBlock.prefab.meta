@@ -1,6 +1,12 @@
 fileFormatVersion: 2
-guid: 5e302d999291be24e95ccce7b887bb0b
+<<<<<<< HEAD:2022 Global Game Jam/Assets/_Game/Resources/PushableBlock.prefab.meta
+guid: 3df06b4a93dda7d4fa20b866abc59f80
 PrefabImporter:
+=======
+guid: d0596e0b2d8f9684990b600375335814
+folderAsset: yes
+DefaultImporter:
+>>>>>>> improving-player-controller:2022 Global Game Jam/Assets/_Game/GFX/Player/JUMP.meta
   externalObjects: {}
   userData: 
   assetBundleName: 

@@ -11,12 +11,11 @@ public class Billboard : MonoBehaviour
     [SerializeField] bool isSideView = true;
     [SerializeField] float rot;
 
-    private void Start()
-    {
-        //var obj = GetComponentInChildren<MeshRenderer>().gameObject;
-        //m_meshRenderer = obj.GetComponent<MeshRenderer>();
-        //m_meshRenderer.material = m_material;
+    public Transform sprTransform;
 
+    private void OnValidate()
+    {
+        sprTransform = transform.GetChild(0);
     }
 
     // Update is called once per frame
@@ -25,43 +24,16 @@ public class Billboard : MonoBehaviour
         transform.rotation = Camera.main.transform.rotation;
 
         // this is vile... but its the only way i could get the rotations to work
-        rot = transform.localRotation.eulerAngles.y - 360;
-        if (rot < -300f)
-            rot = 0;
+        rot = transform.localRotation.eulerAngles.x;
+        //if (rot < -300f)
+        //    rot = 0;
 
-        isSideView = (rot <= -45);
-        
-        // TODO @adam: add 2d animation on 3d object code here
+        isSideView = (rot <= 45);
 
-        /*if (isRotating)
-        {
-            transform.LookAt(Camera.main.transform.position, -Vector3.up);
-            transform.rotation = Quaternion.Euler(transform.eulerAngles.x - 90.0f, transform.eulerAngles.y, transform.eulerAngles.z);
-
-            if (transform.eulerAngles.x < 0.0f)
-            {
-                transform.localRotation = Quaternion.Euler(-180.0f, transform.eulerAngles.y, transform.eulerAngles.z);
-            }
-
-            ConsoleProDebug.Watch("Billboard rotation", transform.eulerAngles.x.ToString());
-
-
-            if (transform.rotation.eulerAngles.x < 315.0f && transform.rotation.eulerAngles.x >= 270.0f)
-            {
-                if (isSideView == false)
-                {
-                    m_meshRenderer.material = sideMaterial;
-                    isSideView = true;
-                }
-            }
-            else if (transform.rotation.eulerAngles.x >= 315.0f && transform.rotation.eulerAngles.x < 359.0f)
-            {
-                if (isSideView == true)
-                {
-                    m_meshRenderer.material = topDownMaterial;
-                    isSideView = false;
-                }
-            }
-        }*/
+        if(isSideView)
+            sprTransform.localEulerAngles = new Vector3(0f, 0f, 0f);
     }
+
+    public bool isTopView
+    { get { return !isSideView; } }
 }

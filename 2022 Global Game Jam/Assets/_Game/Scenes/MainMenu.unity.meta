@@ -1,5 +1,10 @@
 fileFormatVersion: 2
-guid: a1e2720bfac8b9f4a8ca5e4431eca586
+<<<<<<< HEAD:2022 Global Game Jam/Assets/_Game/Scenes/MainMenu.unity.meta
+guid: 9c9d326b2333dac4d9f76c94647722d7
+=======
+guid: 72528c06f85f59d4683af4d04b04313d
+folderAsset: yes
+>>>>>>> improving-player-controller:2022 Global Game Jam/Assets/_Game/GFX/Player/SIT IDLE.meta
 DefaultImporter:
   externalObjects: {}
   userData: 

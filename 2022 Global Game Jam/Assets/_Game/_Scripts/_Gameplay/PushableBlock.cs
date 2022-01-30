@@ -8,12 +8,12 @@ public class PushableBlock : MonoBehaviour
 
     public void OnEnable()
     {
-        blu.App.GetModule<blu.GameStateModule>().OnStateChangeEvent += OnStateChange;
+        //blu.App.GetModule<blu.GameStateModule>().OnStateChangeEvent += OnStateChange;
     }
 
     public void OnDisable()
     {
-        blu.App.GetModule<blu.GameStateModule>().OnStateChangeEvent -= OnStateChange;
+        //blu.App.GetModule<blu.GameStateModule>().OnStateChangeEvent -= OnStateChange;
     }
 
     // Start is called before the first frame update
