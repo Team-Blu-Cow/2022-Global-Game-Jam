@@ -7,7 +7,6 @@ public class TopDownController : PlayerStateController
 {
     [SerializeField] float rotationSpeed;
     bool facingRight;
-    public bool isShifting = false;
 
     public override void OnFixedUpdate()
     {
@@ -19,9 +18,6 @@ public class TopDownController : PlayerStateController
 
     public void CheckMoveDirection()
     {
-        if (isShifting)
-            return;
-
         Vector3 moveDir = new Vector3(pInfo.MovementV, 0, pInfo.MovementH );
         moveDir.Normalize();
 
@@ -42,9 +38,9 @@ public class TopDownController : PlayerStateController
         Vector3 moveDir;
         
         if(isFacingRight)
-            moveDir = new Vector3(1, 0, 0);
+            moveDir = new Vector3(0, 0, -1);
         else
-            moveDir = new Vector3(-1, 0, 0);
+            moveDir = new Vector3(0, 0, 1);
 
         if (moveDir != Vector3.zero)
         {
@@ -66,10 +62,5 @@ public class TopDownController : PlayerStateController
     public void ResetRotation()
     {
         m_player.spriteTransform.localEulerAngles = new Vector3(0f,0f,0f);
-    }
-
-    public override void OnUpdate()
-    {
-
     }
 }
