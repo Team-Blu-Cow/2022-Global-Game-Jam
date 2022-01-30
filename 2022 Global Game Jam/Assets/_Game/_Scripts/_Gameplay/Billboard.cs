@@ -15,7 +15,8 @@ public class Billboard : MonoBehaviour
 
     private void OnValidate()
     {
-        sprTransform = transform.GetChild(0);
+        if (sprTransform == null)
+            sprTransform = transform.GetChild(0);
     }
 
     // Update is called once per frame
