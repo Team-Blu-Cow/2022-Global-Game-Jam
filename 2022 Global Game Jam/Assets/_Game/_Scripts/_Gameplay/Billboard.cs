@@ -31,7 +31,7 @@ public class Billboard : MonoBehaviour
 
         isSideView = (rot <= 45);
 
-        if(isSideView)
+        if(isSideView && sprTransform != null)
             sprTransform.localEulerAngles = new Vector3(0f, 0f, 0f);
     }
 

@@ -49,9 +49,9 @@ public class TopDownController : PlayerStateController
         }
 
         if (pInfo.MovementH > 0.1)
-            facingRight = true;
-        else if (pInfo.MovementH < -0.1)
             facingRight = false;
+        else if (pInfo.MovementH < -0.1)
+            facingRight = true;
     }
 
     public bool GetFacingDirection()

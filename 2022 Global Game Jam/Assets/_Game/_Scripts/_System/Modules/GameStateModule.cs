@@ -31,6 +31,13 @@ namespace blu
         public OnStateChangeDelegate OnStateChangeEvent;
         public OnStateChangeDelegate LateOnStateChangeEvent;
 
+        public override void Initialize()
+        {
+            base.Initialize();
+
+            LeanTween.init(600);
+        }
+
         public void ChangeState(RotationState state)
         {
             m_currentRotationState = state;

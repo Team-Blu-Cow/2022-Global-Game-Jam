@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Water
-  m_Shader: {fileID: -6465566751694194690, guid: 3f80b967ce938ce468d524d3c07fdc7d, type: 3}
+  m_Name: EndFlagMat
+  m_Shader: {fileID: -6465566751694194690, guid: 50fa8fa44734ced4e8edcc770d7672b0, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -19,6 +19,10 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: 81b83f824bf16734a88b234fe4010101, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -32,16 +36,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - Vector1_1d06f02f23264e25a9b57115c95d32a5: 0.25
-    - Vector1_3418bebdcb8a4333b643e3126248b097: 3
-    - Vector1_43d5b5fc42324344853778257321546f: 0.01
-    - Vector1_4bc3a8be9a7b4688ac67ded5f59fd467: 1
-    - Vector1_52c03aae693e4afe895b98b4d450ba19: 1
-    - Vector1_ab0ed100934a4f77b91e7e02ef4c519c: 0.12
-    - Vector1_b674fb58268044959460c5863374710b: 436.2
-    - Vector1_ec3c8bcaba5644e49583556920b2b45d: 1
-    m_Colors:
-    - Color_7c75cfa6f3054bd3b2f869cbfcb0b252: {r: 0, g: 0, b: 0, a: 1}
-    - Color_b7a1f6e720d141ef98bd4b3c5c9ee8b3: {r: 1, g: 1, b: 1, a: 0.49803922}
-    - Color_ca201637859246559baf3a6ff19e51ca: {r: 0, g: 0, b: 0, a: 0.49803922}
+    - Vector1_52383bff0b3e41fda385a6883ff55336: 0.2
+    - Vector1_9c1c529c12cf4ec1a427958a8e541b43: 1
+    - Vector1_bcf672f357124a939a2f618486de9902: 0
+    - _DitherSize: 4
+    - _Grayscale: 1
+    - _Opacity: 1
+    m_Colors: []
   m_BuildTextureStacks: []

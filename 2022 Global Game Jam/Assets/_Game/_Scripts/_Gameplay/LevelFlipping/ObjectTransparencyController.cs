@@ -32,7 +32,9 @@ public class ObjectTransparencyController : MonoBehaviour
         if(m_manager == null)
             m_manager = FindObjectOfType<LevelManager>();
 
-        if(m_manager)
+        // Matthew this code doesn't work!!!!!!!!
+        // its stupid and i hate it and has undone 15 minutes of tedious work!!!!!
+        /*if(m_manager)
         {
             int closest = m_manager.FindClosestSlice(this.gameObject);
 
@@ -63,7 +65,7 @@ public class ObjectTransparencyController : MonoBehaviour
                     slice.RemoveDynamicObject(gameObject);
                 }
             }
-        }
+        }*/
 
         m_tmPro = new List<TextMeshPro>(GetComponentsInChildren<TextMeshPro>());
     }
