@@ -32,13 +32,14 @@ namespace blu
             }
 
             PlayerController cacheController = in_emitter.GetComponent<PlayerController>();
-
+            ConsoleProDebug.Watch("Magnitude", cacheController.rb.velocity.magnitude.ToString());
+            ConsoleProDebug.Watch("IsGrounded", cacheController.pInfo.IsGrounded.ToString());
             //check velocity magnitude
             //check if grounded
-            //             if ()
-            //             {
-            //                 return;
-            //             }
+            if (cacheController.rb.velocity.magnitude < 2 || !cacheController.pInfo.IsGrounded)
+            {
+                return;
+            }
 
             switch (in_material)
             {
