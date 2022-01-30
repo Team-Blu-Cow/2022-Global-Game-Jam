@@ -37,7 +37,7 @@ namespace blu
         public override void Initialize() //
         {
             base.Initialize();
-            InitAudioSettings();
+            //InitAudioSettings();
             InitGraphicsSettings();
         }
 
@@ -48,9 +48,17 @@ namespace blu
             audioSettings.sfxVolume = PlayerPrefs.GetFloat("SFXVolume", 1f);
             audioSettings.mute = PlayerPrefs.GetInt("MuteAudio", 0) != 0;
 
-            audioSettings.master = FMODUnity.RuntimeManager.GetBus("bus:/Master");
-            audioSettings.music = FMODUnity.RuntimeManager.GetBus("bus:/Master/Music");
-            audioSettings.sfx = FMODUnity.RuntimeManager.GetBus("bus:/Master/SFX");
+            try
+            {
+                audioSettings.master = FMODUnity.RuntimeManager.GetBus("bus:/Master");
+                audioSettings.music = FMODUnity.RuntimeManager.GetBus("bus:/Master/Music");
+                audioSettings.sfx = FMODUnity.RuntimeManager.GetBus("bus:/Master/SFX");
+            }
+            catch(System.Exception ex)
+            {
+                Debug.LogError(ex.Message);
+            }
+
         }
 
         private void InitGraphicsSettings()

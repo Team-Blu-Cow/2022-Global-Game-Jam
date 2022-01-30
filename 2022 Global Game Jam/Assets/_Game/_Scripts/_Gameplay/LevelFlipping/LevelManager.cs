@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEditor;
 using Cinemachine;
 
 public class LevelManager : MonoBehaviour
@@ -14,7 +15,7 @@ public class LevelManager : MonoBehaviour
     [SerializeField] private float m_levelWidth = 10;
 
     [SerializeField] private List<GameObject> m_dynamicObjects;
-    [SerializeField] private GameObject m_playerObject;
+    public GameObject m_playerObject;
 
     [SerializeField] private CinemachineBrain m_cameraBrain;
 
@@ -46,6 +47,21 @@ public class LevelManager : MonoBehaviour
             SetDepthLimits(m_editorSliceDistance);
         }
 
+        if(m_cameraBrain == null)
+        {
+            m_cameraBrain = FindObjectOfType<CinemachineBrain>();
+        }
+
+    }
+
+    public void OnEnable()
+    {
+        blu.App.GetModule<blu.GameStateModule>().OnStateChangeEvent += OnStateChange;
+    }
+
+    public void OnDisable()
+    {
+        blu.App.GetModule<blu.GameStateModule>().OnStateChangeEvent -= OnStateChange;
     }
 
     public void Start()
@@ -63,12 +79,26 @@ public class LevelManager : MonoBehaviour
 
         AlignDynamicObjects();
         SetDepthLimits();
+        SpawnWalls();
+    }
+
+    void OnStateChange(blu.GameStateModule.RotationState state)
+    {
+        if(state == blu.GameStateModule.RotationState.SIDE_ON)
+        {
+            m_currentSlice = FindClosestSlice(m_playerObject);
+            TransitionToSlice(m_currentSlice);
+        }
+        else if(state == blu.GameStateModule.RotationState.TOP_DOWN)
+        {
+            TransitionToTopDown();
+        }
     }
 
     private void Update()
     {
         // this is temporary, just to demonstrate functionality
-        if(UnityEngine.InputSystem.Keyboard.current.qKey.wasReleasedThisFrame)
+        /*if(UnityEngine.InputSystem.Keyboard.current.qKey.wasReleasedThisFrame)
         {
             if(m_state == State.SideScroller)
             {
@@ -82,7 +112,7 @@ public class LevelManager : MonoBehaviour
                 m_state = State.SideScroller;
             }
             
-        }
+        }*/
     }
 
     void SetDepthLimits(float offset = 0)
@@ -129,7 +159,7 @@ public class LevelManager : MonoBehaviour
         }
     }
 
-    int FindClosestSlice(GameObject obj)
+    public int FindClosestSlice(GameObject obj)
     {
         float dist = float.MaxValue;
         int closest = 0;
@@ -171,4 +201,47 @@ public class LevelManager : MonoBehaviour
         Gizmos.DrawLine(transform.position, transform.position + (Vector3.up * 10));
     }
 
+    public LevelSlice GetSlice(int i)
+    {
+        if (i > m_slices.Count - 1)
+            return null;
+
+        return m_slices[i];
+    }
+
+    public int SliceCount()
+    {
+        return m_slices.Count;
+    }
+
+    private void SpawnWalls()
+    {
+        List<GameObject> walls = new List<GameObject>();
+        float wallHeight = 5.0f;
+
+
+        for (int i = 0; i < 4; i++)
+        {
+            walls.Add(new GameObject());
+            walls[i].name = "Wall " + (i + 1);
+            walls[i].transform.parent = this.transform;
+            walls[i].AddComponent<BoxCollider>();
+        }
+
+        //Top
+        walls[0].transform.position = new Vector3(-1, 0, m_levelWidth / 2.0f);
+        walls[0].GetComponent<BoxCollider>().size = new Vector3(1, wallHeight, m_levelWidth);
+
+        //Left
+        walls[1].transform.position = new Vector3(((m_slices.Count * m_sliceDepth) / 2.0f) - 0.5f, 0, -1);
+        walls[1].GetComponent<BoxCollider>().size = new Vector3((m_slices.Count * m_sliceDepth), wallHeight, 1);
+
+        //Bottom
+        walls[2].transform.position = new Vector3((m_slices.Count * m_sliceDepth), 0, m_levelWidth / 2.0f);
+        walls[2].GetComponent<BoxCollider>().size = new Vector3(1, wallHeight, m_levelWidth);
+
+        //Right
+        walls[3].transform.position = new Vector3(((m_slices.Count * m_sliceDepth) / 2.0f) - 0.5f, 0, m_levelWidth + 0.5f);
+        walls[3].GetComponent<BoxCollider>().size = new Vector3((m_slices.Count * m_sliceDepth), wallHeight, 1);
+    }
 }

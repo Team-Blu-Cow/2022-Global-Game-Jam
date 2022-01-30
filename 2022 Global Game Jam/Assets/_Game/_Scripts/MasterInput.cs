@@ -53,6 +53,33 @@ public partial class @MasterInput : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Pause"",
+                    ""type"": ""Button"",
+                    ""id"": ""367ded96-5171-4cfc-b890-8b78c1eab360"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Interact"",
+                    ""type"": ""Button"",
+                    ""id"": ""10b708a5-f2e4-4558-b202-6c4e8890fca1"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Pull"",
+                    ""type"": ""Button"",
+                    ""id"": ""7cc63e04-f52f-4a67-9a51-a8ff28c8dd7e"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -154,6 +181,39 @@ public partial class @MasterInput : IInputActionCollection2, IDisposable
                     ""action"": ""Jump"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""7f07fddb-6158-4c1d-8add-9bba1078f59e"",
+                    ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""KB+M"",
+                    ""action"": ""Pause"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""996160f1-002a-4db7-aec0-fb70dbad6961"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""KB+M"",
+                    ""action"": ""Interact"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""690c240a-fa45-4c08-ac8e-a5a4f9afee10"",
+                    ""path"": ""<Keyboard>/f"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""KB+M"",
+                    ""action"": ""Pull"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         },
@@ -162,7 +222,7 @@ public partial class @MasterInput : IInputActionCollection2, IDisposable
             ""id"": ""79d6db4e-a921-4eb2-89d9-c2abdc32c5d3"",
             ""actions"": [
                 {
-                    ""name"": ""Move"",
+                    ""name"": ""Navigate"",
                     ""type"": ""Value"",
                     ""id"": ""2a64f6fa-12a4-4fdf-bacd-3887cea2eb80"",
                     ""expectedControlType"": ""Vector2"",
@@ -197,7 +257,7 @@ public partial class @MasterInput : IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Move"",
+                    ""action"": ""Navigate"",
                     ""isComposite"": true,
                     ""isPartOfComposite"": false
                 },
@@ -208,7 +268,7 @@ public partial class @MasterInput : IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""KB+M"",
-                    ""action"": ""Move"",
+                    ""action"": ""Navigate"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
@@ -219,7 +279,7 @@ public partial class @MasterInput : IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""KB+M"",
-                    ""action"": ""Move"",
+                    ""action"": ""Navigate"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
@@ -230,7 +290,7 @@ public partial class @MasterInput : IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""KB+M"",
-                    ""action"": ""Move"",
+                    ""action"": ""Navigate"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
@@ -241,7 +301,7 @@ public partial class @MasterInput : IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""KB+M"",
-                    ""action"": ""Move"",
+                    ""action"": ""Navigate"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
@@ -305,9 +365,12 @@ public partial class @MasterInput : IInputActionCollection2, IDisposable
         m_PlayerControls_Move = m_PlayerControls.FindAction("Move", throwIfNotFound: true);
         m_PlayerControls_Flip = m_PlayerControls.FindAction("Flip", throwIfNotFound: true);
         m_PlayerControls_Jump = m_PlayerControls.FindAction("Jump", throwIfNotFound: true);
+        m_PlayerControls_Pause = m_PlayerControls.FindAction("Pause", throwIfNotFound: true);
+        m_PlayerControls_Interact = m_PlayerControls.FindAction("Interact", throwIfNotFound: true);
+        m_PlayerControls_Pull = m_PlayerControls.FindAction("Pull", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
-        m_UI_Move = m_UI.FindAction("Move", throwIfNotFound: true);
+        m_UI_Navigate = m_UI.FindAction("Navigate", throwIfNotFound: true);
         m_UI_Select = m_UI.FindAction("Select", throwIfNotFound: true);
         m_UI_Pause = m_UI.FindAction("Pause", throwIfNotFound: true);
     }
@@ -372,6 +435,9 @@ public partial class @MasterInput : IInputActionCollection2, IDisposable
     private readonly InputAction m_PlayerControls_Move;
     private readonly InputAction m_PlayerControls_Flip;
     private readonly InputAction m_PlayerControls_Jump;
+    private readonly InputAction m_PlayerControls_Pause;
+    private readonly InputAction m_PlayerControls_Interact;
+    private readonly InputAction m_PlayerControls_Pull;
     public struct PlayerControlsActions
     {
         private @MasterInput m_Wrapper;
@@ -379,6 +445,9 @@ public partial class @MasterInput : IInputActionCollection2, IDisposable
         public InputAction @Move => m_Wrapper.m_PlayerControls_Move;
         public InputAction @Flip => m_Wrapper.m_PlayerControls_Flip;
         public InputAction @Jump => m_Wrapper.m_PlayerControls_Jump;
+        public InputAction @Pause => m_Wrapper.m_PlayerControls_Pause;
+        public InputAction @Interact => m_Wrapper.m_PlayerControls_Interact;
+        public InputAction @Pull => m_Wrapper.m_PlayerControls_Pull;
         public InputActionMap Get() { return m_Wrapper.m_PlayerControls; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -397,6 +466,15 @@ public partial class @MasterInput : IInputActionCollection2, IDisposable
                 @Jump.started -= m_Wrapper.m_PlayerControlsActionsCallbackInterface.OnJump;
                 @Jump.performed -= m_Wrapper.m_PlayerControlsActionsCallbackInterface.OnJump;
                 @Jump.canceled -= m_Wrapper.m_PlayerControlsActionsCallbackInterface.OnJump;
+                @Pause.started -= m_Wrapper.m_PlayerControlsActionsCallbackInterface.OnPause;
+                @Pause.performed -= m_Wrapper.m_PlayerControlsActionsCallbackInterface.OnPause;
+                @Pause.canceled -= m_Wrapper.m_PlayerControlsActionsCallbackInterface.OnPause;
+                @Interact.started -= m_Wrapper.m_PlayerControlsActionsCallbackInterface.OnInteract;
+                @Interact.performed -= m_Wrapper.m_PlayerControlsActionsCallbackInterface.OnInteract;
+                @Interact.canceled -= m_Wrapper.m_PlayerControlsActionsCallbackInterface.OnInteract;
+                @Pull.started -= m_Wrapper.m_PlayerControlsActionsCallbackInterface.OnPull;
+                @Pull.performed -= m_Wrapper.m_PlayerControlsActionsCallbackInterface.OnPull;
+                @Pull.canceled -= m_Wrapper.m_PlayerControlsActionsCallbackInterface.OnPull;
             }
             m_Wrapper.m_PlayerControlsActionsCallbackInterface = instance;
             if (instance != null)
@@ -410,6 +488,15 @@ public partial class @MasterInput : IInputActionCollection2, IDisposable
                 @Jump.started += instance.OnJump;
                 @Jump.performed += instance.OnJump;
                 @Jump.canceled += instance.OnJump;
+                @Pause.started += instance.OnPause;
+                @Pause.performed += instance.OnPause;
+                @Pause.canceled += instance.OnPause;
+                @Interact.started += instance.OnInteract;
+                @Interact.performed += instance.OnInteract;
+                @Interact.canceled += instance.OnInteract;
+                @Pull.started += instance.OnPull;
+                @Pull.performed += instance.OnPull;
+                @Pull.canceled += instance.OnPull;
             }
         }
     }
@@ -418,14 +505,14 @@ public partial class @MasterInput : IInputActionCollection2, IDisposable
     // UI
     private readonly InputActionMap m_UI;
     private IUIActions m_UIActionsCallbackInterface;
-    private readonly InputAction m_UI_Move;
+    private readonly InputAction m_UI_Navigate;
     private readonly InputAction m_UI_Select;
     private readonly InputAction m_UI_Pause;
     public struct UIActions
     {
         private @MasterInput m_Wrapper;
         public UIActions(@MasterInput wrapper) { m_Wrapper = wrapper; }
-        public InputAction @Move => m_Wrapper.m_UI_Move;
+        public InputAction @Navigate => m_Wrapper.m_UI_Navigate;
         public InputAction @Select => m_Wrapper.m_UI_Select;
         public InputAction @Pause => m_Wrapper.m_UI_Pause;
         public InputActionMap Get() { return m_Wrapper.m_UI; }
@@ -437,9 +524,9 @@ public partial class @MasterInput : IInputActionCollection2, IDisposable
         {
             if (m_Wrapper.m_UIActionsCallbackInterface != null)
             {
-                @Move.started -= m_Wrapper.m_UIActionsCallbackInterface.OnMove;
-                @Move.performed -= m_Wrapper.m_UIActionsCallbackInterface.OnMove;
-                @Move.canceled -= m_Wrapper.m_UIActionsCallbackInterface.OnMove;
+                @Navigate.started -= m_Wrapper.m_UIActionsCallbackInterface.OnNavigate;
+                @Navigate.performed -= m_Wrapper.m_UIActionsCallbackInterface.OnNavigate;
+                @Navigate.canceled -= m_Wrapper.m_UIActionsCallbackInterface.OnNavigate;
                 @Select.started -= m_Wrapper.m_UIActionsCallbackInterface.OnSelect;
                 @Select.performed -= m_Wrapper.m_UIActionsCallbackInterface.OnSelect;
                 @Select.canceled -= m_Wrapper.m_UIActionsCallbackInterface.OnSelect;
@@ -450,9 +537,9 @@ public partial class @MasterInput : IInputActionCollection2, IDisposable
             m_Wrapper.m_UIActionsCallbackInterface = instance;
             if (instance != null)
             {
-                @Move.started += instance.OnMove;
-                @Move.performed += instance.OnMove;
-                @Move.canceled += instance.OnMove;
+                @Navigate.started += instance.OnNavigate;
+                @Navigate.performed += instance.OnNavigate;
+                @Navigate.canceled += instance.OnNavigate;
                 @Select.started += instance.OnSelect;
                 @Select.performed += instance.OnSelect;
                 @Select.canceled += instance.OnSelect;
@@ -477,10 +564,13 @@ public partial class @MasterInput : IInputActionCollection2, IDisposable
         void OnMove(InputAction.CallbackContext context);
         void OnFlip(InputAction.CallbackContext context);
         void OnJump(InputAction.CallbackContext context);
+        void OnPause(InputAction.CallbackContext context);
+        void OnInteract(InputAction.CallbackContext context);
+        void OnPull(InputAction.CallbackContext context);
     }
     public interface IUIActions
     {
-        void OnMove(InputAction.CallbackContext context);
+        void OnNavigate(InputAction.CallbackContext context);
         void OnSelect(InputAction.CallbackContext context);
         void OnPause(InputAction.CallbackContext context);
     }

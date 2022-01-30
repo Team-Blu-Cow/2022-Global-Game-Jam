@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class Billboard : MonoBehaviour
 {
-    [SerializeField] private bool isRotating = true;
-
     private Material m_material;
 
     private MeshRenderer m_meshRenderer;

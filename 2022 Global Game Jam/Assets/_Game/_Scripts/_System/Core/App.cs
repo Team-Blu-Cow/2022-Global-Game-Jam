@@ -22,6 +22,7 @@ namespace blu
             DontDestroyOnLoad(gameObject);
 
             AddModule<InputModule>();
+            AddModule<IOModule>();
             AddModule<SceneModule>();
             AddModule<SettingsModule>();
             AddModule<GameStateModule>();
