@@ -7,7 +7,7 @@ using blu;
 
 public class Interactable : MonoBehaviour
 {
-    Transform m_popUp;
+    [SerializeField, HideInInspector] Transform m_popUp;
     [SerializeField, HideInInspector] PlayerController m_player;
     [SerializeField] float m_radius;
 

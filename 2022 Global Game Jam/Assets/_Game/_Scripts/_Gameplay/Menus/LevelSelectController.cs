@@ -23,22 +23,15 @@ public class LevelSelectController : MonoBehaviour
     } }
 
 
-    LevelManager m_manager;
-
     blu.IOModule iomodule;
 
     [SerializeField] List<TextMeshPro> m_textMeshes = new List<TextMeshPro>();
     [SerializeField] List<TextMeshPro> m_sideTextMeshes = new List<TextMeshPro>();
-    List<string> scenesInBuild = new List<string>();
+    [SerializeField, HideInInspector] List<string> scenesInBuild = new List<string>();
 
     [SerializeField] Sprite completeSprite;
     [SerializeField] Sprite uncompleteSprite;
     [SerializeField] Sprite notFoundSprite;
-
-    private void OnValidate()
-    {
-        m_manager = FindObjectOfType<LevelManager>();
-    }
 
     private void Awake()
     {
