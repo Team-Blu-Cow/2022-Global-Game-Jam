@@ -13,7 +13,7 @@ public class TopDownController : PlayerStateController
     {
         if (locked)
             return;
-        rb.velocity = new Vector3(pInfo.MovementV * pInfo.groundMoveSpeed, rb.velocity.y, rb.velocity.z);
+        rb.velocity = new Vector3(pInfo.MovementV * pInfo.groundMoveSpeed * ((pInfo.PullDown) ? pInfo.PullSpeedMult : 1), rb.velocity.y, rb.velocity.z);
         m_animator.SetFloat("moveSpeedV", Mathf.Abs(pInfo.MovementV));
 
         CheckMoveDirection();
