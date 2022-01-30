@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -80,6 +81,7 @@ public class PlayerController : MonoBehaviour
         input_ = new MasterInput();
 
         input_.PlayerControls.Flip.performed += _ => Flip();
+        input_.PlayerControls.Retry.performed += _ => Restart();
 
         input_.UI.Disable();
         input_.PlayerControls.Enable();
@@ -164,6 +166,11 @@ public class PlayerController : MonoBehaviour
         m_info.IsGrounded |= Physics.OverlapSphere(m_footSensor.position + new Vector3(0, 0f, 0.19f), m_checkRadius,1).Length > 1;
 
         m_animator.SetBool("isGrounded", m_info.IsGrounded);
+    }
+
+    private void Restart()
+    {
+        blu.App.GetModule<blu.SceneModule>().SwitchScene(SceneManager.GetActiveScene().name, blu.TransitionType.Fade, blu.LoadingBarType.BottomRightRadial);
     }
 
     void ApplyUniversalMovement()
