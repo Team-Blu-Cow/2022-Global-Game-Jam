@@ -7,9 +7,12 @@ public class TopDownController : PlayerStateController
 {
     [SerializeField] float rotationSpeed;
     bool facingRight;
+    public bool locked = false;
 
     public override void OnFixedUpdate()
     {
+        if (locked)
+            return;
         rb.velocity = new Vector3(pInfo.MovementV * pInfo.groundMoveSpeed, rb.velocity.y, rb.velocity.z);
         m_animator.SetFloat("moveSpeedV", Mathf.Abs(pInfo.MovementV));
 

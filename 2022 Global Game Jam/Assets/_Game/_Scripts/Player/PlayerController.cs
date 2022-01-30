@@ -83,14 +83,18 @@ public class PlayerController : MonoBehaviour
 
     private void Flip()
     {
+       
         m_topDown = !m_topDown;
         if (m_topDown)
         {
+            m_topDownController.locked = false;
             blu.App.GetModule<blu.GameStateModule>().ChangeState(blu.GameStateModule.RotationState.TOP_DOWN);
             m_topDownController.SetMoveDirection(m_sideScrollController.facingRight);
         }
         else
         {
+            rb.velocity = Vector3.zero;
+            m_topDownController.locked = true;
             blu.App.GetModule<blu.GameStateModule>().ChangeState(blu.GameStateModule.RotationState.SIDE_ON);
             m_sideScrollController.SetFacing(m_topDownController.GetFacingDirection());
         }
