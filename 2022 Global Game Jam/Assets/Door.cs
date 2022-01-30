@@ -5,20 +5,21 @@ using UnityEngine;
 public class Door : MonoBehaviour
 {
     [SerializeField] SwitchInteractable interactbleControl;
+    [SerializeField] float animSpeed;
 
     private void Update()
     {
         if (interactbleControl.SwitchFlipped)
         {
             if (!LeanTween.isTweening(gameObject))
-                transform.LeanRotateY(90,1);
-            transform.GetChild(0).GetComponent<BoxCollider>().enabled = false;
+                transform.LeanRotateY(90,animSpeed);
+            transform.GetComponentInParent<BoxCollider>().enabled = false;
         }
         else
         {
             if (!LeanTween.isTweening(gameObject))
-                transform.LeanRotateY(0, 1);
-            transform.GetChild(0).GetComponent<BoxCollider>().enabled = true;
+                transform.LeanRotateY(0, animSpeed);
+            transform.GetComponentInParent<BoxCollider>().enabled = true;
         }
     }
 
