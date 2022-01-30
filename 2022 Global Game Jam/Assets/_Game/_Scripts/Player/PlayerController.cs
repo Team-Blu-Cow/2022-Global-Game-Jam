@@ -181,36 +181,21 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private void OnCollisionStay(Collision collision)
-    {
-        if (collision.gameObject.tag == "JumpPad" && !m_isOnJumpPad)
-        {
-            if (transform.position.z > collision.transform.position.z - 0.5f && transform.position.z < collision.transform.position.z + 0.5f)
-            {
-                m_jumpForce *= collision.gameObject.GetComponent<JumpPad>().GetJumpMultiplier();
-                m_isOnJumpPad = true;
-            }
-        }
-    }
-
-    private void OnCollisionExit(Collision collision)
-    {
-        if(collision.gameObject.tag == "JumpPad")
-        {
-            if (m_isOnJumpPad)
-            {
-                m_isOnJumpPad = false;
-                m_jumpForce /= collision.gameObject.GetComponent<JumpPad>().GetJumpMultiplier();
-            }
-        }
-    }
-
     private void OnTriggerStay(Collider other)
     {
         if(other.gameObject.tag == "Pullable")
         {
             m_isCollidingWithPullable = true;
             m_collidingBox = other.gameObject.transform.parent.gameObject;
+        }
+
+        if (other.gameObject.tag == "JumpPad" && !m_isOnJumpPad)
+        {
+            if (transform.position.z > other.transform.position.z - 0.5f && transform.position.z < other.transform.position.z + 0.5f)
+            {
+                m_jumpForce *= other.gameObject.GetComponent<JumpPad>().GetJumpMultiplier();
+                m_isOnJumpPad = true;
+            }
         }
     }
 
@@ -220,6 +205,15 @@ public class PlayerController : MonoBehaviour
         {
             m_isCollidingWithPullable = false;
             m_collidingBox = null;
+        }
+
+        if (other.gameObject.tag == "JumpPad")
+        {
+            if (m_isOnJumpPad)
+            {
+                m_isOnJumpPad = false;
+                m_jumpForce /= other.gameObject.GetComponent<JumpPad>().GetJumpMultiplier();
+            }
         }
     }
 }
