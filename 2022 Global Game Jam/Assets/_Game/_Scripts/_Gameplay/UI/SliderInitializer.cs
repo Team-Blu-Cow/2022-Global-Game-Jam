@@ -24,15 +24,15 @@ public class SliderInitializer : MonoBehaviour
         switch (_type)
         {
             case SliderType.MasterBus:
-                //_slider.value = App.GetModule<SettingsModule>().audioSettings.masterVolume;
+                _slider.value = App.GetModule<SettingsModule>().audioSettings.masterVolume;
                 break;
 
             case SliderType.SFXBus:
-                //_slider.value = App.GetModule<SettingsModule>().audioSettings.sfxVolume;
+                _slider.value = App.GetModule<SettingsModule>().audioSettings.sfxVolume;
                 break;
 
             case SliderType.MusicBus:
-                //_slider.value = App.GetModule<SettingsModule>().audioSettings.musicVolume;
+                _slider.value = App.GetModule<SettingsModule>().audioSettings.musicVolume;
                 break;
 
             default:
@@ -45,15 +45,15 @@ public class SliderInitializer : MonoBehaviour
         switch (_type)
         {
             case SliderType.MasterBus:
-                //App.GetModule<SettingsModule>().audioSettings.masterVolume = in_value;
+                App.GetModule<SettingsModule>().audioSettings.masterVolume = in_value;
                 break;
 
             case SliderType.SFXBus:
-                //App.GetModule<SettingsModule>().audioSettings.sfxVolume = in_value;
+                App.GetModule<SettingsModule>().audioSettings.sfxVolume = in_value;
                 break;
 
             case SliderType.MusicBus:
-                //App.GetModule<SettingsModule>().audioSettings.musicVolume = in_value;
+                App.GetModule<SettingsModule>().audioSettings.musicVolume = in_value;
                 break;
 
             default:
