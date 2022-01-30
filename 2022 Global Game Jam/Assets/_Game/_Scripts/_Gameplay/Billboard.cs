@@ -15,7 +15,7 @@ public class Billboard : MonoBehaviour
 
     private void OnValidate()
     {
-        if (sprTransform == null)
+        if (sprTransform == null && transform.childCount > 0)
             sprTransform = transform.GetChild(0);
     }
 
