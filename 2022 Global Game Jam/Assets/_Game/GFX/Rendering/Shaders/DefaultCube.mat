@@ -37,7 +37,10 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - Opacity: 1
+    - Vector1_52383bff0b3e41fda385a6883ff55336: 0.2
+    - Vector1_9c1c529c12cf4ec1a427958a8e541b43: 1
     - Vector1_b3df7b8140b54d0d875abcd1059e77af: 1
+    - Vector1_bcf672f357124a939a2f618486de9902: 0
     - _DitherSize: 4
     - _Grayscale: 1
     - _Opacity: 1

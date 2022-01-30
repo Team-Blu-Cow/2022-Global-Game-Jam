@@ -65,6 +65,12 @@ public class PlayerController : MonoBehaviour
         
     }
 
+    private void Start()
+    {
+        blu.App.GetModule<blu.GameStateModule>().ChangeState(blu.GameStateModule.RotationState.SIDE_ON);
+        m_topDown = false;
+    }
+
     public void SetUpInput()
     {
         input_ = new MasterInput();
