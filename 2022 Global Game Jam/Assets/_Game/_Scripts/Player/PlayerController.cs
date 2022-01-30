@@ -24,6 +24,10 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private PlayerInfo m_info;
     public PlayerInfo pInfo => m_info;
 
+    private GameObject m_collidingBox;
+    private bool m_isCollidingWithPullable = false;
+    private bool m_isOnJumpPad = false;
+
     public Transform spriteTransform
     {
         get { return m_billboard.sprTransform; }
@@ -106,6 +110,12 @@ public class PlayerController : MonoBehaviour
             m_topDownController.OnUpdate();
         else
             m_sideScrollController.OnUpdate();
+
+        if (m_info.PullDown)
+            OnPullPerformed();
+
+        if (m_info.PullReleased)
+            OnPullCanceled();
     }
 
     private void FixedUpdate()
@@ -133,6 +143,9 @@ public class PlayerController : MonoBehaviour
 
         m_info.JumpDown = input_.PlayerControls.Jump.IsPressed();
         m_info.JumpReleased = input_.PlayerControls.Jump.WasReleasedThisFrame();
+
+        m_info.PullDown = input_.PlayerControls.Pull.IsPressed();
+        m_info.PullReleased = input_.PlayerControls.Pull.WasReleasedThisFrame();
     }
 
     void CheckForGrounded()
@@ -171,6 +184,31 @@ public class PlayerController : MonoBehaviour
         m_animator.SetFloat("moveSpeedH", Mathf.Abs(m_info.MovementH));
     }
 
+    void OnPullPerformed()
+    {
+        if(m_isCollidingWithPullable && m_collidingBox != null)
+        {
+            Rigidbody boxRb = m_collidingBox.GetComponent<Rigidbody>();
+            boxRb.velocity = m_rb.velocity;
+            boxRb.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationY | RigidbodyConstraints.FreezeRotationZ;
+        }
+    }
+
+    void OnPullCanceled()
+    {
+        if (m_collidingBox != null)
+        {
+            if (m_topDown)
+            {
+                m_collidingBox.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ;
+            }
+            else
+            {
+                m_collidingBox.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationY | RigidbodyConstraints.FreezeRotationZ;
+            }
+        }
+    }
+
     private void OnDrawGizmos()
     {
         
@@ -180,6 +218,43 @@ public class PlayerController : MonoBehaviour
         Gizmos.DrawWireSphere(m_footSensor.position + new Vector3(0, 0f, 0.19f), m_checkRadius);
         Gizmos.color = Color.white;
         //Gizmos.DrawWireSphere(m_footSensor.position , 0.15f);
+    }
+
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.gameObject.tag == "Pullable")
+        {
+            m_isCollidingWithPullable = true;
+            m_collidingBox = other.gameObject.transform.parent.gameObject;
+        }
+
+        if (other.gameObject.tag == "JumpPad")
+        {
+            if (transform.position.z > other.transform.position.z - 0.5f && transform.position.z < other.transform.position.z + 0.5f && m_isOnJumpPad == false)
+            {
+                m_isOnJumpPad = true;
+                m_sideScrollController.jumpForce *= other.gameObject.GetComponent<JumpPad>().GetJumpMultiplier();
+            }
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.tag == "Pullable")
+        {
+            m_isCollidingWithPullable = false;
+            m_collidingBox = null;
+        }
+
+        if (other.gameObject.tag == "JumpPad")
+        {
+            if (m_isOnJumpPad)
+            {
+                m_isOnJumpPad = false;
+                m_sideScrollController.jumpForce /= other.gameObject.GetComponent<JumpPad>().GetJumpMultiplier();  
+            }
+          
+        }
     }
 }
 
@@ -234,5 +309,6 @@ public class PlayerInfo
     public bool JumpDown;
     public bool JumpReleased;
 
-    
+    public bool PullDown;
+    public bool PullReleased;
 }
