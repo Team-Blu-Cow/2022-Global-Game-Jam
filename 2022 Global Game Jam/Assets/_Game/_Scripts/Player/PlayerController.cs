@@ -126,9 +126,9 @@ public class PlayerController : MonoBehaviour
 
     void CheckForGrounded()
     {
-        m_info.IsGrounded = Physics.OverlapSphere(m_footSensor.position, m_checkRadius).Length > 1;
-        m_info.IsGrounded |= Physics.OverlapSphere(m_footSensor.position + new Vector3(0, 0f, -0.19f), m_checkRadius).Length > 1;
-        m_info.IsGrounded |= Physics.OverlapSphere(m_footSensor.position + new Vector3(0, 0f, 0.19f), m_checkRadius).Length > 1;
+        m_info.IsGrounded = Physics.OverlapSphere(m_footSensor.position, m_checkRadius, 1).Length > 1;
+        m_info.IsGrounded |= Physics.OverlapSphere(m_footSensor.position + new Vector3(0, 0f, -0.19f), m_checkRadius,1).Length > 1;
+        m_info.IsGrounded |= Physics.OverlapSphere(m_footSensor.position + new Vector3(0, 0f, 0.19f), m_checkRadius,1).Length > 1;
 
         m_animator.SetBool("isGrounded", m_info.IsGrounded);
     }
